@@ -1,5 +1,5 @@
-import React from "react";
-import RegisterButton from "../register-button/register-button";
+import React  from "react";
+
 
 const Register = () => {
   return (
