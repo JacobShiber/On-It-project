@@ -8,8 +8,6 @@ app.use(cors());
 app.use(express.json());
 
 
-
-
 app.get('/', (req, res) => {
     res.status(200).send('Server is online');
 })
