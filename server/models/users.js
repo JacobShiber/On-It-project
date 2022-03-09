@@ -4,11 +4,14 @@ const schama = mongoose.Schema;
 const User = new schama(
   {
     firstName: { type: String, required: true },
-    job: { type: String, required: true },
+    role: { type: String, required: true },
     email: { type: String, required: true },
     phone: { type: String, required: true },
     password : { type: String, required: true },
-    isAdmin : { type: String, required: true ,default:false },
+    isAdmin : { type: Boolean, required: true },
+    img : { type: String, required: true },
+    course : { type: String, required: true },
+    school : { type: String, required: true },
   },
   { timestamps: true }
 );
