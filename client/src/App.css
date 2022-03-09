@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+.Login{
+  text-align: center;
+  border: solid 3px black;
+  padding: 8%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
