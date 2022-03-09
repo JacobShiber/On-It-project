@@ -1,7 +1,8 @@
 import logo from './Logo-text-white.png';
-import React from 'react'
+import React, { useContext } from 'react'
 
  const Login=()=> {
+  const { user, setUsers } = useContext();
   return (
     <div className='Login'>
       <img src= {logo} alt = "logo" width="90px" height="50px"/><br/>
@@ -9,7 +10,7 @@ import React from 'react'
       <input type="text" /><br/>
       <label>Password : </label><br/>
       <input type="text" /><br/>
-      <button>Log in</button>
+      <button >Log in</button>
     </div>
   )
 }
