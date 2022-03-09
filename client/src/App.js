@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <UsersContextProvider>
     <Register/>
-        <Login/>
+        {/* <Login/> */}
         </UsersContextProvider>
       </header>
     </div>
