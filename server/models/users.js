@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const schama = mongoose.Schema;
 
-const Employee = new schama(
+const User = new schama(
   {
     firstName: { type: String, required: true },
     job: { type: String, required: true },
