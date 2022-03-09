@@ -40,3 +40,10 @@
     transform: rotate(360deg);
   }
 }
+
+.form {
+  width: 20vw;
+  height: 50vh;
+  border: 2px solid white;
+  /* display: grid; */
+}
