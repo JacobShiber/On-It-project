@@ -1,11 +1,13 @@
 import React  from "react";
+import RegisterButton from "../register-button/register-button";
 
 
 const Register = () => {
   return (
-    <form>
+    <div className="form">
+     <input></input>
     <RegisterButton/>
-    </form>
+    </div>
   );
 };
 

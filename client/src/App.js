@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
     <Register/>
-        <Login/>
+        {/* <Login/> */}
       </header>
     </div>
   );
