@@ -29,9 +29,14 @@ position: relative;
 bottom: 90px;
 }
 .rightSize{
+  margin-top: 20px;
 width: 40%;
 height: 70%;
+}
 
+.rightSize h2 {
+  position: relative;
+  bottom: 50px;
 }
 /* ----------------------------------------------------- */
 /* home */
@@ -161,7 +166,6 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  /* background: cornflowerblue; */
   background-color: purple;
   box-shadow: 1px 1px 1px black;
   color: #FFF;
@@ -209,15 +213,41 @@ fieldset {
 
 .registerComponents .registerButtons {
   position: relative;
-  top: 195px;
+  top: 25vh;
+  right: 15vh;
   z-index: 200;
 }
+
 
 .registerButtons button {
   border: none;
   color: black;
+  margin-right: 20px;
+  font-size: 20px;
+  background:none;
+  color: purple;
 }
 
 .registerButtons button:hover {
   border-bottom: 1px solid black;
+}
+
+#loginContainer {
+  margin-top: 40vh;
+}
+
+.navigateButtons {
+  padding: 5px 5px;
+  border-radius: 2px;
+  background: black;
+  box-shadow: 1px 1px 1px purple;
+  color: white;
+  margin: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.navigateButtons:hover {
+  background-color: purple;
+  box-shadow: 1px 1px 1px black;
 }
