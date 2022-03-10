@@ -4,6 +4,7 @@ import {UsersContext} from '../../../context/users-context/users-context';
 import {userLogin} from '../../../services/users/users.service';
  const Login=()=> {
   const { user, setUser } = useContext(UsersContext);
+  
 
   const defineUser=(name, value)=>{
     switch(name) {
@@ -24,12 +25,13 @@ import {userLogin} from '../../../services/users/users.service';
   }
   return (
     <div className='Login'>
-      <img src= {logo} alt = "logo" width="90px" height="50px"/><br/>
+      {/* <img src= {logo} alt = "logo" width="200px" height="90px"/><br/> */}
       <label>Email : </label><br/>
       <input type="text" name={"email"} onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/><br/>
       <label>Password : </label><br/>
-      <input type="text" name={"password"} onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/><br/>
+      <input type="text" name={"password"} onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/><br/><br/>
       <button onClick = {sendUser}>Log in</button>
+      
     </div>
   )
 }

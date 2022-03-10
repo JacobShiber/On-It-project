@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Register from './components/features/register/register-component';
-import Login from './components/features/login/login-component';
+import PageRouting from './components/Routing/PageRouting';
 import {UsersContextProvider} from './context/users-context/users-context';
 
 function App() {
@@ -9,8 +8,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <UsersContextProvider>
-    <Register/>
-        <Login/>
+          <PageRouting/>
+    {/* <Register/>
+        <LoginPage/> */}
         </UsersContextProvider>
       </header>
     </div>
