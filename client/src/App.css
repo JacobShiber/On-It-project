@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: white;
 }
 .Login{
   text-align: center;
@@ -16,13 +17,16 @@
 .loginPage{
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100vw;
+  height: 100vh;
 }
 .leftSize{
 width: 40%;
 height: 70%;
-margin-top: 10%;
-
+/* margin-top: 10%; */
+position: relative;
+bottom: 90px;
 }
 .rightSize{
 width: 40%;
@@ -97,12 +101,6 @@ body {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-#contact h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
 
 #contact h4 {
   margin: 5px 0 15px;
@@ -115,7 +113,9 @@ body {
   margin: 5px 0 15px;
   display: block;
   font-weight: 400;
-  color: cornflowerblue;
+  color: purple;
+  text-shadow:1px 1px 1px black;
+  font-size: 30px;
 }
 
 
@@ -161,7 +161,9 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background: cornflowerblue;
+  /* background: cornflowerblue; */
+  background-color: purple;
+  box-shadow: 1px 1px 1px black;
   color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
