@@ -1,8 +1,10 @@
+import React,{useContext} from "react"; 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../features/login/login-component";
 // import Register from "../features/register/register-component";
 import Home from "../pages/home/home-component";
 import LoginPage from "../pages/login/loginPage-component";
+
 
 const PageRouting=()=> {
   return (
@@ -20,3 +22,4 @@ const PageRouting=()=> {
   )
 }
 export default PageRouting;
+
