@@ -16,6 +16,7 @@ export const userRegister = async (userData) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
     })
-    .then(response => console.log(response))
+    .then(response => response.json())
+    .then(res => console.log(res))
     .catch(err => console.log(err));
 }
