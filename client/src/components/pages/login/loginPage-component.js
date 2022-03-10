@@ -18,8 +18,8 @@ import MainRegister from '../../features/register/main-register-component'
         <img src={logo} alt="logo"/>
         <h2>Welcome to a place that will put you <br/>
           in order for your studies</h2>
-          <button onClick={() => {setAuthState('login')}}>Login</button>
-      <button onClick={() => {setAuthState('register')}}>Register</button>
+          <button className='navigateButtons' onClick={() => {setAuthState('login')}}>Login</button>
+      <button  className='navigateButtons' onClick={() => {setAuthState('register')}}>Register</button>
       </section>
     </div>
   )

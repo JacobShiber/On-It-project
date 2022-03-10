@@ -2,11 +2,12 @@ import logo from './Logo-text-white.png';
 import React, { useContext } from 'react'
 import { UsersContext } from '../../../context/users-context/users-context';
 import { userLogin } from '../../../services/users/users.service';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
   const { user, setUser } = useContext(UsersContext);
-  
+  let navigate = useNavigate();
 
 
   const defineUser = (name, value) => {
@@ -22,27 +23,34 @@ const Login = () => {
     }
   }
 
-  const sendUser = () => {
+  const sendUser = (e) => {
+    e.preventDefault();
     userLogin(user)
       .then(result => result.json())
       .then(res => {
         localStorage.setItem('token', res.token);
         setUser(res.user);
         console.log(res.user);
+        navigate('/home');
       })
       .catch(err => console.log(err))
   }
 
   return (
-    <div className='Login'>
-      {/* <img src= {logo} alt = "logo" width="200px" height="90px"/><br/> */}
-      <label>Email : </label><br/>
-      <input type="text" name={"email"} onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/><br/>
-      <label>Password : </label><br/>
-      <input type="text" name={"password"} onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/><br/><br/>
-      <button onClick = {sendUser}>Log in</button>
-      
-    </div>
+    <div className="container" id='loginContainer'>  
+  <form id="contact" action="" method="post">
+    <h3>Login</h3>
+    <fieldset>
+      <input name="email" placeholder="Your Email Address" type="email" tabIndex="2" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
+    </fieldset>
+    <fieldset>
+      <input name="password" placeholder="Your password" type="text" tabIndex="4" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
+    </fieldset>
+    <fieldset>
+      <button onClick = {sendUser} type="submit" id="contact-submit" data-submit="...Sending">Register</button>
+    </fieldset>
+  </form>
+</div>
   )
 }
 export default Login;
