@@ -1,5 +1,6 @@
 require('dotenv').config();
 require('./db/index');
+const newsRouter=require('./routes/usersNews-router')
 const express = require('express');
 const app = express();
 const port = process.env.PORT;
@@ -15,6 +16,7 @@ passportMiddleware(passport);
 
 const usersRouter = require('./routes/users-router');
 
+app.use('/news', passport.authenticate("jwt",{session:false}),newsRouter)
 app.use(passport.initialize());
 
 app.use('/users', usersRouter);
