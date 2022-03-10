@@ -15,6 +15,7 @@
 }
 .loginPage{
   display: flex;
+  flex-direction: row;
   width: 100vw;
 }
 .leftSize{
@@ -28,6 +29,16 @@ width: 40%;
 height: 70%;
 
 }
-
-
-
+/* ----------------------------------------------------- */
+/* home */
+.theTeam{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  
+}
+.student{
+  width: 30%;
+  height: 70%;
+  border: 2px black solid;
+}
