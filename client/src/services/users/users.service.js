@@ -7,9 +7,6 @@ export const userLogin = async (userData) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userData)
     })
-    .then(response => response.json())
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
 }
 
 
