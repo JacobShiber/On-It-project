@@ -11,4 +11,4 @@ const UsersNew = new schama(
   },
   { timestamps: true }
 );
-module.exports = mongoose.model("UsersNew", UserNew);
+module.exports = mongoose.model("UsersNew", UsersNew);
