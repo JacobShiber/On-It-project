@@ -1,57 +1,37 @@
 .App {
   text-align: center;
   background-color: white;
+  color: black;
 }
-.Login{
-  text-align: center;
-  border: solid 3px black;
-  padding: 5%;
-  /* margin-top: ; */
-    margin-left: 30%;
-    margin-right: 30%;
+h1 {
+  padding: 1%;
 }
-.Login button{
-  background-color: blue;
-  /* padding: 5%; */
-}
-.loginPage{
+.loginPage {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100vw;
   height: 100vh;
 }
-.leftSize{
-width: 40%;
-height: 70%;
-/* margin-top: 10%; */
-position: relative;
-bottom: 90px;
+.leftSize {
+  width: 40%;
+  height: 70%;
+  position: relative;
+  bottom: 90px;
 }
-.rightSize{
+.rightSize {
   margin-top: 20px;
-width: 40%;
-height: 70%;
+  width: 40%;
+  height: 70%;
 }
 
 .rightSize h2 {
   position: relative;
   bottom: 50px;
 }
-/* ----------------------------------------------------- */
-/* home */
-.theTeam{
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  
-}
-.student{
-  width: 30%;
-  height: 70%;
-  border: 2px black solid;
-}
 
+
+/* ----------------------------------------------------------- */
 .form {
   width: 20vw;
   height: 50vh;
@@ -79,7 +59,7 @@ body {
   font-size: 12px;
   line-height: 30px;
   color: #777;
-  background: #4CAF50;
+  
 }
 
 .container {
@@ -99,13 +79,12 @@ body {
 }
 
 #contact {
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 50px;
   border-radius: 5px;
   margin: 150px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
-
 
 #contact h4 {
   margin: 5px 0 15px;
@@ -119,11 +98,9 @@ body {
   display: block;
   font-weight: 400;
   color: purple;
-  text-shadow:1px 1px 1px black;
+  text-shadow: 1px 1px 1px black;
   font-size: 30px;
 }
-
-
 
 fieldset {
   border: medium none !important;
@@ -140,7 +117,7 @@ fieldset {
 #contact textarea {
   width: 100%;
   border: 1px solid #ccc;
-  background: #FFF;
+  background: #fff;
   margin: 0 0 5px;
   padding: 10px;
 }
@@ -168,17 +145,17 @@ fieldset {
   border: none;
   background-color: purple;
   box-shadow: 1px 1px 1px black;
-  color: #FFF;
+  color: #fff;
   margin: 0 0 5px;
   padding: 10px;
   font-size: 15px;
 }
 
 #contact button[type="submit"]:hover {
-  background: #43A047;
+  background: #43a047;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out; */
 }
 
 #contact button[type="submit"]:active {
@@ -218,13 +195,12 @@ fieldset {
   z-index: 200;
 }
 
-
 .registerButtons button {
   border: none;
   color: black;
   margin-right: 20px;
   font-size: 20px;
-  background:none;
+  background: none;
   color: purple;
 }
 
