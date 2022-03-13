@@ -1,4 +1,4 @@
-const UsersNews = require("../models/userNews");
+const UsersNews =require("../models/userNews");
 
 const getAllNews = async (req, res) => {
   await UsersNews.find()
