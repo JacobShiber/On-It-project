@@ -19,8 +19,8 @@ const login = async (req, res) => {
     await users.findOne({ email })
         .then(user =>
             bcrypt.compare(password, user.password, (err, isMatching) => {
-                if (err) return res.status(500).send({ message: 'error accessing password' });
-                if (!isMatching) return res.status(500).send({ message: 'password do not match' });
+                if (err) return res.status(500).send({login_success : false,  message: 'error accessing password' });
+                if (!isMatching) return res.status(500).send({login_success : false, message: 'Password do not match' });
 
                 jwt.sign({ ...user }, process.env.SECRET_KEY, { expiresIn: '60m' }, (err, token) => {
                     if (err) return res.status(500).send({ message: 'error with the token' });
@@ -28,7 +28,7 @@ const login = async (req, res) => {
                 })
             })
         )
-        .catch(err => res.status(500).send({ message : 'general error' }));
+        .catch(err => res.status(500).send({ login_success : false, message : 'User do not exist' }));
 }
 
 const getAllUsers = async (req, res) => {
