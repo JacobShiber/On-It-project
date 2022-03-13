@@ -2,6 +2,19 @@
   text-align: center;
   background-color: white;
   color: black;
+  display: grid;
+  grid-template-areas: 
+  "navBar navBar navBar navBar"
+  "main main main main"
+  "main main main main"
+  "footer footer footer footer";
+  width: 100vw;
+  height: 100vh;
+
+  /* grid-template-rows: 10% 80%;
+  grid-template-columns: 15%; */
+
+
 }
 h1 {
   padding: 1%;
@@ -29,8 +42,6 @@ h1 {
   position: relative;
   bottom: 50px;
 }
-
-
 /* ----------------------------------------------------------- */
 .form {
   width: 20vw;
