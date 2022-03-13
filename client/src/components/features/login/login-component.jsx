@@ -1,14 +1,14 @@
-import logo from './Logo-text-white.png';
+
 import React, { useContext } from 'react'
 import { UsersContext } from '../../../context/users-context/users-context';
 import { userLogin } from '../../../services/users/users.service';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Login = () => {
   const { user, setUser } = useContext(UsersContext);
   let navigate = useNavigate();
-
 
   const defineUser = (name, value) => {
     switch (name) {
@@ -47,7 +47,7 @@ const Login = () => {
       <input name="password" placeholder="Your password" type="text" tabIndex="4" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
     </fieldset>
     <fieldset>
-      <button onClick = {sendUser} type="submit" id="contact-submit" data-submit="...Sending">Register</button>
+      <button onClick = {sendUser} type="submit" id="contact-submit" data-submit="...Sending">Login</button>
     </fieldset>
   </form>
 </div>
