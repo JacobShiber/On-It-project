@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import logo from './Logo-text-white.png';
+import React, { useContext, useState } from 'react'
 import { UsersContext } from '../../../context/users-context/users-context';
 import { userLogin } from '../../../services/users/users.service';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +8,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const { user, setUser } = useContext(UsersContext);
+  const [loginMessage, setLoginMessage] = useState('');
+  const [loginStatus, setLoginStatus] = useState(false);
   let navigate = useNavigate();
 
   const defineUser = (name, value) => {
@@ -27,10 +30,15 @@ const Login = () => {
     userLogin(user)
       .then(result => result.json())
       .then(res => {
-        localStorage.setItem('token', res.token);
-        setUser(res.user);
-        console.log(res.user);
-        navigate('/home');
+        if(res.login_success === true){
+          localStorage.setItem('token', res.token);
+          setUser(res.user);
+          navigate('/home');
+        }
+        else {
+          setLoginStatus(true);
+          setLoginMessage(res.message);
+        }
       })
       .catch(err => console.log(err))
   }
@@ -39,6 +47,9 @@ const Login = () => {
     <div className="container" id='loginContainer'>  
   <form id="contact" action="" method="post">
     <h3>Login</h3>
+    {
+      loginStatus === true? <div><p>{loginMessage}</p></div> : null
+    }
     <fieldset>
       <input name="email" placeholder="Your Email Address" type="email" tabIndex="2" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
     </fieldset>
