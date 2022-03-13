@@ -1,4 +1,6 @@
 import React from "react";
+import {GetAllNews} from '../../../services/newsUser/newsUser.service';
+
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
           studentOne
         </article>
       </section>
+
+      <button onClick = {GetAllNews}>Click</button>
     </div>
   );
 };
