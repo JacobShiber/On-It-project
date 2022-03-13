@@ -6,6 +6,7 @@ import Contact from "../pages/contact/contact-component";
 import Home from "../pages/home/home-component";
 import LoginPage from "../pages/login/loginPage-component";
 import News from "../pages/news/news-component";
+import Schedule from "../pages/schedule/schedule-component";
 
 const PageRouting=()=> {
   return (
@@ -19,6 +20,7 @@ const PageRouting=()=> {
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/news" element={<News />} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/schedule" element={<Schedule />} />
           </Routes>
       </BrowserRouter>
     </div>
