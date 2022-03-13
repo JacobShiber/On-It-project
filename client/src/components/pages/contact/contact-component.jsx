@@ -1,13 +1,13 @@
-import { UsersContextProvider } from '../../../context/users-context/users-context';
+// import { UsersContextProvider } from '../../../context/users-context/users-context';
 import CardsContact from './cards-contact-component';
 import './contact.css';
 
  function Contact() {
-  return (
-<UsersContextProvider>
+  return (<div>
+{/* <UsersContextProvider> */}
   <h1>keren</h1>
   <CardsContact/>
-</UsersContextProvider>
-    )
+{/* // </UsersContextProvider> */}
+   </div>  )
 }
 export default Contact;
