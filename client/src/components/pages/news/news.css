@@ -1,0 +1,11 @@
+.newsInputs input{
+    width: 30%;
+    padding: 0.5%;
+}
+
+.newsInputs button {
+    padding: 0.5%;
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 1px purple;
+}
