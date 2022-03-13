@@ -18,8 +18,12 @@ const PageRouting=()=> {
             <Route exact path="/home" element={<Home />} />
           </Routes>
       </BrowserRouter>
+      
     </div>
   )
+
 }
+
 export default PageRouting;
+
 

@@ -11,5 +11,3 @@ export const UsersContextProvider = ({ children }) => {
         </UsersContext.Provider>
     )
 };
-
-

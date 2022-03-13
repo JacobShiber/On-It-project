@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 
 const RegisterButton = () => {
   return (
-  <Button variant="contained" size="small">Register</Button>
+    <Button variant="contained" size="small">Register</Button>
   )
 };
 
