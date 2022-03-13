@@ -1,23 +1,20 @@
-import React, { useContext } from 'react'
-import { UsersContext } from "../../../context/users-context/users-context";
+import React, {useEffect } from 'react'
+import { useState } from 'react';
 import CardContact from "./card-contact-component";
+import { GetAllUsers } from '../../../services/users/users.service';
 
 const CardsContact = () => {
-  const { user } = useContext(UsersContext);
-  const userItem={firstName:"keren",email:"sfdv",phone:"054254",course:"web",role:"student",img:"aa"};
-  
-  console.log(user);
+  const [userData,setUserData]=useState([]);
+  useEffect(()=>{
+    GetAllUsers()
+    .then((res)=>setUserData(res)) 
+  },[])
+  console.log(userData);
   return (
     <div className='cardWrapper'>
-        {/* {
-          user.map((userItem)=>{
-            <CardContact userItem={userItem} />
-
-          })
-        } */}
-        <h1>{user.firstName}</h1>
-      
-      <CardContact userItem={userItem} />
+        {
+          userData.map((user) => <CardContact key={user.firstName} userItem={user}/>)
+        }
     </div>
   );
 };
