@@ -31,4 +31,10 @@ const login = async (req, res) => {
         .catch(err => res.status(500).send({ login_success : false, message : 'User do not exist' }));
 }
 
-module.exports = {register, login};
+const getAllUsers = async (req, res) => {
+    await users.find()
+      .then((result) => res.status(200).json(result))
+      .catch((err) => res.status(404).json({ massage: err }));
+  };
+
+module.exports = {register, login , getAllUsers};
