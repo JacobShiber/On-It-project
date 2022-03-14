@@ -12,11 +12,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <UsersContextProvider>
-          {/* <PageRouting/> */}
           <UsersGrades/>
-          {/* { <UsersGrades/> } */}
-           {/* <MainRegister/> */}
-          {/* <Login /> */}
+          <PageRouting/>
         </UsersContextProvider>
       </header>
     </div>
