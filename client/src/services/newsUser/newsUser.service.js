@@ -9,9 +9,6 @@ export const GetAllNews = async () => {
         Authorization:`bearer ${localStorage.getItem("token")}` 
       }
     })
-      .then((res) => res.json())
-      .then(result => console.log(result))
-      .catch((error) => console.log({ error: "the method get isnt work" }));
   } catch (error) {
     console.log("error in method get");
   }
