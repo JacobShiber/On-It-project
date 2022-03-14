@@ -9,3 +9,24 @@
     color: white;
     box-shadow: 1px 1px 1px purple;
 }
+
+.newsCard {
+    border: 1px solid black;
+    width: 30%;
+    height: 100px;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.newsCard img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
+.newsCard p {
+    width: 100px;
+}

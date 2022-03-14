@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { UsersContext } from '../../../context/users-context/users-context';
+import {UsersContext} from '../../../context/users-context/users-context';
 
-import { GetAllNews, PostNews } from '../../../services/newsUser/newsUser.service';
+import { GetAllNews } from '../../../services/newsUser/newsUser.service';
 
-const NewsAdmin = () => {
-    let { user } = useContext(UsersContext);
+
+const NewsUser =() => {
+    let {user} = useContext(UsersContext);
     user = JSON.parse(localStorage.getItem('user'));
     const [news, setNews] = useState([]);
-    const [update, setUpdate] = useState({});
 
     useEffect(() => {
         GetAllNews()
@@ -16,25 +16,8 @@ const NewsAdmin = () => {
             .catch((error) => console.log({ error: "the method get isnt work" }));
     }, [])
 
-    const addNews = (dataValue) => {
-        setUpdate({
-            userName: user.firstName,
-            userImg: user.img,
-            data: dataValue,
-            role: user.role,
-            school: user.school
-        })
-    }
-
-    return (
+    return(
         <div>
-            <div className="newsInputs">
-                <form>
-                    <input type="text" placeholder="Whats on your mind" onChange={(e) => { addNews(e.target.value) }} />
-                    <button type="submit" onClick={() => { PostNews(update) }}>Submit</button>
-                </form>
-            </div>
-            <div>
                 {
                     news.map(update =>
                         <div className="newsCard">
@@ -52,7 +35,7 @@ const NewsAdmin = () => {
                     )
                 }
             </div>
-        </div>
     )
 }
-export default NewsAdmin;
+
+export default NewsUser;
