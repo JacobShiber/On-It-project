@@ -13,8 +13,6 @@ function App() {
       <header className="App-header">
         <UsersContextProvider>
           <PageRouting/>
-           {/* <MainRegister/> */}
-          {/* <Login /> */}
         </UsersContextProvider>
       </header>
     </div>
