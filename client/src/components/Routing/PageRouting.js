@@ -12,7 +12,6 @@ const PageRouting=()=> {
   return (
     <div>
 <BrowserRouter>
-{/* <LoginPage/> */}
           <Routes>
             <Route exact path="/" element={<LoginPage />} />
             <Route exact path="/login" element={<Login />} />

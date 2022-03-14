@@ -1,20 +1,29 @@
+const basic_url = "http://localhost:6500/schedule";
+
+// export const GetAllSchedules = async () => {
+//   try {
+//     return await fetch(`${basic_url}`, {
+//       headers: {
+//         Authorization:`bearer ${localStorage.getItem("token")}` 
+//       }
+//     })
+//       .then((res) => res.json())
+//       .then(result => console.log(result))
+//       .catch((error) => console.log({ error: "the method get isnt work" }));
+//   } catch (error) {
+//     console.log("error in method get");
+//   }
+// };
 
 
-const basic_url = "http://localhost:6500/news";
-
-export const GetAllNews = async () => {
-  try {
-    return await fetch(`${basic_url}`, {
-      headers: {
-        Authorization:`bearer ${localStorage.getItem("token")}` 
-      }
-    })
-  } catch (error) {
-    console.log("error in method get");
-  }
+export const GetAllSchedules = async () => {
+    return await fetch(`${basic_url}`)
+      .then((res) =>  res.json())
+      .catch((error) => console.log({ error: "the method get isnt work" }));
+  
 };
 
-export const GetNewsById = async () => {
+export const GetSchedulesById = async () => {
   try {
     return await fetch(`${basic_url}`, {
       headers: {
@@ -28,7 +37,7 @@ export const GetNewsById = async () => {
   }
 };
 
-export const PostNews = async (userData) => {
+export const PostSchedules = async (userData) => {
   try {
     return await fetch(`${basic_url}`, {
       method: "POST",
@@ -40,7 +49,7 @@ export const PostNews = async (userData) => {
   }
 };
 
-export const PutNews = async (userData) => {
+export const PutSchedules = async (userData) => {
   try {
     return await fetch(`${basic_url}/id`, {
       method: "PUT",
@@ -52,7 +61,7 @@ export const PutNews = async (userData) => {
   }
 };
 
-export const DeleteNews = async () => {
+export const DeleteSchedules = async () => {
   try {
     return await fetch(`${basic_url}/id`, {
       method: "DELETE",

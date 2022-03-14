@@ -4,7 +4,7 @@
   color: black;
   display: grid;
   grid-template-areas: 
-  "navBar navBar navBar navBar"
+  "navbar navbar navbar navbar"
   "main main main main"
   "main main main main"
   "footer footer footer footer";
@@ -15,6 +15,10 @@
   grid-template-columns: 15%; */
 
 
+}
+
+.navbar{
+  grid-area:navbar;
 }
 h1 {
   padding: 1%;
