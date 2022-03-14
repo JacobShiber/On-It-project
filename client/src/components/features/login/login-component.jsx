@@ -30,7 +30,7 @@ const Login = () => {
     userLogin(user)
       .then(result => result.json())
       .then(res => {
-        if(res.login_success === true){
+        if (res.login_success === true) {
           localStorage.setItem('token', res.token);
           setUser(res.user);
           navigate('/home');
@@ -44,23 +44,23 @@ const Login = () => {
   }
 
   return (
-    <div className="container" id='loginContainer'>  
-  <form id="contact" action="" method="post">
-    <h3>Login</h3>
-    {
-      loginStatus === true? <div><p>{loginMessage}</p></div> : null
-    }
-    <fieldset>
-      <input name="email" placeholder="Your Email Address" type="email" tabIndex="2" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
-    </fieldset>
-    <fieldset>
-      <input name="password" placeholder="Your password" type="text" tabIndex="4" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
-    </fieldset>
-    <fieldset>
-      <button onClick = {sendUser} type="submit" id="contact-submit" data-submit="...Sending">Register</button>
-    </fieldset>
-  </form>
-</div>
+    <div className="container" id='loginContainer'>
+      <form id="contact" action="" method="post">
+        <h3>Login</h3>
+        {
+          loginStatus === true ? <div><p>{loginMessage}</p></div> : null
+        }
+        <fieldset>
+          <input name="email" placeholder="Your Email Address" type="email" tabIndex="2" required onChange={(e) => { defineUser(e.target.name, e.target.value) }} />
+        </fieldset>
+        <fieldset>
+          <input name="password" placeholder="Your password" type="text" tabIndex="4" required onChange={(e) => { defineUser(e.target.name, e.target.value) }} />
+        </fieldset>
+        <fieldset>
+          <button onClick={sendUser} type="submit" id="contact-submit" data-submit="...Sending">Register</button>
+        </fieldset>
+      </form>
+    </div>
   )
 }
 export default Login;
