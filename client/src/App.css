@@ -20,9 +20,11 @@
 .navbar{
   grid-area:navbar;
 }
+
 h1 {
   padding: 1%;
 }
+
 .loginPage {
   display: flex;
   flex-direction: row;
@@ -30,6 +32,7 @@ h1 {
   width: 100vw;
   height: 100vh;
 }
+
 .leftSize {
   width: 40%;
   height: 70%;
