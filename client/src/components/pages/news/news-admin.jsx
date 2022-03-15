@@ -34,7 +34,7 @@ const NewsAdmin = () => {
                     <button type="submit" onClick={() => { PostNews(update) }}>Submit</button>
                 </form>
             </div>
-            <div>
+            <div className = "newsContainer">
                 {
                     news.map(update =>
                         <div className="newsCard">

@@ -17,7 +17,7 @@ const NewsUser =() => {
     }, [])
 
     return(
-        <div>
+        <div className = "newsContainer">
                 {
                     news.map(update =>
                         <div className="newsCard">
