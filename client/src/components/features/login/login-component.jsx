@@ -29,7 +29,6 @@ const Login = () => {
     userLogin(user)
       .then(result => result.json())
       .then(res => {
-        console.log(res);
         if(res.login_success === true){
           localStorage.setItem('token', res.token);
           localStorage.setItem('user', JSON.stringify(res.user))
