@@ -20,17 +20,21 @@ const NewsUser =() => {
         <div>
                 {
                     news.map(update =>
+                        <div className='news'>
                         <div className="newsCard">
                             <img src={update.userImg} alt="adminPicture" />
                             <div>
-                                <h2>{update.userName}</h2>
+                                <h3>{update.userName}</h3>
                                 <h4>{update.role}</h4>
-                                <h3>{update.school}</h3>
+                                <h4>{update.school}</h4>
                             </div>
                             <div>
                                 <h5>{update.createdAt.split('T')[0]}</h5>
-                                <p>{update.data}</p>
+                                </div>
                             </div>
+                            <br/>
+                            <hr/>
+                        <p className='DataInCard'>{update.data}</p>
                         </div>
                     )
                 }
