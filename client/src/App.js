@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import PageRouting from './components/Routing/PageRouting';
 import {UsersContextProvider} from './context/users-context/users-context';
-import UsersGrades from './components/features/user-grades-table/user-grade-table';
+// import UsersGrades from './components/features/user-grades-table/user-grade-table';
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <UsersContextProvider>
           {/* <UsersGrades/> */}
           <PageRouting/>
+          
         </UsersContextProvider>
       </header>
     </div>

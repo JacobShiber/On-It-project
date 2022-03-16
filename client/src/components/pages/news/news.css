@@ -41,3 +41,8 @@
 .newsCard p {
     width: 100px;
 }
+
+.userCardInfo {
+    position: fixed;
+    margin-left: 70%;
+}

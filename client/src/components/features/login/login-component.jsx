@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { UsersContext } from '../../../context/users-context/users-context';
-import { userLogin } from '../../../services/users/users.service';
+import { userLogin, GetAllUsers } from '../../../services/users/users.service';
 import { useNavigate } from 'react-router-dom';
 
 
