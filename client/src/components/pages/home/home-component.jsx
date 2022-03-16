@@ -4,13 +4,15 @@ import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
 import logoCheck from './homePicture/PinkCheck.png';
 import mainPic from './homePicture/computerAndCoffe.png';
+
+
 import './home.css'
 const Home = () => {
   return (
     <div className="home">
 <section className="textOnPicMain">
   <h1>On It</h1>
-  <h3>All the detals you need to your studies</h3>
+  <h3>All the details you need to your studies</h3>
 </section><img className="mainPic" src={mainPic}
   alt="computer"/>
 
@@ -278,6 +280,7 @@ const Home = () => {
         <img src="https://zephyrnet.com/wp-content/uploads/2020/09/5-questions-with-chase-cio-rohan-amin.jpg"
 alt="picQuestions" />
       </section> */}
+
     </div>
   );
 };
