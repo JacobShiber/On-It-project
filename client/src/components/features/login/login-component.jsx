@@ -1,4 +1,3 @@
-import logo from './Logo-text-white.png';
 import React, { useContext, useState } from 'react'
 import { UsersContext } from '../../../context/users-context/users-context';
 import { userLogin } from '../../../services/users/users.service';
@@ -30,8 +29,10 @@ const Login = () => {
     userLogin(user)
       .then(result => result.json())
       .then(res => {
+        console.log(res);
         if(res.login_success === true){
           localStorage.setItem('token', res.token);
+          localStorage.setItem('user', JSON.stringify(res.user))
           setUser(res.user);
           navigate('/home');
         }

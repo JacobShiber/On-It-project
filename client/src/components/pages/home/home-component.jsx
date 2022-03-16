@@ -273,6 +273,7 @@ const Home = () => {
         <input className="questionsTextInput"/><br/>
         <button>send</button>
       </section>
+
       {/* <section className="questions">
         <img src="https://zephyrnet.com/wp-content/uploads/2020/09/5-questions-with-chase-cio-rohan-amin.jpg"
 alt="picQuestions" />

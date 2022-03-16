@@ -1,7 +1,8 @@
 require('dotenv').config();
 require('./db/index');
-const newsRouter = require('./routes/usersNews-router');
 const userGradesRouter = require("./routes/users-grades-router")
+const newsRouter=require('./routes/usersNews-router')
+const ScheduleRouter=require('./routes/schedule-router')
 const express = require('express');
 const app = express();
 const port = process.env.PORT;
@@ -22,6 +23,7 @@ app.use(passport.initialize());
 
 app.use('/users', usersRouter);
 app.use('/grades' , userGradesRouter);
+app.use('/schedule',ScheduleRouter)
 
 
 app.get('/', (req, res) => {
