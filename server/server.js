@@ -1,8 +1,5 @@
 require('dotenv').config();
 require('./db/index');
-const userGradesRouter = require("./routes/users-grades-router")
-const newsRouter=require('./routes/usersNews-router')
-const ScheduleRouter=require('./routes/schedule-router')
 const express = require('express');
 const app = express();
 const port = process.env.PORT;
@@ -16,6 +13,9 @@ const passportMiddleware = require('./config/passport');
 
 passportMiddleware(passport);
 
+const userGradesRouter = require("./routes/users-grades-router");
+const newsRouter=require('./routes/usersNews-router');
+const ScheduleRouter=require('./routes/schedule-router');
 const usersRouter = require('./routes/users-router');
 
 app.use('/news', passport.authenticate("jwt",{session:false}),newsRouter)

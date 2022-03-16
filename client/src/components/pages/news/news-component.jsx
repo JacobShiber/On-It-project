@@ -1,15 +1,23 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 // import {UsersContext} from '../../../context/users-context/users-context';
 import NewsAdmin from './news-admin';
 import NewsUser from './news-user';
 import './news.css';
+import UserCardInfo from '../../features/user-card/user-card';
 
- const News=()=> {
+
+const News = () => {
   //  const {user} = useContext(UsersContext);
 
-   const user = JSON.parse(localStorage.getItem('user'));
+  const user = JSON.parse(localStorage.getItem('user'));
   return (
-    <div>{user.isAdmin === true? <NewsAdmin /> : <NewsUser/>}</div>
+    <div>
+      <div className = "userCardInfo">
+        <UserCardInfo />
+      </div>
+
+      {user.isAdmin === true ? <NewsAdmin /> : <NewsUser />}
+    </div>
     // <button onClick = {}>Click</button>
   )
 }
