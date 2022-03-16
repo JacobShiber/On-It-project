@@ -44,13 +44,14 @@ export const PutGrade = async (userData) => {
   }
 };
 
-export const DeleteGrade = async () => {
+export const DeleteGrade = async (userData) => {
   try {
-    return await fetch(`${basic_url}/id`, {
+    return await fetch(`${basic_url}`, {
       method: "DELETE",
+      body: JSON.stringify(userData),
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    console.log("error in method post");
+    console.log("error in method delete");
   }
 };

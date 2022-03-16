@@ -22,6 +22,9 @@ const UserRegister = () => {
       <input  name="firstName" placeholder="Your name" type="text" tabIndex="1" required autoFocus  onChange={getValues} />
     </fieldset>
     <fieldset>
+      <input  name="id" placeholder="Your id" type="text" tabIndex="1" required autoFocus  onChange={getValues} />
+    </fieldset>
+    <fieldset>
       <input name="email" placeholder="Your Email Address" type="email" tabIndex="2" required  onChange={getValues}/>
     </fieldset>
     <fieldset>

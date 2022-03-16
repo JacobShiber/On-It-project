@@ -5,7 +5,7 @@ userGradesRouter.get('/',userGradesActions.getAllGrades)
 userGradesRouter.get('/:id',userGradesActions.getUserGradeById)
 userGradesRouter.post('/',userGradesActions.AddUserGrades );
 userGradesRouter.put('/',userGradesActions.updateUserGrade );
-userGradesRouter.delete('/:id',userGradesActions.deleteUserGrade );
+userGradesRouter.delete('/',userGradesActions.deleteUserGrade );
 
 module.exports = userGradesRouter;
 
