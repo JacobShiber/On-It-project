@@ -38,3 +38,7 @@
   margin-top: 2%;
 }
 
+.userCardInfo {
+    position: fixed;
+    margin-left: 70%;
+}
