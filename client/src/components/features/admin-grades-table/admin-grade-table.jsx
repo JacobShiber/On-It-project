@@ -1,185 +1,140 @@
 import React, { useEffect, useState } from "react";
-import { GetAllGrades } from "../../../services/userGrades/uses-grades-service";
-import {PutGrade , PostGrade , DeleteGrade} from "../../../services/userGrades/uses-grades-service"
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import { GetAllGrades , PutGrade , PostGrade , DeleteGrade } from "../../../services/userGrades/uses-grades-service" ;
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
+import DeleteIcon from '@mui/icons-material/Delete';
+import UpdateIcon from '@mui/icons-material/Update';
+
 
 
 const AdminGradesTable = () => {
 
   let [userToUpdate , setUserToUpdate] = useState({}) ;
 
-  let [adminAction , setAdminAction] = useState("");
+  let [loading , setLoading] = useState(false);
 
-  let [users, setUsers] = useState([]);
+  let [usersData, setUsersData] = useState([]);
 
-  let tests = ["react" , "typescript" , "js" , ".net" , "html" , "css"]
+  let tests = ["React" , "Typescript" , "JS" , ".Net" , "HTML" , "Css" , "Node.js" , "MongoDB"]
 
-  let courses = ["full stack" , "dev-net" , "cyber" , "qa"]
+  let courses = ["Full Stack" , "Dev-net" , "Cyber" , "Qa"]
 
 
   useEffect(() => {
+  setLoading(true);
   GetAllGrades()
-  .then(data => setUsers(data))
+  .then(data => setUsersData(data))
+  .catch(err => console.log(err))
+  .finally(() => setLoading(false))
  } , []);  
 
  const updateValue = (e) => {
   userToUpdate[e.target.name] = e.target.value ;
- }
+ };
 
- const updateAction = (e) => {
-  setAdminAction(e.target.value);
- }
-
- const updateUser = () => {
+ const updateUser = (requestedGrade , newGrade) => {
+   setLoading(true);
    setUserToUpdate({...userToUpdate});
-  //  console.log(userToUpdate);
-   PutGrade(userToUpdate)
+   console.log({requestedGrade,newGrade});
+   PutGrade({requestedGrade,newGrade})
   .then(res => res.json())
-  .then(data => setUsers(data))
+  .then(data => setUsersData(data))
   .catch(err => console.log(err))
- }
+  .finally(() => setLoading(false))
+ };
 
  const addGrade = () => {
+   setLoading(true);
    setUserToUpdate({...userToUpdate})
-  //  console.log(userToUpdate);
+   console.log(userToUpdate);
    PostGrade(userToUpdate)
   .then(res => res.json())
-  .then(data => setUsers(data))
+  .then(data => setUsersData(data))
   .catch(err => console.log(err))
- }
+  .finally(() => setLoading(false))
+ };
 
- const deleteUserGrade = () => {
-  setUserToUpdate({...userToUpdate})
-  // console.log(userToUpdate);
-  DeleteGrade(userToUpdate)
+ const deleteUserGrade = (user) => {
+  setLoading(true);
+  DeleteGrade(user)
  .then(res => res.json())
- .then(data => setUsers(data))
+ .then(data => setUsersData(data))
  .catch(err => console.log(err))
- }
+ .finally(() => setLoading(false))
+ };
 
-
- const invokeAction = () => {
-   switch (adminAction) {
-      case "add" :
-        return addGrade();
-
-      case "update" : 
-        return updateUser();
-
-      case "delete" : 
-       return deleteUserGrade();
-   }
- }
  
-
- const getAllId = (usersArray) => {
-    let userIdArray = [] ;
-    for (let user of usersArray) {
-      if (userIdArray.indexOf(user.userId) === -1)userIdArray.push(user.userId) ;
-    }
-    return userIdArray ;
- }
-
- const getAllNames = (usersArray) => {
-  let userNamesArray = [] ;
-  for (let user of usersArray) {
-    if (userNamesArray.indexOf(user.userName) === -1)userNamesArray.push(user.userName) ;
-  }
-  return userNamesArray ;
-}
-
- let IdList = getAllId(users) ;
-
- let NamesList = getAllNames(users) ;
-
-
 return (
-    <div style={{width:"70vw" , height:"30vh" , marginLeft:"15vw" , marginTop:"15vh" }}>
+    <>
+     {
+       loading ?  <Stack sx={{ color: 'grey.500' , marginLeft:"50vw" , marginTop:"30vh" }} spacing={2} direction="row">
+       <CircularProgress color="secondary" />
+     </Stack> : 
+      <div style={{width:"70vw" , height:"30vh" , marginTop:"5vh" , marginLeft:"15vw"}}>
 
-      <select  onChange={updateAction}>
-        <option> action</option>
-        <option value="add">add</option>
-        <option value="delete">delete</option>
-        <option value="update">update</option>
-      </select>
-       
-      <select name="userName" onChange={updateValue}>
-        <option> student</option>
-        {
-          NamesList.map((name , index) => 
-               <option key={index} value={name}>{name}</option>
-          )
-        }
+<input className="table-Inputs" name="userName" onChange={updateValue} placeholder="Enter Student Name"/>
+<input className="table-Inputs" name="userId" onChange={updateValue}  placeholder="Enter Student Id"/>
+<input className="table-Inputs" type="number"  name="grade" onChange={updateValue}  placeholder="Enter Student Grade"/>
 
-      </select>
+ <select className="table-select" name="test"  onChange={updateValue}>
+ <option>Test</option>
+   {
+     tests.map((test , index) => 
+          <option key={index} value={test}>{test}</option>
+     )
+   }
 
-    <select name="userId" onChange={updateValue} >
-    <option> Id</option>
-      {
-         IdList.map((userId , index) => 
-           <option key={index} value={userId}>{userId}</option>
-         )
-      }
-    </select>
-      <select name="test"  onChange={updateValue}>
-      <option> test</option>
-        {
-          tests.map((test , index) => 
-               <option key={index} value={test}>{test}</option>
-          )
-        }
+ </select>
 
-      </select>
-      <select name="course" onChange={updateValue}>
-      <option> course</option>
-        {
-          courses.map((course , index) => 
-               <option key={index} value={course}>{course}</option>
-          )
-        }
+ <select className="table-select"  name="course" onChange={updateValue}>
+ <option>Course</option>
+   {
+     courses.map((course , index) => 
+          <option key={index} value={course}>{course}</option>
+     )
+   }
 
-      </select>
-    <input type='number' name="grade" onChange={updateValue}></input>
-    <button type="button" onClick={invokeAction}>finish</button>
+ </select>
 
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 100 }} aria-label="simple table">
-        <TableHead>
-          <TableRow>
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Id</TableCell>
-            <TableCell align="right">Test</TableCell>
-            <TableCell align="right">Grade</TableCell>
-            <TableCell align="right">Course</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {users.map((user , index) => (
-            <TableRow
-              key={index}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell align="right">{user.userName}</TableCell>
-              <TableCell align="right">{user.userId}</TableCell>
-              <TableCell align="right">{user.test}</TableCell>
-              <TableCell align="right">{user.grade}</TableCell>
-              <TableCell align="right">{user.course}</TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </TableContainer>
-    </div>
+<button className="table-button" type="button" onClick={addGrade}>Add Grade</button>
+
+
+<table className="table-fill">
+<thead>
+<tr>
+<th className="text-left">Name</th>
+<th className="text-left">Id</th>
+<th className="text-left">Grade</th>
+<th className="text-left">Test</th>
+<th className="text-left">Course</th>
+<th className="text-left"></th>
+</tr>
+</thead>
+<tbody className="table-hover">
+{
+usersData.map((user , index) => 
+<tr key={index}>
+ <td className="text-left">{user.userName}</td>
+ <td className="text-left">{user.userId}</td>
+ <td className="text-left">{user.grade}</td>
+ <td className="text-left">{user.test}</td>
+ <td className="text-left">{user.course}</td>
+ <td><UpdateIcon className="admin-Buttons" onClick={() => updateUser(user,userToUpdate)}/> <DeleteIcon  className="admin-Buttons" onClick={() => deleteUserGrade(user)}/></td>
+</tr>
+)
+}
+</tbody>
+</table>
+</div> 
+}
+    </>
+     
   );
 }
 
 export default AdminGradesTable ;
+
+
 
 
 
