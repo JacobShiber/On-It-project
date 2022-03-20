@@ -11,14 +11,14 @@ const News = () => {
 
   const user = JSON.parse(localStorage.getItem('user'));
   return (
-    <div>
-      <div className = "userCardInfo">
+    <>
+    <h1 className='mainTitle'>New Updates</h1>
+    <div className = "userCardInfo">
         <UserCardInfo />
       </div>
-
-      {user.isAdmin === true ? <NewsAdmin /> : <NewsUser />}
-    </div>
-    // <button onClick = {}>Click</button>
+    <div>{user.isAdmin === true? <NewsAdmin /> : <NewsUser/>}</div>
+    {/* // <button onClick = {}>Click</button> */}
+   </> 
   )
 }
 export default News;

@@ -3,8 +3,6 @@ import { UsersContext } from '../../../context/users-context/users-context';
 import { userLogin, GetAllUsers } from '../../../services/users/users.service';
 import { useNavigate } from 'react-router-dom';
 
-
-
 const Login = () => {
   const { user, setUser } = useContext(UsersContext);
   const [loginMessage, setLoginMessage] = useState('');

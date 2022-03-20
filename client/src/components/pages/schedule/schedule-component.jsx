@@ -1,19 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { ScheduleContextProvider } from "../../../context/schedule/schedule-context";
-import { GetAllSchedules } from "../../../services/schedule/schedule.service";
-import UserSchedule from "./userSchedule-component";
+import AdminSchedule from './adminSchedule-component';
+import UserSchedule from './userSchedule-component';
 
-const Schedule = () => {
-  // const [scheduleData,setScheduleData]=useState({});
-  // useEffect(()=>{
-  //   GetAllSchedules()
-  //   .then((res)=>setScheduleData({...res})) 
-  //   console.log(scheduleData);
-  // },[])
-  return (
-    <ScheduleContextProvider>
-      <UserSchedule />
-    </ScheduleContextProvider>
-  );
-};
+function Schedule() {
+
+    const user = JSON.parse(localStorage.getItem('user'));
+
+    return (
+      <div>
+        { user.isAdmin === true? <AdminSchedule /> : <UserSchedule />}
+      </div>
+    );
+}
+
 export default Schedule;
