@@ -28,9 +28,9 @@ app.use('/schedule',ScheduleRouter)
 
 
 
-app.get('/', (req, res) => {
+app.get('/', (req , res) => {
     res.status(200).send('Server is online');
-})
+});
 
 
 app.listen(port);
