@@ -7,6 +7,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <style>
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@500&display=swap');
+</style>
         <UsersContextProvider>
           <PageRouting/>
           

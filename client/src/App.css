@@ -10,13 +10,15 @@
   "footer footer footer footer";
   width: 100vw;
   height: 100vh;
-
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Poppins', sans-serif;
   /* grid-template-rows: 10% 80%;
   grid-template-columns: 15%; */
-
-
 }
-
+h1{
+  font-size: 40px;
+  text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
+}
 .navbar{
   grid-area:navbar;
 }

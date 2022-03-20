@@ -3,46 +3,52 @@ import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
 import logoCheck from './homePicture/PinkCheck.png';
-import mainPic from './homePicture/computerAndCoffe.png';
-
+// import mainPic from './homePicture/computerAndCoffe.png';
+import computerPic from './homePicture/computerMain.jpg';
+import LogoPic from './homePicture/Logo-white.png';
 
 import './home.css'
+import { Link } from "react-router-dom";
+
+const sendMassage=()=>{
+  alert("Thank you for your time to massage us")
+}
 const Home = () => {
   return (
     <div className="home">
 <section className="textOnPicMain">
-  <h1>On It</h1>
-  <h3>All the details you need to your studies</h3>
-</section><img className="mainPic" src={mainPic}
+  <h1><img src={LogoPic} className="picOnIt"/>n It
+  </h1>
+  <h3>Be stronger than your excuse</h3>
+</section><img className="mainPic" src={computerPic}
   alt="computer"/>
-
 
 <section className="ourService">
       <h1>OUR SERVICES</h1>
         <article className="Service">
           <img
-            src="https://static.wixstatic.com/media/bd3f2b_20e1ab45bd5442748bf7789e5a4b8ea8~mv2.png/v1/fill/w_225,h_358,al_c,lg_1,q_85/bd3f2b_20e1ab45bd5442748bf7789e5a4b8ea8~mv2.webp"
+            src="https://ak.picdn.net/shutterstock/videos/1069950295/thumb/1.jpg"
             alt="picService"
             width="250px"
             height="250px"
           />
-          <h2>Grades</h2>
+          <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
             <br />
-            see your grades faster
+            contact to all your
             <br />
-            Without staying in suspense
+            friends and admins.
           </h3>
         </article>
         <article className="Service">
           <img
-            src="https://www.clipartmax.com/png/middle/6-62802_newspaper-icon.png"
+            src="https://thumbs.gfycat.com/BlindZigzagGreatargus-max-1mb.gif"
             alt="picService"
             width="250px"
             height="250px"
           />
-          <h2>News</h2>
+             <Link to="/news"><h2>News</h2></Link>
           <h3>
             In this page you can
             <br />
@@ -58,7 +64,7 @@ const Home = () => {
             width="250px"
             height="250px"
           />
-          <h2>Schedule</h2>
+          <Link to="/schedule"><h2>Schedule</h2></Link>
           <h3>
             In this page you can
             <br />
@@ -68,8 +74,6 @@ const Home = () => {
           </h3>
         </article>
       </section>
-
-
 
       <section className="aboutUs">
         <article className="aboutUsArticle">
@@ -87,7 +91,6 @@ const Home = () => {
             Project. we choose this side to help students be more arranged.
             they have all the details of their studies arranged in one place. We do it because
             we did not have this platform.
-           
           </h3>
           <br />
           <h2>Why Choose Us?</h2>
@@ -141,139 +144,114 @@ const Home = () => {
         </article>
       </section>
 
-      {/* <section className="ourService">
-      <h1>OUR SERVICES</h1>
-        <article className="Service">
-          <img
-            src="https://static.wixstatic.com/media/bd3f2b_20e1ab45bd5442748bf7789e5a4b8ea8~mv2.png/v1/fill/w_225,h_358,al_c,lg_1,q_85/bd3f2b_20e1ab45bd5442748bf7789e5a4b8ea8~mv2.webp"
-            alt="picService"
-            width="250px"
-            height="250px"
-          />
-          <h2>Grades</h2>
-          <h3>
-            In this page you can
-            <br />
-            see your grades faster
-            <br />
-            Without staying in suspense
-          </h3>
-        </article>
-        <article className="Service">
-          <img
-            src="https://www.clipartmax.com/png/middle/6-62802_newspaper-icon.png"
-            alt="picService"
-            width="250px"
-            height="250px"
-          />
-          <h2>News</h2>
-          <h3>
-            In this page you can
-            <br />
-            see your news in live
-            <br />
-            And not to hear from others
-          </h3>
-        </article>
-        <article className="Service">
-          <img
-            src="https://media.istockphoto.com/vectors/calendar-and-clock-icon-vector-id1001687382?k=20&m=1001687382&s=170667a&w=0&h=8ca7Z4N7HDfLOKEIq-KWc-yaS_UJ0QNtrv3VPqpbONs="
-            alt="picService"
-            width="250px"
-            height="250px"
-          />
-          <h2>Schedule</h2>
-          <h3>
-            In this page you can
-            <br />
-            see your schedule anytime
-            <br />
-            Without being late for class
-          </h3>
-        </article>
-      </section> */}
+{/* <section>
+  <h1>ABOUT THE WEB </h1>
+<h3>
+  This side established to target students in the institution they are.<br/>
+  Show them their scores are focused in one place. <br/>
+  Their updates on a separate and clear page.
+</h3>
+</section> */}
+
+
+
+
+
+
 
       <h1>MEET THE TEAM</h1>
       <section className="theTeam">
         <article className="student">
-          <img
+          <img className="picStudents"
             src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
             alt="picStudent"
-            width="250px"
-            height="250px"
           />
           <br />
-          <h3>students</h3>
+          <h2>Shimon Samay</h2>
           <h4>graduate Tech-Career</h4>
+          <a href="shimonsamay7@gmail.com" target="_blank">
           <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/>
+          width="38px" height="30px" alt="gifEmail"/></a>
+          <a href="https://github.com/ShimonSamay" target="_blank">
            <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/>
+          width="41px" height="30px" alt="gifGithub"/></a>
+          <a href="https://www.linkedin.com/in/shimon-samay-363a27217/" target="_blank">
            <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/>
+          width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
+
+
         <article className="student">
-          <img
+          <img  className="picStudents"
             src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
             alt="picStudent"
-            width="250px"
-            height="250px"
           />
           <br />
-          <h3>students</h3>
+          <h2>Jacob Shiber</h2>
           <h4>graduate Tech-Career</h4>
+          <a href="Yaakovshiber@gmail.com" target="_blank">
           <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/>
+          width="38px" height="30px" alt="gifEmail"/></a>
+          <a href="https://github.com/JacobShiber" target="_blank">
            <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/>
+          width="41px" height="30px" alt="gifGithub"/></a>
+          <a href="https://www.linkedin.com/in/yaakov-shiber-31a466226/" target="_blank">
            <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/>
+          width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
+
+
         <article className="student">
-          <img
+          <img  className="picStudents"
             src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
             alt="picStudent"
-            width="250px"
-            height="250px"
           />
           <br />
-          <h3>students</h3>
+          <h2>Keren Hailu</h2>
           <h4>graduate Tech-Career</h4>
+          <a href="keren4509@gmail.com" target="_blank">
           <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/>
+          width="38px" height="30px" alt="gifEmail"/></a>
+          <a href="https://github.com/kerenhailu" target="_blank">
            <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/>
+          width="41px" height="30px" alt="gifGithub"/></a>
+          <a href="https://www.linkedin.com/in/keren-hailu-58bb07218/" target="_blank">
            <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/>
+          width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
+
         <article className="student">
-          <img
+          <img  className="picStudents"
             src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
             alt="picStudent"
-            width="250px"
-            height="250px"
           />
           <br />
-          <h3>students</h3>
+          <h2>Shay Belayneh</h2>
           <h4>graduate Tech-Career</h4>
+          <a href="shay600195@gmail.com" target="_blank">
           <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/>
+          width="38px" height="30px" alt="gifEmail"/></a>
+          <a href="https://github.com/ShayBelayneh" target="_blank">
            <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/>
+          width="41px" height="30px" alt="gifGithub"/></a>
+          <a href="https://www.linkedin.com/in/shay-belayneh/" target="_blank">
            <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/>
+          width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
       </section>
+
       <section className="questionsText">
-        <h2>For questions, requests and inquiries we are always <br/>
+        <h1>GET IN TOUCH </h1>
+        <h2>For questions, requests and inquiries we are always 
           available and happy to help :</h2>
-        <label htmlFor="">Name : </label><br/>
-        <input /><br/>
-        <label htmlFor="">Email : </label><br/>
-        <input /><br/>
-        <label >Text : </label><br/>
-        <input className="questionsTextInput"/><br/>
-        <button>send</button>
+        {/* <label htmlFor="">Name : </label><br/> */}
+        <input placeholder="  Name" className="inputName"/>
+        {/* <label htmlFor="">Email : </label><br/> */}
+        <input placeholder="  Email" className="inputEmail"/><br/>
+        {/* <label >Text : </label><br/> */}
+        <input placeholder="  Massage" className="inputMassage"/><br/>
+        <button onClick={sendMassage}>send</button>
+        <hr/>
       </section>
 
       {/* <section className="questions">
