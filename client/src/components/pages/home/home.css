@@ -1,7 +1,10 @@
 .home h1 {
-  font-size: 30px;
-  text-shadow: 1px 1px 1px purple;
+  font-size: 40px;
+  text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
 }
+/* .home{
+  font-family: 'Mochiy Pop One', sans-serif;
+  font-family: 'Poppins', sans-serif;} */
 
 .theTeam {
   width: 99vw;
@@ -11,25 +14,44 @@
   justify-content: space-around;
 }
 .student {
-  width: 23vw;
-  height: 75%;
-  padding: 1%;
+  width: 22vw;
+  height: auto;
+  padding: 1.5%;
+  margin: 0.5%;
   /* margin: 1%; */
   /* border: 2px black solid; */
   /* box-shadow: 4px 4px 4px rgba(216, 205, 216, 0.712); */
   box-shadow: gray 5px 5px 5px 5px;
+  transition: 2s ease-in-out;
 }
-
+.picStudents{
+  width:16vw;
+   height:33vh;
+}
+/* .student img :hover{
+  width: 0.5%;
+} */
+.student:hover{
+  width: 23vw;
+}
 .mainPic {
   width: 100vw;
   height: 90vh;
-  opacity: 0.5;
+  opacity: 0.25;
   /* position: relative; */
+}
+.picOnIt{
+  width: 20vw;
+  height: 30vh; 
+  margin-right: -103px;
+  /* margin-top: 5vh; */
+  /* position: relative; */
+  margin-bottom: -92px;
 }
 .textOnPicMain {
   position: absolute;
   margin-left: 30vw;
-  margin-top: 20%;
+  margin-top: 20vh;
   font-size: 30px;
   padding: 1%;
 }
@@ -106,6 +128,46 @@
   text-align: center;
   /* position: absolute; */
 }
-/* .questionsTextInput {
-  padding: 10%;
-} */
+.questionsText button{
+  width: 30vw;
+  margin: 1%;
+  padding: 0.5%;
+border: none;
+box-shadow: 4px 4px 4px rgb(134, 128, 128);
+font-size: large;
+font-weight: bold;
+text-shadow:1px 1px 1px rgb(201, 117, 180) ;
+transition: 1s ease-in-out;
+}
+
+.questionsText button:hover{
+  background-color:rgb(202, 89, 202);
+}
+.questionsText input{
+border: none;
+  box-shadow: 4px 4px 4px rgb(134, 128, 128);
+  margin: 0.5%;
+}
+.inputEmail , .inputName{
+width: 30vw;
+height: 6vh;
+transition: 1s ease-in-out;
+}
+.inputMassage{
+width: 61vw;
+height: 25vh;
+transition: 1s ease-in-out;
+}
+ .inputMassage:hover{
+background-color: rgba(238, 196, 238, 0.795);
+ }
+ .inputEmail:hover{
+  background-color: rgba(238, 196, 238, 0.795);
+   }
+   .inputName:hover{
+    background-color: rgba(238, 196, 238, 0.795);
+     }
+.questionsText h2{
+  margin-right: 13vw;
+}
+
