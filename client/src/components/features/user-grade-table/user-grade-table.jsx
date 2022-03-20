@@ -1,60 +1,63 @@
 import React , {useState , useEffect} from "react";
 import { GetAllGrades } from "../../../services/userGrades/uses-grades-service";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 
 const UserGradesTable = () => {
 
-    let [users, setUsers] = useState([]);
+    let [userData, setUserData] = useState([]);
+    let [loading , setLoading] = useState(false);
+    let [name , setName] = useState("shimon");
 
-    let [id , setUserId] = useState("");
+    // const user = JSON.parse(localStorage.getItem("user"));
 
-    const user = JSON.parse(localStorage.getItem("user"));
-
-    setUserId(user.userId);
+    // setUserId(user.userId);
 
     useEffect(() => {
+      setLoading(true);
         GetAllGrades()
-        .then(data => setUsers(data))
+        .then(data => setUserData(data))
+        .finally(() => setLoading(false));
     } , []);  
 
    return (
+     <>
+     {
+       loading ? <Stack sx={{ color: 'grey.500' , marginLeft:"50vw" , marginTop:"30vh" }} spacing={2} direction="row">
+       <CircularProgress color="secondary" />
+     </Stack> : 
     <div style={{width:"70vw" , height:"30vh" , marginLeft:"15vw" , marginTop:"15vh" }}>
-    <TableContainer component={Paper}>
-    <Table sx={{ minWidth: 100 }} aria-label="simple table">
-      <TableHead>
-        <TableRow>
-          <TableCell align="right">Name</TableCell>
-          <TableCell align="right">Id</TableCell>
-          <TableCell align="right">Test</TableCell>
-          <TableCell align="right">Grade</TableCell>
-          <TableCell align="right">Course</TableCell>
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {users.filter((user) => user.userId === id ).map((user , index) => 
-              <TableRow
-            key={index}
-            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-          >
-            <TableCell align="right">{user.userName}</TableCell>
-            <TableCell align="right">{user.userId}</TableCell>
-            <TableCell align="right">{user.test}</TableCell>
-            <TableCell align="right">{user.grade}</TableCell>
-            <TableCell align="right">{user.course}</TableCell>
-          </TableRow>
-        )}
-        </TableBody>
-    </Table>
-  </TableContainer>
+    <table className="table-fill">
+<thead>
+<tr>
+<th className="text-left">Name</th>
+<th className="text-left">Id</th>
+<th className="text-left">Grade</th>
+<th className="text-left">Test</th>
+<th className="text-left">Course</th>
+</tr>
+</thead>
+<tbody className="table-hover">
+{
+userData.filter(user => user.userName === name).map((user , index) => 
+ <tr key={index}>
+ <td className="text-left">{user.userName}</td>
+ <td className="text-left">{user.userId}</td>
+ <td className="text-left">{user.grade}</td>
+ <td className="text-left">{user.test}</td>
+ <td className="text-left">{user.course}</td>
+</tr> 
+)
+}
+</tbody>
+</table>
   </div>
-   )
+     }
+</>
+)
 }
 
 export default UserGradesTable ;
+

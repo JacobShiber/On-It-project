@@ -20,7 +20,8 @@ const AddUserGrades = async (req, res) => {
 };
 
 const updateUserGrade = async (req, res) => {
-      await UsersGrades.updateOne({userId : req.body.userId , userName:req.body.userName , test:req.body.test} , req.body)
+      const {requestedGrade , newGrade} = req.body ;
+      await UsersGrades.updateOne(requestedGrade , newGrade)
       await UsersGrades.find()
       .then(result=>{res.status(200).json(result)})
       .catch(err=>{res.status(500).json({massage:"update is failed"})})
