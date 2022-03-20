@@ -18,12 +18,14 @@ const newsRouter=require('./routes/usersNews-router');
 const ScheduleRouter=require('./routes/schedule-router');
 const usersRouter = require('./routes/users-router');
 
+
 app.use('/news', passport.authenticate("jwt",{session:false}),newsRouter)
 app.use(passport.initialize());
 
 app.use('/users', usersRouter);
 app.use('/grades' , userGradesRouter);
 app.use('/schedule',ScheduleRouter)
+
 
 
 app.get('/', (req, res) => {
