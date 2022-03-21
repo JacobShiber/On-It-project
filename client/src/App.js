@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <UsersContextProvider>
-          {/* <GradesTable/> */}
           <PageRouting/>
         </UsersContextProvider>
       </header>

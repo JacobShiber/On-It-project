@@ -32,6 +32,7 @@ const Login = () => {
           localStorage.setItem('user', JSON.stringify(res.user))
           setUser(res.user);
           navigate('/home');
+          window.location.reload();
         }
         else {
           setLoginStatus(true);
