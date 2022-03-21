@@ -97,6 +97,7 @@ body {
 
 #contact input[type="text"],
 #contact input[type="email"],
+#contact input[type="password"],
 #contact input[type="tel"],
 #contact input[type="url"],
 #contact textarea,
@@ -137,6 +138,7 @@ fieldset {
 }
 
 #contact input[type="text"],
+#contact input[type="password"],
 #contact input[type="email"],
 #contact input[type="tel"],
 #contact input[type="url"],
@@ -149,6 +151,7 @@ fieldset {
 }
 
 #contact input[type="text"]:hover,
+#contact input[type="password"]:hover,
 #contact input[type="email"]:hover,
 #contact input[type="tel"]:hover,
 #contact input[type="url"]:hover,
@@ -258,154 +261,6 @@ fieldset {
   background-color: rgb(182, 182, 182);
 }
 
-/* .table-Inputs {
-  padding: 5px 15px;
-  margin: 4px;
-  border-radius: 3px;
-  margin-bottom: 2vh;
-  border: 3px solid rgba(128, 0, 128, 0.801);
-  text-align: center;
-}
-
-.table-select {
-  padding: 5px 15px;
-  margin: 4px;
-  text-align: center;
-  border: 3px solid rgba(128, 0, 128, 0.801);
-  border-radius: 5px;
-}
-
-.table-button {
-  padding: 5px 20px;
-  border-radius: 3px;
-  margin-left: 1.5vw;
-  background-color: rgba(128, 0, 128, 0.801);
-  color: white;
-  transition: 0.3s linear;
-}
-
-.table-button:hover {
-  transform: scale(1.2);
-  border: 3px solid rgba(128, 0, 128, 0.801);
-  background-color: #ebebeb;
-  color: rgba(128, 0, 128, 0.801);
-  cursor: pointer;
-} */
-
-/* admin Grades table css */
-
-/*** Table Styles **/
-
-/* 
-.table-fill {
-  background: white;
-  text-align: center;
-  border-radius: 3px;
-  border-collapse: collapse;
-  height: 20vh;
-  margin-left: 10vw;
-  margin-top: 2vh;
-  max-width: 70%;
-  padding: 5px;
-  width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite; */
-
-/* .table-fill {
- background: white;
- text-align: center;
- border-radius:3px;
- border-collapse: collapse;
- height: 20vh ;
- margin-left: 10vw;
- margin-top: 2vh;
- max-width: 70%;
- padding:5px;
- width: 100%;
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
- animation: float 5s infinite;
-}
-
-th {
-  color: #d5dde5;
-  background: rgba(128, 0, 128, 0.801);
-  border-bottom: 2px solid whitesmoke;
-  font-size: 15px;
-  font-weight: 100;
-  padding: 15px;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  vertical-align: middle;
-}
-
-th:first-child {
-  border-top-left-radius: 3px;
-}
-
-th:last-child {
-  border-top-right-radius: 3px;
-  border-right: none;
-}
-
-tr {
-  border-top: 1px solid #c1c3d1;
-  border-bottom: 1px solid #c1c3d1;
-  color: #666b85;
-  font-size: 14px;
-  font-weight: normal;
-  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-}
-
-tr:hover td {
-  background: rgba(128, 0, 128, 0.801);
-  color: #ffffff;
-  border-top: 1px solid #22262e;
-}
-
-tr:first-child {
-  border-top: none;
-}
-
-tr:last-child {
-  border-bottom: none;
-}
-
-tr:nth-child(odd) td {
-  background: #ebebeb;
-}
-
-tr:nth-child(odd):hover td {
-  background: rgba(128, 0, 128, 0.801);
-}
-
-tr:last-child td:first-child {
-  border-bottom-left-radius: 3px;
-}
-
-tr:last-child td:last-child {
-  border-bottom-right-radius: 3px;
-}
-
-td {
-  background: #ffffff;
-  font-weight: 300;
-  font-size: 15px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #c1c3d1;
-}
-
-.admin-Buttons {
-  cursor: pointer;
-  transition: 0.5s linear;
-}
-
-.admin-Buttons:hover {
-  transform: scale(1.3);
-} */
-
-/* ************************************************ */
-
-
 .footer #button {
   width: 35px;
   height: 35px;
@@ -446,7 +301,7 @@ td {
   position: relative;
   top: 0;
   left: 0;
-  background: rgba(128, 0, 128, 0.507);
+  background: rgba(128, 0, 128, 0.9);
 }
 
 
