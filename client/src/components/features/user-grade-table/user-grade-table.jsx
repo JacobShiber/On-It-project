@@ -9,11 +9,9 @@ const UserGradesTable = () => {
 
     let [userData, setUserData] = useState([]);
     let [loading , setLoading] = useState(false);
-    let [name , setName] = useState("shimon");
 
-    // const user = JSON.parse(localStorage.getItem("user"));
+    const userFromMemory = JSON.parse(localStorage.getItem("user"));
 
-    // setUserId(user.userId);
 
     useEffect(() => {
       setLoading(true);
@@ -41,7 +39,7 @@ const UserGradesTable = () => {
 </thead>
 <tbody className="table-hover">
 {
-userData.filter(user => user.userName === name).map((user , index) => 
+userData.filter(user => user.userId === userFromMemory.id).map((user , index) => 
  <tr key={index}>
  <td className="text-left">{user.userName}</td>
  <td className="text-left">{user.userId}</td>

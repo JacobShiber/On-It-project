@@ -27,9 +27,9 @@ app.use('/schedule', passport.authenticate("jwt",{session:false}), ScheduleRoute
 
 
 
-app.get('/', (req, res) => {
+app.get('/', (req , res) => {
     res.status(200).send('Server is online');
-})
+});
 
 
 app.listen(port);
