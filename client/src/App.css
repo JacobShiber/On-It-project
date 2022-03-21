@@ -260,7 +260,7 @@ fieldset {
   background-color: rgb(182, 182, 182);
 }
 
-.table-Inputs {
+/* .table-Inputs {
   padding: 5px 15px;
   margin: 4px;
   border-radius: 3px;
@@ -292,7 +292,7 @@ fieldset {
   background-color:#EBEBEB;
   color:  rgba(128, 0, 128, 0.801);
   cursor: pointer;
-}
+} */
 
 
 
@@ -309,7 +309,7 @@ fieldset {
 
 /*** Table Styles **/
 
-.table-fill {
+/* .table-fill {
  background: white;
  text-align: center;
  border-radius:3px;
@@ -399,7 +399,7 @@ td {
 
 .admin-Buttons:hover {
   transform: scale(1.3);
-}
+} */
 
 /* ************************************************ */
 
