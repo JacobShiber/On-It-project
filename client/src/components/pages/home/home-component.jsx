@@ -70,12 +70,10 @@ const Home = () => {
       </section>
 
       <section className="aboutUs">
-        <article className="aboutUsArticle">
+        <article className="aboutUsPic">
           <img
             src="https://media.istockphoto.com/photos/concept-against-racism-or-racial-discrimination-by-showing-with-hand-picture-id1252564431?s=2048x2048"
             alt="us"
-            width="700px"
-            height="400px"
           />
         </article>
         <article className="aboutUsArticle">
