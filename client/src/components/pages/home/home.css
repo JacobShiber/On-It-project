@@ -2,6 +2,10 @@
   font-size: 40px;
   text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
 }
+.home{
+  width: 100vw;
+  height: 100vh;
+}
 /* .home{
   font-family: 'Mochiy Pop One', sans-serif;
   font-family: 'Poppins', sans-serif;} */
@@ -80,8 +84,8 @@
   width: 30%;
 }
 .Service img {
-  width: 100px;
-  height: 100px;
+  width: 8vw;
+  height: 12vh;
   border-radius: 50%;
   box-shadow: 4px 4px 4px rgb(134, 128, 128);
   margin: 3%;
@@ -116,11 +120,6 @@
   font-weight: 400;
   font-size: 14px;
 }
-/* .questions img {
-  height: 50vh;
-  opacity: 0.2;
-  width: 99vw;
-} */
 .questionsText {
   margin-top: 1%;
   background: linear-gradient(white, rgb(179, 172, 172));
@@ -171,3 +170,30 @@ background-color: rgba(238, 196, 238, 0.795);
   margin-right: 13vw;
 }
 
+
+@media screen and (max-width: 768px){
+  .student{
+    width: 45vw;
+    margin-top: 4%;
+   }
+   .picOnIt h1{
+    font-size: medium;
+   }
+   .textOnPicMain h3{
+ font-size: x-large;
+   }
+}
+
+
+/* @media screen and (max-width: 426px){
+ .home h1{
+font-size: x-large;
+ }
+ .home h2 , h4{
+font-size: small;
+ }
+ .student{
+  width: 45vw;
+  margin-top: 4%;
+ }
+} */

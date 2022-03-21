@@ -46,7 +46,7 @@ const Login = () => {
   <form id="contact" action="" method="post">
     <h3>Login</h3>
     {
-      loginStatus === true? <div><p>{loginMessage}</p></div> : null
+      loginStatus === true? <div><p className='loginMessage'>{loginMessage}</p></div> : null
     }
     <fieldset>
       <input name="email" placeholder="Your Email Address" type="email" tabIndex="2" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>

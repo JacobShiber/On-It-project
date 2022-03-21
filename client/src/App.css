@@ -27,12 +27,19 @@ h1 {
   padding: 1%;
 }
 
+.loginMessage{
+  color: red;
+  font-weight: bold;
+  font-size: large;
+}
+
 .loginPage {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+
 }
 
 .leftSize {
@@ -172,7 +179,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-  background: #43a047;
+  background: rgb(199, 34, 199);
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out; 
