@@ -27,10 +27,8 @@ const Home = () => {
       <h1>OUR SERVICES</h1>
         <article className="Service">
           <img
-            src="https://ak.picdn.net/shutterstock/videos/1069950295/thumb/1.jpg"
+            src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
             alt="picService"
-            width="250px"
-            height="250px"
           />
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
@@ -45,8 +43,6 @@ const Home = () => {
           <img
             src="https://thumbs.gfycat.com/BlindZigzagGreatargus-max-1mb.gif"
             alt="picService"
-            width="250px"
-            height="250px"
           />
              <Link to="/news"><h2>News</h2></Link>
           <h3>
@@ -59,10 +55,8 @@ const Home = () => {
         </article>
         <article className="Service">
           <img
-            src="https://media.istockphoto.com/vectors/calendar-and-clock-icon-vector-id1001687382?k=20&m=1001687382&s=170667a&w=0&h=8ca7Z4N7HDfLOKEIq-KWc-yaS_UJ0QNtrv3VPqpbONs="
+            src="https://i.pinimg.com/originals/36/1a/f8/361af8ea19b3ae80d06922bb2a314afd.jpg"
             alt="picService"
-            width="250px"
-            height="250px"
           />
           <Link to="/schedule"><h2>Schedule</h2></Link>
           <h3>
@@ -76,21 +70,21 @@ const Home = () => {
       </section>
 
       <section className="aboutUs">
-        <article className="aboutUsArticle">
+        <article className="aboutUsPic">
           <img
             src="https://media.istockphoto.com/photos/concept-against-racism-or-racial-discrimination-by-showing-with-hand-picture-id1252564431?s=2048x2048"
             alt="us"
-            width="700px"
-            height="400px"
           />
         </article>
         <article className="aboutUsArticle">
           <h1>ABOUT US</h1>
           <h3>
-            We are four students from Tech-Career School from israel and this is our final
-            Project. we choose this side to help students be more arranged.
-            they have all the details of their studies arranged in one place. We do it because
-            we did not have this platform.
+            We are four Tech-Career's students from israel and this is our final
+            Project. <br/>
+            We chose this idea for students to aid them to be more arranged.
+            The main goal is to have all the details of their studies arranged in one place. <br/>
+            We do it because
+            we did not have this platform , and we think that every student should have it.
           </h3>
           <br />
           <h2>Why Choose Us?</h2>

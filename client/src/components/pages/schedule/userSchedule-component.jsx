@@ -17,8 +17,7 @@ const localizer = dateFnsLocalizer({
     parse,
     startOfWeek,
     getDay,
-    locales,
-    
+    locales, 
 });
 
 let events = [
@@ -38,11 +37,8 @@ function UserSchedule() {
         setAllEvents(result);
       })
     }, [])
-
-
-
     return (
-        <div className="App">
+        <div className="UserSchedule">
             <h1>Calendar</h1>
             <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
         </div>

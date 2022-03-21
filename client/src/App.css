@@ -27,12 +27,19 @@ h1 {
   padding: 1%;
 }
 
+.loginMessage{
+  color: red;
+  font-weight: bold;
+  font-size: large;
+}
+
 .loginPage {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100vw;
   height: 100vh;
+
 }
 
 .leftSize {
@@ -171,7 +178,7 @@ fieldset {
 }
 
 #contact button[type="submit"]:hover {
-  background: #43a047;
+  background: rgb(199, 34, 199);
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -251,7 +258,7 @@ fieldset {
   background-color: rgb(182, 182, 182);
 }
 
-.table-Inputs {
+/* .table-Inputs {
   padding: 5px 15px;
   margin: 4px;
   border-radius: 3px;
@@ -283,11 +290,12 @@ fieldset {
   background-color: #ebebeb;
   color: rgba(128, 0, 128, 0.801);
   cursor: pointer;
-}
+} */
 
 /* admin Grades table css */
 
 /*** Table Styles **/
+
 
 .table-fill {
   background: white;
@@ -302,6 +310,20 @@ fieldset {
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   animation: float 5s infinite;
+
+/* .table-fill {
+ background: white;
+ text-align: center;
+ border-radius:3px;
+ border-collapse: collapse;
+ height: 20vh ;
+ margin-left: 10vw;
+ margin-top: 2vh;
+ max-width: 70%;
+ padding:5px;
+ width: 100%;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ animation: float 5s infinite;
 }
 
 th {
@@ -379,7 +401,7 @@ td {
 
 .admin-Buttons:hover {
   transform: scale(1.3);
-}
+} */
 
 /* ************************************************ */
 
