@@ -10,11 +10,13 @@ import Schedule from "../pages/schedule/schedule-component";
 import Footer from "../features/footer/footer-component";
 import Navbar from "../features/navbar/navbar-component";
 
+const user = JSON.parse(localStorage.getItem('user'));
+
 const PageRouting = () => {
   return (
     <div> 
       <BrowserRouter>
-      {/* <Navbar/> */}
+      {user? <Navbar/> : null}
         <Routes>
           <Route exact path="/" element={<LoginPage />} />
           <Route exact path="/login" element={<Login />} />
