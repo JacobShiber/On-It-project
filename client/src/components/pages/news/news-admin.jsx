@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { UsersContext } from '../../../context/users-context/users-context';
 
-import { GetAllNews, PostNews } from '../../../services/newsUser/newsUser.service';
+import { GetAllNews, PostNews, DeleteNews } from '../../../services/newsUser/newsUser.service';
 
 const NewsAdmin = () => {
     let { user } = useContext(UsersContext);
@@ -26,6 +26,16 @@ const NewsAdmin = () => {
         })
     }
 
+    const deleteNews = (idValue) => {
+        let result = window.confirm(`Are you sure you want to delete this?`);
+        if (result == true) {
+            DeleteNews(idValue).then(() => window.location.reload());
+        }
+        else{
+            return null;
+        };
+    }
+
     return (
         <div>
             <div className="newsInputs">
@@ -34,24 +44,25 @@ const NewsAdmin = () => {
                     <button type="submit" onClick={() => { PostNews(update) }}>Submit</button>
                 </form>
             </div>
-            <div className = "newsContainer">
+            <div className="newsContainer">
                 {
                     news.map(update =>
                         <div className='news'>
-                        <div className="newsCard">
-                           <div> <img src={update.userImg} alt="adminPicture" />
-                            
-                                <h3>{update.userName}</h3>
-                                <p>{update.role}</p>
-                                <p>{update.school}</p>
+                            <div className="newsCard">
+                                {user.firstName == update.userName ? <button onClick={() => deleteNews(update._id)}>Delete</button> : null}
+                                <div> <img src={update.userImg} alt="adminPicture" />
+
+                                    <h3>{update.userName}</h3>
+                                    <p>{update.role}</p>
+                                    <p>{update.school}</p>
+                                </div>
+                                <div>
+                                    <h4 className='datePost'>{update.createdAt.split('T')[0]}</h4>
+                                    <br />
+                                    <h2>{update.data}</h2>
+                                </div>
                             </div>
-                            <div>
-                                <h4 className='datePost'>{update.createdAt.split('T')[0]}</h4>
-                                <br/>
-                                <h2>{update.data}</h2>
-                            </div>
-                            </div>
-                            <br/>
+                            <br />
                         </div>
                     )
                 }
