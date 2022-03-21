@@ -22,13 +22,13 @@ app.use('/news', passport.authenticate("jwt",{session:false}),newsRouter)
 app.use(passport.initialize());
 
 app.use('/users', usersRouter);
-app.use('/grades' , userGradesRouter);
-app.use('/schedule',ScheduleRouter)
+app.use('/grades' , passport.authenticate("jwt",{session:false}), userGradesRouter);
+app.use('/schedule', passport.authenticate("jwt",{session:false}), ScheduleRouter)
 
 
 
 app.listen(process.env.PORT);
 app.get('/', (req, res) => {
     res.status(200).send('Server is online');
-})
+});
 

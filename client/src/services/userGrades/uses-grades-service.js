@@ -2,7 +2,11 @@ const basic_url = 'http://localhost:6500/grades';
 
 export const GetAllGrades = async () => {
   try {
-    return await fetch(`${basic_url}`)
+    return await fetch(`${basic_url}` , {
+      headers: {
+        Authorization:`bearer ${localStorage.getItem("token")}` 
+      }
+    })
       .then((res) => res.json())
       .catch((error) => console.log({ error: "the method get isnt work" }));
   } catch (error) {
@@ -12,7 +16,11 @@ export const GetAllGrades = async () => {
 
 export const GetGradeById = async () => {
   try {
-    return await fetch(`${basic_url}/id`)
+    return await fetch(`${basic_url}/id` , {
+      headers: {
+        Authorization:`bearer ${localStorage.getItem("token")}` 
+      }
+    })
       .then((res) => res.json())
       .catch((error) => console.log({ error: "the method getById isnt work" }));
   } catch (error) {
@@ -24,7 +32,7 @@ export const PostGrade = async (userData) => {
   try {
     return await fetch(`${basic_url}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json" , Authorization:`bearer ${localStorage.getItem("token")}` },
       body: JSON.stringify(userData),
     });
   } catch (error) {
@@ -36,7 +44,7 @@ export const PutGrade = async (userData) => {
   try {
     return await fetch(`${basic_url}`, {
       method: "PUT",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Authorization:`bearer ${localStorage.getItem("token")}` },
       body: JSON.stringify(userData),
     });
   } catch (error) {
@@ -49,7 +57,7 @@ export const DeleteGrade = async (userData) => {
     return await fetch(`${basic_url}`, {
       method: "DELETE",
       body: JSON.stringify(userData),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", Authorization:`bearer ${localStorage.getItem("token")}` },
     });
   } catch (error) {
     console.log("error in method delete");

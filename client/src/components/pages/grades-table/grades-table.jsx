@@ -3,16 +3,17 @@ import AdminGradesTable from "../../features/admin-grades-table/admin-grade-tabl
 import UserGradesTable from "../../features/user-grade-table/user-grade-table";
 import './grades.css'
 const GradesTable = () => {
-  let [view, setView] = useState(false);
+  // let [view, setView] = useState(false);
 
-  let changeView = () => {
-    setView(!view);
-  };
+  // let changeView = () => {
+  //   setView(!view);
+  // };
+
+  const user = JSON.parse(localStorage.getItem('user'));
 
   return (
     <div>
-      <button onClick={changeView}>{view ? "Admin-View" : "Student-View"}</button>
-      {view ? <UserGradesTable /> : <AdminGradesTable />}
+      {user.isAdmin === false ? <UserGradesTable /> : <AdminGradesTable />}
     </div>
   );
 };
