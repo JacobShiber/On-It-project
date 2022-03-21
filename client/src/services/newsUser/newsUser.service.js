@@ -40,9 +40,9 @@ export const PostNews = async (userData) => {
   }
 };
 
-export const PutNews = async (userData) => {
+export const PutNews = async (userData, id) => {
   try {
-    return await fetch(`${basic_url}/id`, {
+    return await fetch(`${basic_url}/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json", Authorization:`bearer ${localStorage.getItem("token")}`  },
       body: JSON.stringify(userData),
@@ -52,9 +52,9 @@ export const PutNews = async (userData) => {
   }
 };
 
-export const DeleteNews = async () => {
+export const DeleteNews = async (id) => {
   try {
-    return await fetch(`${basic_url}/id`, {
+    return await fetch(`${basic_url}/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json", Authorization:`bearer ${localStorage.getItem("token")}`  },
     });
