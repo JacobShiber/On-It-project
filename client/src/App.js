@@ -13,8 +13,8 @@ function App() {
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@500&display=swap');
 </style>
         <UsersContextProvider>
-          <GradesTable/>
-          {/* <PageRouting/> */}
+          {/* <GradesTable/> */}
+          <PageRouting/>
         </UsersContextProvider>
       </header>
     </div>
