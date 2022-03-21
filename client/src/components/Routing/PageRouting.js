@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../features/login/login-component";
 import Contact from "../pages/contact/contact-component";
+import GradesTable from "../pages/grades-table/grades-table";
 // import Register from "../features/register/register-component";
 import Home from "../pages/home/home-component";
 import LoginPage from "../pages/login/loginPage-component";
@@ -19,6 +20,7 @@ const PageRouting=()=> {
             <Route exact path="/home" element={<Home />} />
             <Route exact path="/news" element={<News />} />
             <Route exact path="/contact" element={<Contact />} />
+            <Route exact path="/grades" element={<GradesTable />} />
             <Route exact path="/schedule" element={<Schedule />} />
           </Routes>
       </BrowserRouter>
