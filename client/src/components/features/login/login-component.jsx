@@ -50,10 +50,10 @@ const Login = () => {
       loginStatus === true? <div><p className='loginMessage'>{loginMessage}</p></div> : null
     }
     <fieldset>
-      <input name="email" placeholder="Your Email Address" type="email" tabIndex="2" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
+      <input name="email" autocomplete placeholder="Your Email Address" type="email" tabIndex="2" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
     </fieldset>
     <fieldset>
-      <input name="password" placeholder="Your password" type="text" tabIndex="4" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
+      <input name="password" autocomplete = "off" placeholder="Your password" type="password" tabIndex="4" required onChange = {(e) => {defineUser(e.target.name, e.target.value)}}/>
     </fieldset>
     <fieldset>
       <button onClick = {sendUser} type="submit" id="contact-submit" data-submit="...Sending">Login</button>
