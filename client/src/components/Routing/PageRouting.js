@@ -8,13 +8,14 @@ import Home from "../pages/home/home-component";
 import LoginPage from "../pages/login/loginPage-component";
 import News from "../pages/news/news-component";
 import Schedule from "../pages/schedule/schedule-component";
-import GradesTable from "../pages/grades-table/grades-table";
 import Footer from "../features/footer/footer-component";
+import Navbar from "../features/navbar/navbar-component";
 
 const PageRouting = () => {
   return (
     <div> 
       <BrowserRouter>
+      {/* <Navbar/> */}
         <Routes>
           <Route exact path="/" element={<LoginPage />} />
           <Route exact path="/login" element={<Login />} />

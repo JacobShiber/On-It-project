@@ -296,7 +296,7 @@ fieldset {
 
 /*** Table Styles **/
 
-
+/* 
 .table-fill {
   background: white;
   text-align: center;
@@ -309,7 +309,7 @@ fieldset {
   padding: 5px;
   width: 100%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
+  animation: float 5s infinite; */
 
 /* .table-fill {
  background: white;

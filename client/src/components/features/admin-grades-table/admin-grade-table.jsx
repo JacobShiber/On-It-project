@@ -79,7 +79,7 @@ return (
  <select className="table-select" name="test"  onChange={updateValue}>
  <option>Test</option>
    {
-     tests.map((test , index) => 
+     tests?.map((test , index) => 
           <option key={index} value={test}>{test}</option>
      )
    }
@@ -89,7 +89,7 @@ return (
  <select className="table-select"  name="course" onChange={updateValue}>
  <option>Course</option>
    {
-     courses.map((course , index) => 
+     courses?.map((course , index) => 
           <option key={index} value={course}>{course}</option>
      )
    }
@@ -112,7 +112,7 @@ return (
 </thead>
 <tbody className="table-hover">
 {
-usersData.map((user , index) => 
+usersData?.map((user , index) => 
 <tr key={index}>
  <td className="text-left">{user.userName}</td>
  <td className="text-left">{user.userId}</td>
