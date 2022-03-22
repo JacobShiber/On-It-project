@@ -18,6 +18,7 @@ const PageRouting = () => {
   useEffect(() => {
     setUser(localStorage.getItem("user"));
   } , []);
+  
   console.log(user);
   return (
     <div> 

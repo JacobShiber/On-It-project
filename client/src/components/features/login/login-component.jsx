@@ -9,6 +9,8 @@ const Login = () => {
   const [loginStatus, setLoginStatus] = useState(false);
   let navigate = useNavigate();
 
+  const ifUser = JSON.parse(localStorage.getItem('user'));
+
   const defineUser = (name, value) => {
     switch (name) {
       case "email":
@@ -44,7 +46,7 @@ const Login = () => {
 
   return (
     <div className="container" id='loginContainer'>  
-  <form id="contact" action="" method="post">
+ <form id="contact" action="" method="post">
     <h3>Login</h3>
     {
       loginStatus === true? <div><p className='loginMessage'>{loginMessage}</p></div> : null
