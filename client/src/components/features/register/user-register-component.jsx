@@ -19,9 +19,6 @@ const style = {
   p: 4,
 };
 
-
-import defultUser from './defultPicUser.jpg';
-
 const UserRegister = () => {
 
   // let navigator = useNavigate() ;
@@ -42,7 +39,7 @@ const UserRegister = () => {
     setOpen(!open);
   };
     // console.log(user);
-  }
+  
   
   return (  
     <div className="container">
