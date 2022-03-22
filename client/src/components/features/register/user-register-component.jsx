@@ -1,6 +1,7 @@
 import React  from "react";
 import { useState } from "react";
 import {userRegister} from '../../../services/users/users.service';
+import defultUser from './defultPicUser.jpg';
 
 const UserRegister = () => {
    let [user , setUser] = useState({isAdmin : false, role: "Student"});
@@ -11,7 +12,9 @@ const UserRegister = () => {
   const addUser = (e) => {
     e.preventDefault();
     setUser({...user});
+    if(user.img == undefined) user.img = {defultUser};
     userRegister(user);
+    // console.log(user);
   }
   
   return (  
@@ -40,7 +43,7 @@ const UserRegister = () => {
       <input  name="school"  placeholder="Your school" type="text" tabIndex="4" required  onChange={getValues}/>
     </fieldset>
     <fieldset>
-      <input  name="img" placeholder="Your img" type="text" tabIndex="4" required  onChange={getValues}/>
+      <input  name="img" placeholder="Your img" type="text" tabIndex="4" onChange={getValues}/>
     </fieldset>
     <fieldset>
       <button onClick = {addUser}  type="submit" id="contact-submit" data-submit="...Sending">Register</button>
