@@ -20,7 +20,7 @@ const style = {
 };
 
 
-import defultUser from './defultPicUser.jpg';
+// import defultUser from './defultPicUser.jpg';
 
 const UserRegister = () => {
 
@@ -42,7 +42,7 @@ const UserRegister = () => {
     setOpen(!open);
   };
     // console.log(user);
-  }
+  
   
   return (  
     <div className="container">
