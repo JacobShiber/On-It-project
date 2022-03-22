@@ -1,17 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GetAllGrades , PutGrade , PostGrade , DeleteGrade } from "../../../services/userGrades/uses-grades-service" ;
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 import DeleteIcon from '@mui/icons-material/Delete';
 import UpdateIcon from '@mui/icons-material/Update';
-
-
+import { LoadingContext } from "../../../context/loading/loading-context";
 
 const AdminGradesTable = () => {
 
   let [userToUpdate , setUserToUpdate] = useState({}) ;
 
-  let [loading , setLoading] = useState(false);
+  let {loading,setLoading} = useContext(LoadingContext);
 
   let [usersData, setUsersData] = useState([]);
 
@@ -79,7 +78,7 @@ return (
  <select className="table-select" name="test"  onChange={updateValue}>
  <option>Test</option>
    {
-     tests.map((test , index) => 
+     tests?.map((test , index) => 
           <option key={index} value={test}>{test}</option>
      )
    }
@@ -89,13 +88,12 @@ return (
  <select className="table-select"  name="course" onChange={updateValue}>
  <option>Course</option>
    {
-     courses.map((course , index) => 
+     courses?.map((course , index) => 
           <option key={index} value={course}>{course}</option>
      )
    }
 
  </select>
-
 <button className="table-button" type="button" onClick={addGrade}>Add Grade</button>
 
 
@@ -112,7 +110,7 @@ return (
 </thead>
 <tbody className="table-hover">
 {
-usersData.map((user , index) => 
+usersData?.map((user , index) => 
 <tr key={index}>
  <td className="text-left">{user.userName}</td>
  <td className="text-left">{user.userId}</td>

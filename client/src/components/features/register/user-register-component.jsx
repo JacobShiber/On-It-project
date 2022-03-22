@@ -20,6 +20,7 @@ const style = {
 };
 
 
+import defultUser from './defultPicUser.jpg';
 
 const UserRegister = () => {
 
@@ -35,10 +36,13 @@ const UserRegister = () => {
 
   const addUser = (e) => {
     e.preventDefault();
+    if(user.img == undefined) user.img = {defultUser};
     setUser({...user});
     userRegister(user);
     setOpen(!open);
   };
+    // console.log(user);
+  }
   
   return (  
     <div className="container">
@@ -81,7 +85,7 @@ const UserRegister = () => {
       <input  name="school"  placeholder="Your school" type="text" tabIndex="4" required  onChange={getValues}/>
     </fieldset>
     <fieldset>
-      <input  name="img" placeholder="Your img" type="text" tabIndex="4" required  onChange={getValues}/>
+      <input  name="img" placeholder="Your img" type="text" tabIndex="4" onChange={getValues}/>
     </fieldset>
     <fieldset>
       <button onClick = {addUser} type="submit" id="contact-submit" data-submit="...Sending">Register</button>

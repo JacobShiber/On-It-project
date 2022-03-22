@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const schama = mongoose.Schema;
-
 const User = new schama(
   {
     firstName: { type: String, required: true },
@@ -10,7 +9,7 @@ const User = new schama(
     phone: { type: String, required: true },
     password : { type: String, required: true },
     isAdmin : { type: Boolean, required: true },
-    img : { type: String, required: true },
+    img : { type: String},
     course : { type: String, required: true },
     school : { type: String, required: true },
   },
