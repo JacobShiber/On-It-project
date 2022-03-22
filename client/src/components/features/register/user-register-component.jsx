@@ -11,8 +11,8 @@ const UserRegister = () => {
   }
   const addUser = (e) => {
     e.preventDefault();
-    setUser({...user});
     if(user.img == undefined) user.img = {defultUser};
+    setUser({...user});
     userRegister(user);
     // console.log(user);
   }
