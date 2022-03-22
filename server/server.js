@@ -28,7 +28,11 @@ app.use('/schedule', passport.authenticate("jwt",{session:false}), ScheduleRoute
 
 
 app.listen(process.env.PORT);
-app.get('/', (req, res) => {
-    res.status(200).send('Server is online');
-});
+
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static(path.join(__dirname, '../client/build')));
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    })
+}
 
