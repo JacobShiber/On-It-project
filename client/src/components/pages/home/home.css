@@ -2,6 +2,10 @@
   font-size: 40px;
   text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
 }
+.home {
+  width: 100vw;
+  height: 100vh;
+}
 /* .home{
   font-family: 'Mochiy Pop One', sans-serif;
   font-family: 'Poppins', sans-serif;} */
@@ -24,14 +28,14 @@
   box-shadow: gray 5px 5px 5px 5px;
   transition: 2s ease-in-out;
 }
-.picStudents{
-  width:16vw;
-   height:33vh;
+.picStudents {
+  width: 18vw;
+  height: 35vh;
 }
 /* .student img :hover{
   width: 0.5%;
 } */
-.student:hover{
+.student:hover {
   width: 23vw;
 }
 .mainPic {
@@ -40,9 +44,9 @@
   opacity: 0.25;
   /* position: relative; */
 }
-.picOnIt{
+.picOnIt {
   width: 20vw;
-  height: 30vh; 
+  height: 30vh;
   margin-right: -103px;
   /* margin-top: 5vh; */
   /* position: relative; */
@@ -80,8 +84,8 @@
   width: 30%;
 }
 .Service img {
-  width: 100px;
-  height: 100px;
+  width: 8vw;
+  height: 12vh;
   border-radius: 50%;
   box-shadow: 4px 4px 4px rgb(134, 128, 128);
   margin: 3%;
@@ -104,6 +108,13 @@
   flex-wrap: wrap;
   padding: 4%;
 }
+.aboutUsPic {
+  width: 45vw;
+}
+.aboutUsPic img {
+  width: 45vw;
+  height: auto;
+}
 .aboutUsArticle {
   text-align: left;
   width: 45vw;
@@ -116,11 +127,6 @@
   font-weight: 400;
   font-size: 14px;
 }
-/* .questions img {
-  height: 50vh;
-  opacity: 0.2;
-  width: 99vw;
-} */
 .questionsText {
   margin-top: 1%;
   background: linear-gradient(white, rgb(179, 172, 172));
@@ -128,46 +134,89 @@
   text-align: center;
   /* position: absolute; */
 }
-.questionsText button{
+.questionsText button {
   width: 30vw;
   margin: 1%;
   padding: 0.5%;
-border: none;
-box-shadow: 4px 4px 4px rgb(134, 128, 128);
-font-size: large;
-font-weight: bold;
-text-shadow:1px 1px 1px rgb(201, 117, 180) ;
-transition: 1s ease-in-out;
+  border: none;
+  box-shadow: 4px 4px 4px rgb(134, 128, 128);
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(201, 117, 180);
+  transition: 1s ease-in-out;
 }
 
-.questionsText button:hover{
-  background-color:rgb(202, 89, 202);
+.questionsText button:hover {
+  background-color: rgb(202, 89, 202);
 }
-.questionsText input{
-border: none;
+.questionsText input {
+  border: none;
   box-shadow: 4px 4px 4px rgb(134, 128, 128);
   margin: 0.5%;
 }
-.inputEmail , .inputName{
-width: 30vw;
-height: 6vh;
-transition: 1s ease-in-out;
+.inputEmail,
+.inputName {
+  width: 30vw;
+  height: 6vh;
+  transition: 1s ease-in-out;
 }
-.inputMassage{
-width: 61vw;
-height: 25vh;
-transition: 1s ease-in-out;
+.inputMassage {
+  width: 61vw;
+  height: 25vh;
+  transition: 1s ease-in-out;
 }
- .inputMassage:hover{
-background-color: rgba(238, 196, 238, 0.795);
- }
- .inputEmail:hover{
+.inputMassage:hover {
   background-color: rgba(238, 196, 238, 0.795);
-   }
-   .inputName:hover{
-    background-color: rgba(238, 196, 238, 0.795);
-     }
-.questionsText h2{
+}
+.inputEmail:hover {
+  background-color: rgba(238, 196, 238, 0.795);
+}
+.inputName:hover {
+  background-color: rgba(238, 196, 238, 0.795);
+}
+.questionsText h2 {
   margin-right: 13vw;
 }
 
+@media screen and (max-width: 768px) {
+  .student {
+    width: 45vw;
+    margin-top: 4%;
+  }
+  .aboutUsPic img {
+    width: 90vw;
+  }
+  .aboutUsArticle {
+    width: 90vw;
+  }
+  .picOnIt {
+    /* margin-left: -20vw; */
+  }
+  .textOnPicMain h3 {
+    font-size: x-large;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .home h1 {
+    font-size: x-large;
+  }
+  .home h2,
+  h4,
+  h3 {
+    font-size: small;
+  }
+  .Service {
+    width: 40vw;
+    margin: 1%;
+  }
+  .aboutUsArticle h3 {
+    font-size: medium;
+  }
+  .ourService {
+    justify-content: space-around;
+  }
+  .questionsText h2 {
+    margin-left: 12%;
+  }
+}
