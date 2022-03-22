@@ -1,25 +1,20 @@
-import React , {useState , useEffect} from "react";
+import React , {useState , useEffect, useContext} from "react";
 import { GetAllGrades } from "../../../services/userGrades/uses-grades-service";
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
-
-
+import { LoadingContext } from "../../../context/loading/loading-context";
 
 const UserGradesTable = () => {
 
     let [userData, setUserData] = useState([]);
-    let [loading , setLoading] = useState(false);
-
+    let {loading,setLoading} = useContext(LoadingContext);
     const userFromMemory = JSON.parse(localStorage.getItem("user"));
-
-
     useEffect(() => {
       setLoading(true);
         GetAllGrades()
         .then(data => setUserData(data))
         .finally(() => setLoading(false));
     } , []);  
-
    return (
      <>
      {

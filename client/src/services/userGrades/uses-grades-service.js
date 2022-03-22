@@ -4,7 +4,7 @@ export const GetAllGrades = async () => {
   try {
     return await fetch(`${basic_url}` , {
       headers: {
-        Authorization:`bearer ${localStorage.getItem("token")}` 
+        Authorization: `bearer ${localStorage.getItem("token")}` 
       }
     })
       .then((res) => res.json())
