@@ -22,11 +22,13 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 410,
+  width: 350,
   borderRadius: "5px" ,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor:"rgb(0,0,0,0.7)",
+  color: "white",
+  border: '3px solid purple',
   boxShadow: 24,
+  textAlign:"center",
   p: 4,
 };
 
@@ -243,14 +245,11 @@ const Home = () => {
       </section>
 
       <section className="questionsText">
-        <h1>GET IN TOUCH </h1>
+        {/* <h1>GET IN TOUCH </h1> */}
         <h2>For questions, requests and inquiries we are always 
           available and happy to help :</h2>
-        {/* <label htmlFor="">Name : </label><br/> */}
         <input placeholder="  Name" className="inputName"/>
-        {/* <label htmlFor="">Email : </label><br/> */}
         <input placeholder="  Email" className="inputEmail"/><br/>
-        {/* <label >Text : </label><br/> */}
         <input placeholder="  Massage" className="inputMassage"/><br/>
         <button onClick={sendMassage}>send</button>
         <hr/>
@@ -263,7 +262,7 @@ const Home = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-           <p onClick={() => setOpen(!open)} style = {{cursor: "pointer"}}>&#9747;</p>
+           <p onClick={() => setOpen(!open)} style = {{cursor: "pointer" , position:"relative" , left:"50%" , bottom:"25px"}}>&#9747;</p>
            <p>We received your message !</p>
           </Typography>
         </Box>
