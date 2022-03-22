@@ -13,6 +13,8 @@ import { Link } from "react-router-dom";
 import shimonPic from './homePicture/shimon.jpg';
 import jacobPic from './homePicture/jacob.jpg';
 import kerenPic from './homePicture/keren.jpg';
+import shayPic from './homePicture/shay.jpeg';
+
 
 
 const style = {
@@ -222,7 +224,7 @@ const Home = () => {
 
         <article className="student">
           <img  className="picStudents"
-            src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
+            src={shayPic}
             alt="picStudent"
           />
           <br/>
