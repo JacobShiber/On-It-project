@@ -203,8 +203,6 @@ const Home = () => {
            <img src={logoLinkedin}
           width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
-
-
         <article className="student">
           <img  className="picStudents"
             src={kerenPic}
