@@ -1,24 +1,66 @@
-import React  from "react";
+import React from "react";
 import { useState } from "react";
 import {userRegister} from '../../../services/users/users.service';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import { useNavigate } from "react-router-dom";
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-125%, -50%)',
+  width: 410,
+  borderRadius: "5px" ,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+
 import defultUser from './defultPicUser.jpg';
 
 const UserRegister = () => {
-   let [user , setUser] = useState({isAdmin : false, role: "Student"});
+
+  // let navigator = useNavigate() ;
+
+  let [user , setUser] = useState({isAdmin : false, role: "Student"});
+
+  const [open, setOpen] = useState(false);
 
   const getValues = (e) => {
     user[e.target.name] = e.target.value ;
   }
+
   const addUser = (e) => {
     e.preventDefault();
     if(user.img == undefined) user.img ="https://www.kpu.ca/sites/default/files/Career%20Services/thumbpreview-grey-avatar-designer.jpg";
     setUser({...user});
     userRegister(user);
+    setOpen(!open);
+  };
     // console.log(user);
   }
   
   return (  
-    <div className="container">  
+    <div className="container">
+     <Modal
+        open={open}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+           <p> Hey {user.firstName} ,  You Registered Successfully !</p>
+           <button onClick={() => window.location.reload()}>Log-in</button>
+          </Typography>
+          {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+          </Typography> */}
+        </Box>
+      </Modal>
   <form id="contact" action="" method="post">
     <h3>User Register</h3>
     <fieldset>
@@ -46,7 +88,7 @@ const UserRegister = () => {
       <input  name="img" placeholder="Your img" type="text" tabIndex="4" onChange={getValues}/>
     </fieldset>
     <fieldset>
-      <button onClick = {addUser}  type="submit" id="contact-submit" data-submit="...Sending">Register</button>
+      <button onClick = {addUser} type="submit" id="contact-submit" data-submit="...Sending">Register</button>
     </fieldset>
   </form>
 </div>
