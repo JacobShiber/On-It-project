@@ -154,16 +154,6 @@ const Home = () => {
           </ul>
         </article>
       </section>
-
-{/* <section>
-  <h1>ABOUT THE WEB </h1>
-<h3>
-  This side established to target students in the institution they are.<br/>
-  Show them their scores are focused in one place. <br/>
-  Their updates on a separate and clear page.
-</h3>
-</section> */}
-
       <h1>MEET THE TEAM</h1>
       <section className="theTeam">
         <article className="student">
