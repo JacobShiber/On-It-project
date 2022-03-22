@@ -1,21 +1,47 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { LoadingContext } from '../../../context/loading/loading-context';
 import { UsersContext } from '../../../context/users-context/users-context';
-
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 import { GetAllNews, PostNews, DeleteNews } from '../../../services/newsUser/newsUser.service';
 
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 410,
+    borderRadius: "5px" ,
+    // bgcolor: 'background.paper',
+    color: "white",
+    border: '3px solid purple',
+    boxShadow: 24,
+    p: 4,
+  };
+
 const NewsAdmin = () => {
+
+    const [open, setOpen] = useState(false);
     let {loading,setLoading} = useContext(LoadingContext);
     let { user } = useContext(UsersContext);
     user = JSON.parse(localStorage.getItem('user'));
     const [news, setNews] = useState([]);
     const [update, setUpdate] = useState({});
+    const [postId, setPostId] = useState('');
+
+    const sortPosts = (array) => {
+     return array.reverse();
+    }
 
     useEffect(() => {
   setLoading(true);
         GetAllNews()
             .then((res) => res.json())
-            .then(result => setNews(result))
+            .then(result => {
+                sortPosts(result);
+                setNews(result);
+            })
             .catch((error) => console.log({ error: "the method get isnt work" }))
             .finally(() => setLoading(false))
             
@@ -32,13 +58,31 @@ const NewsAdmin = () => {
     }
 
     const deleteNews = (idValue) => {
-        let result = window.confirm(`Are you sure you want to delete this?`);
-        if (result == true) {
-            DeleteNews(idValue).then(() => window.location.reload());
-        }
-        else{
-            return null;
-        };
+        setOpen(!open);
+        setPostId(idValue);
+    }
+
+    const confirmDelete = () => {
+        DeleteNews(postId).then(() => 
+        GetAllNews()
+            .then((res) => res.json())
+            .then(result => {
+                sortPosts(result);
+                setNews(result);
+            }));
+        setOpen(!open);
+    }
+
+    const postNewUpdate = (e) => {
+        e.preventDefault();
+        PostNews(update)
+        .then(()=> 
+        GetAllNews()
+            .then((res) => res.json())
+            .then(result => {
+                sortPosts(result);
+                setNews(result);
+            }))
     }
 
     return (
@@ -46,15 +90,13 @@ const NewsAdmin = () => {
         <>{loading ? <img src='https://static.wixstatic.com/media/f2773f_a97a7c76b5ba4075bb095745a72b53c3~mv2.gif' className='gifLoading' alt="gifLoading" />:
         <div>
             <div className="newsInputs">
-                <form>
                     <input type="text" placeholder="Whats on your mind" onChange={(e) => { addNews(e.target.value) }} />
-                    <button type="submit" onClick={() => { PostNews(update) }}>Submit</button>
-                </form>
+                    <button  onClick={postNewUpdate}>Submit</button>
             </div>
             <div className="newsContainer">
                 {
-                    news.map(update =>
-                        <div className='news'>
+                    news.map((update , index) =>
+                        <div key={index} className='news'>
                             <div className="newsCard">
                                 {user.firstName == update.userName ? <button onClick={() => deleteNews(update._id)}>Delete</button> : null}
                                 <div> <img src={update.userImg} alt="adminPicture" />
@@ -74,6 +116,21 @@ const NewsAdmin = () => {
                     )
                 }
             </div>
+    <Modal
+        open={open}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+           <p>Are you sure you want to delete ? </p>
+           <div style={{display:"flex" , justifyContent:"space-around" , marginTop:"5%"}}>
+           <p style={{cursor:"pointer"}} onClick={confirmDelete}>&#9989;</p>
+           <p style={{cursor:"pointer"}} onClick={() => {setOpen(!open)}}>&#10060;</p>
+           </div>
+          </Typography>
+        </Box>
+      </Modal>
         </div>
    }</> )
 }
