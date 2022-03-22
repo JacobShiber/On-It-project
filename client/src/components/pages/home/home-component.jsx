@@ -10,6 +10,10 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import './home.css'
 import { Link } from "react-router-dom";
+import shimonPic from './homePicture/shimon.jpg';
+import jacobPic from './homePicture/jacob.jpg';
+import kerenPic from './homePicture/keren.jpg';
+
 
 const style = {
   position: 'absolute',
@@ -161,7 +165,7 @@ const Home = () => {
       <section className="theTeam">
         <article className="student">
           <img className="picStudents"
-            src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
+            src={shimonPic}
             alt="picStudent"
           />
           <br />
@@ -178,10 +182,9 @@ const Home = () => {
           width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
 
-
         <article className="student">
           <img  className="picStudents"
-            src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
+            src={jacobPic}
             alt="picStudent"
           />
           <br />
@@ -197,11 +200,9 @@ const Home = () => {
            <img src={logoLinkedin}
           width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
-
-
         <article className="student">
           <img  className="picStudents"
-            src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
+            src={kerenPic}
             alt="picStudent"
           />
           <br />
