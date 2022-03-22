@@ -8,8 +8,24 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { LoadingContext } from "../../../context/loading/loading-context";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
+import {GetAllSchedules, PostSchedules, DeleteSchedules} from '../../../services/schedule/schedule.service' ;
 
-import {GetAllSchedules, PostSchedules} from '../../../services/schedule/schedule.service'
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 410,
+    borderRadius: "5px" ,
+    // bgcolor: 'background.paper',
+    color: "white",
+    border: '3px solid purple',
+    boxShadow: 24,
+    p: 4,
+  };
 
 const locales = {
     "en-US": require("date-fns/locale/en-US"),
@@ -23,10 +39,14 @@ const localizer = dateFnsLocalizer({
 });
 let events = [
 ];
+
+
 function AdminSchedule() {
     let {loading,setLoading} = useContext(LoadingContext);
+    const [open, setOpen] = useState(false);
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
+    const [eventId, setEventId] = useState('');
 
     useEffect(() => {
     setLoading(true);
@@ -41,6 +61,22 @@ function AdminSchedule() {
       })
   .finally(() => setLoading(false))
     }, [])
+
+    const deleteEvent = async() => {
+        await DeleteSchedules(eventId)
+        .then(() =>
+            GetAllSchedules()
+                .then(res => {
+                    res.map(event => {
+                    event.end = new Date(Date.parse(event.end))
+                    event.start = new Date(Date.parse(event.start))
+                    return null;
+            })
+            setAllEvents(res);
+          })  
+        )
+        .finally(() => setOpen(!open))
+    }
 
     function handleAddEvent() {
         setAllEvents([...allEvents, newEvent]);
@@ -66,7 +102,22 @@ function AdminSchedule() {
                 <img src="https://cdn-icons-png.flaticon.com/512/1513/1513520.png"
                 alt="gifClock" />
             </div>
-            <Calendar className="maimSchedule" localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
+            <Calendar onSelectEvent={event => {setEventId(event._id); setOpen(!open) }} className="maimSchedule" localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
+            <Modal
+        open={open}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+           <p>Are you sure you want to delete ? </p>
+           <div style={{display:"flex" , justifyContent:"space-around" , marginTop:"5%"}}>
+           <p style={{cursor:"pointer"}} onClick={deleteEvent}>&#9989;</p>
+           <p style={{cursor:"pointer"}} onClick={() => {setOpen(!open)}}>&#10060;</p>
+           </div>
+          </Typography>
+        </Box>
+      </Modal>
         </div>
    }</>);
 };

@@ -51,9 +51,9 @@ export const PutSchedules = async (userData) => {
   }
 };
 
-export const DeleteSchedules = async () => {
+export const DeleteSchedules = async (id) => {
   try {
-    return await fetch(`${basic_url}/id`, {
+    return await fetch(`${basic_url}/${id}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json", Authorization:`bearer ${localStorage.getItem("token")}`  },
     });

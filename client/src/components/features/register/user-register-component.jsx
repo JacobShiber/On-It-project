@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { useNavigate } from "react-router-dom";
+import defultUser from './defultPicUser.jpg';
 
 const style = {
   position: 'absolute',
@@ -19,8 +20,6 @@ const style = {
   p: 4,
 };
 
-
-// import defultUser from './defultPicUser.jpg';
 
 const UserRegister = () => {
 
@@ -56,9 +55,9 @@ const UserRegister = () => {
            <p> Hey {user.firstName} ,  You Registered Successfully !</p>
            <button onClick={() => window.location.reload()}>Log-in</button>
           </Typography>
-          {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography> */}
+          </Typography> 
         </Box>
       </Modal>
   <form id="contact" action="" method="post">
