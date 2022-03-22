@@ -5,8 +5,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import DeleteIcon from '@mui/icons-material/Delete';
 import UpdateIcon from '@mui/icons-material/Update';
 
-
-
 const AdminGradesTable = () => {
 
   let [userToUpdate , setUserToUpdate] = useState({}) ;
@@ -95,7 +93,6 @@ return (
    }
 
  </select>
-
 <button className="table-button" type="button" onClick={addGrade}>Add Grade</button>
 
 

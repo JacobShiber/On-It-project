@@ -26,10 +26,12 @@ let events = [
 ];
 
 function AdminSchedule() {
+    let [loading , setLoading] = useState(false);
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
 
     useEffect(() => {
+  setLoading(true);
       GetAllSchedules()
       .then(result => {
         result.map(event => {
@@ -39,6 +41,7 @@ function AdminSchedule() {
         })
         setAllEvents(result);
       })
+  .finally(() => setLoading(false))
     }, [])
 
 
@@ -51,6 +54,9 @@ function AdminSchedule() {
 
 
     return (
+        <>
+        {
+           loading ? <img src="https://img1.picmix.com/output/stamp/normal/6/3/3/5/1025336_27291.gif" className='gifLoading' alt="gifLoading" />:
         <div className="AdminSchedule">
             <h1>Calendar</h1>
             <div className="addEvent">
@@ -67,7 +73,7 @@ function AdminSchedule() {
             </div>
             <Calendar className="maimSchedule" localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
         </div>
-    );
-}
+   }</>);
+};
 
 export default AdminSchedule;
