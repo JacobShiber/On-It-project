@@ -20,7 +20,7 @@ const style = {
 };
 
 
-import defultUser from './defultPicUser.jpg';
+// import defultUser from './defultPicUser.jpg';
 
 const UserRegister = () => {
 
@@ -36,13 +36,13 @@ const UserRegister = () => {
 
   const addUser = (e) => {
     e.preventDefault();
-    if(user.img == undefined) user.img = {defultUser};
+    if(user.img == undefined) user.img = "{defultUser}";
     setUser({...user});
     userRegister(user);
     setOpen(!open);
   };
     // console.log(user);
-  }
+  
   
   return (  
     <div className="container">
