@@ -11,7 +11,7 @@ const UserRegister = () => {
   }
   const addUser = (e) => {
     e.preventDefault();
-    if(user.img == undefined) user.img = {defultUser};
+    if(user.img == undefined) user.img ="https://www.kpu.ca/sites/default/files/Career%20Services/thumbpreview-grey-avatar-designer.jpg";
     setUser({...user});
     userRegister(user);
     // console.log(user);
