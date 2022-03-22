@@ -8,12 +8,9 @@ import LoginPage from "../pages/login/loginPage-component";
 import News from "../pages/news/news-component";
 import Schedule from "../pages/schedule/schedule-component";
 import Footer from "../features/footer/footer-component";
-
 import Navbar from "../features/navbar/navbar-component";
 
 const user = JSON.parse(localStorage.getItem('user'));
-
-
 const PageRouting = () => {
  
  const [user , setUser] = useState({});

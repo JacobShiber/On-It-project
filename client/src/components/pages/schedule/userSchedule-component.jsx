@@ -7,7 +7,7 @@ import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-datepicker/dist/react-datepicker.css";
 import { LoadingContext } from "../../../context/loading/loading-context";
-import {GetAllSchedules} from '../../../services/schedule/schedule.service'
+import {GetAllSchedules} from '../../../services/schedule/schedule.service';
 
 const locales = {
     "en-US": require("date-fns/locale/en-US"),

@@ -11,9 +11,8 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-
 import { useNavigate } from 'react-router-dom';
-
+import './navbar.css'
   const pages = ['Home', 'News', 'Grades', 'Schedule', 'Contact'];
   const settings = ['Logout'];
   const navigations = ['/home', '/news', '/grades', '/schedule', '/contact'];
@@ -38,11 +37,9 @@ const Navbar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
-
   const navBarNavigator = (index) => {
     navigate(navigations[index])
   }
-
   const logout = () => {
     localStorage.clear();
     handleCloseUserMenu();
@@ -82,7 +79,6 @@ const Navbar = () => {
             transformOrigin={{
               vertical: 'top',
               horizontal: 'left',
-
             }}
 
             open={Boolean(anchorElNav)}
@@ -91,9 +87,7 @@ const Navbar = () => {
               display: { xs: 'block', md: 'none' },
               backgroundColor : "primary"
             }}
-
           >
-
             {pages.map((page) => (
               <MenuItem key={page} onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">{page}</Typography>
@@ -120,7 +114,6 @@ const Navbar = () => {
             </Button>
           ))}
         </Box>
-
         <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
@@ -154,7 +147,6 @@ const Navbar = () => {
     </Container>
   </AppBar>
   );
-  
 };
 
 export default Navbar;

@@ -7,6 +7,10 @@ import computerPic from './homePicture/computerMain.jpg';
 import LogoPic from './homePicture/Logo-white.png';
 import './home.css'
 import { Link } from "react-router-dom";
+import shimonPic from './homePicture/shimon.jpg';
+import jacobPic from './homePicture/jacob.jpg';
+import kerenPic from './homePicture/keren.jpg';
+
 
 const sendMassage=()=>{
   alert("Thank you for your time to massage us")
@@ -160,17 +164,11 @@ const Home = () => {
 </h3>
 </section> */}
 
-
-
-
-
-
-
       <h1>MEET THE TEAM</h1>
       <section className="theTeam">
         <article className="student">
           <img className="picStudents"
-            src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
+            src={shimonPic}
             alt="picStudent"
           />
           <br />
@@ -187,10 +185,9 @@ const Home = () => {
           width="38px" height="30px" alt="gifLinkedin"/></a>
         </article>
 
-
         <article className="student">
           <img  className="picStudents"
-            src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
+            src={jacobPic}
             alt="picStudent"
           />
           <br />
@@ -210,7 +207,7 @@ const Home = () => {
 
         <article className="student">
           <img  className="picStudents"
-            src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
+            src={kerenPic}
             alt="picStudent"
           />
           <br />
