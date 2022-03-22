@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GetAllGrades , PutGrade , PostGrade , DeleteGrade } from "../../../services/userGrades/uses-grades-service" ;
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 import DeleteIcon from '@mui/icons-material/Delete';
 import UpdateIcon from '@mui/icons-material/Update';
+import { LoadingContext } from "../../../context/loading/loading-context";
 
 const AdminGradesTable = () => {
 
   let [userToUpdate , setUserToUpdate] = useState({}) ;
 
-  let [loading , setLoading] = useState(false);
+  let {loading,setLoading} = useContext(LoadingContext);
 
   let [usersData, setUsersData] = useState([]);
 

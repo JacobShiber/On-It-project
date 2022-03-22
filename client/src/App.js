@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import PageRouting from "./components/Routing/PageRouting";
+import { LoadingContextProvider } from "./context/loading/loading-context";
 import { UsersContextProvider } from "./context/users-context/users-context";
 
 
@@ -12,8 +13,10 @@ function App() {
 </style>
       <header className="App-header">
         <UsersContextProvider>
-          {/* <GradesTable/> */}
+          <LoadingContextProvider>
           <PageRouting/>
+          </LoadingContextProvider>
+          {/* <GradesTable/> */}
         </UsersContextProvider>
       </header>
     </div>

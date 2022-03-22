@@ -1,10 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react'
+import { LoadingContext } from '../../../context/loading/loading-context';
 import { UsersContext } from '../../../context/users-context/users-context';
 
 import { GetAllNews, PostNews, DeleteNews } from '../../../services/newsUser/newsUser.service';
 
 const NewsAdmin = () => {
-    let [loading , setLoading] = useState(false);
+    let {loading,setLoading} = useContext(LoadingContext);
     let { user } = useContext(UsersContext);
     user = JSON.parse(localStorage.getItem('user'));
     const [news, setNews] = useState([]);

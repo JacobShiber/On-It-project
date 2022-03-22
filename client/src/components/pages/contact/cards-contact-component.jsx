@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react';
 import CardContact from "./card-contact-component";
 import { GetAllUsers } from '../../../services/users/users.service';
+import { LoadingContext } from '../../../context/loading/loading-context';
 
 const CardsContact = () => {
-  let [loading , setLoading] = useState(false);
+  let {loading,setLoading} = useContext(LoadingContext);
   const [userData,setUserData]=useState([]);
   useEffect(()=>{
   setLoading(true);

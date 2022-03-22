@@ -2,11 +2,12 @@ import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { LoadingContext } from "../../../context/loading/loading-context";
 
 import {GetAllSchedules, PostSchedules} from '../../../services/schedule/schedule.service'
 
@@ -18,20 +19,17 @@ const localizer = dateFnsLocalizer({
     parse,
     startOfWeek,
     getDay,
-    locales,
-    
+    locales, 
 });
-
 let events = [
 ];
-
 function AdminSchedule() {
-    let [loading , setLoading] = useState(false);
+    let {loading,setLoading} = useContext(LoadingContext);
     const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
 
     useEffect(() => {
-  setLoading(true);
+    setLoading(true);
       GetAllSchedules()
       .then(result => {
         result.map(event => {
@@ -48,9 +46,7 @@ function AdminSchedule() {
         setAllEvents([...allEvents, newEvent]);
         newEvent.allDay = false;
         PostSchedules(newEvent).then(result => console.log(result));
-        // console.log(newEvent);
     }
-
 
     return (
         <>
@@ -74,5 +70,4 @@ function AdminSchedule() {
         </div>
    }</>);
 };
-
 export default AdminSchedule;
