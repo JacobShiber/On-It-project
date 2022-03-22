@@ -73,8 +73,7 @@ const NewsAdmin = () => {
         setOpen(!open);
     }
 
-    const postNewUpdate = (e) => {
-        e.preventDefault();
+    const postNewUpdate = () => {
         PostNews(update)
         .then(()=> 
         GetAllNews()

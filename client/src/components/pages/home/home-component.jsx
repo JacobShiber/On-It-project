@@ -35,6 +35,7 @@ const Home = () => {
 
   const sendMassage = () => {
     setOpen(!open)
+    
   }
 
   return (
