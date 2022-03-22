@@ -1,28 +1,4 @@
-.App {
-  text-align: center;
-  background-color: white;
-  color: black;
-  display: grid;
-  grid-template-areas:
-    "navbar navbar navbar navbar"
-    "main main main main"
-    "main main main main"
-    "footer footer footer footer";
-  width: 100vw;
-  height: 100vh;
-  font-family: "Mochiy Pop One", sans-serif;
-  font-family: "Poppins", sans-serif;
-  /* grid-template-rows: 10% 80%;
-  grid-template-columns: 15%; */
-}
-h1 {
-  font-size: 40px;
-  text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
-  padding: 1%;
-}
-
-
-.loginMessage{
+.loginMessage {
   color: red;
   font-weight: bold;
   font-size: large;
@@ -31,10 +7,10 @@ h1 {
 .loginPage {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
   height: 100vh;
-
 }
 
 .leftSize {
@@ -256,196 +232,54 @@ fieldset {
   background-color: rgb(182, 182, 182);
 }
 
-/* .table-Inputs {
-  padding: 5px 15px;
-  margin: 4px;
-  border-radius: 3px;
-  margin-bottom: 2vh;
-  border: 3px solid rgba(128, 0, 128, 0.801);
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .leftSize {
+    width: 40vw;
+  }
+  .rightSize {
+    width: 40vw;
+    margin-top: 20vh;
+    margin-left: 1%;
+  }
+  .rightSize img {
+    width: 38vw;
+    height: 35vh;
+  }
+  .rightSize h2 {
+    font-size: medium;
+  }
+  .registerButtons {
+    top: 31vh;
+    margin-left: 16%;
+  }
+  .registerButtons button {
+    position: relative;
+    top: 40px;
+  }
 }
 
-.table-select {
-  padding: 5px 15px;
-  margin: 4px;
-  text-align: center;
-  border: 3px solid rgba(128, 0, 128, 0.801);
-  border-radius: 5px;
+@media screen and (max-width: 426px) {
+  .loginPage {
+    /* margin-top: 5vh; */
+    flex-wrap: wrap-reverse;
+    position: relative;
+    bottom: 135px;
+  }
+  .leftSize {
+    width: 80vw;
+    height: 1%;
+  }
+  .rightSize {
+    width: 80vw;
+  }
+  #loginContainer {
+    margin-top: 0;
+    position: relative;
+    bottom: 20vh;
+  }
+  .registerComponents{
+      height: 0;
+      position: relative;
+    bottom: 25vh;
+  }
 }
-
-.table-button {
-  padding: 5px 20px;
-  border-radius: 3px;
-  margin-left: 1.5vw;
-  background-color: rgba(128, 0, 128, 0.801);
-  color: white;
-  transition: 0.3s linear;
-}
-
-.table-button:hover {
-  transform: scale(1.2);
-  border: 3px solid rgba(128, 0, 128, 0.801);
-  background-color: #ebebeb;
-  color: rgba(128, 0, 128, 0.801);
-  cursor: pointer;
-} */
-
-/* admin Grades table css */
-
-/*** Table Styles **/
-
-
-.table-fill {
-  background: white;
-  text-align: center;
-  border-radius: 3px;
-  border-collapse: collapse;
-  height: 20vh;
-  margin-left: 10vw;
-  margin-top: 2vh;
-  max-width: 70%;
-  padding: 5px;
-  width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
-}
-
-/* .table-fill {
- background: white;
- text-align: center;
- border-radius:3px;
- border-collapse: collapse;
- height: 20vh ;
- margin-left: 10vw;
- margin-top: 2vh;
- max-width: 70%;
- padding:5px;
- width: 100%;
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
- animation: float 5s infinite;
-}
-
-th {
-  color: #d5dde5;
-  background: rgba(128, 0, 128, 0.801);
-  border-bottom: 2px solid whitesmoke;
-  font-size: 15px;
-  font-weight: 100;
-  padding: 15px;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  vertical-align: middle;
-}
-
-th:first-child {
-  border-top-left-radius: 3px;
-}
-
-th:last-child {
-  border-top-right-radius: 3px;
-  border-right: none;
-}
-
-tr {
-  border-top: 1px solid #c1c3d1;
-  border-bottom: 1px solid #c1c3d1;
-  color: #666b85;
-  font-size: 14px;
-  font-weight: normal;
-  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-}
-
-tr:hover td {
-  background: rgba(128, 0, 128, 0.801);
-  color: #ffffff;
-  border-top: 1px solid #22262e;
-}
-
-tr:first-child {
-  border-top: none;
-}
-
-tr:last-child {
-  border-bottom: none;
-}
-
-tr:nth-child(odd) td {
-  background: #ebebeb;
-}
-
-tr:nth-child(odd):hover td {
-  background: rgba(128, 0, 128, 0.801);
-}
-
-tr:last-child td:first-child {
-  border-bottom-left-radius: 3px;
-}
-
-tr:last-child td:last-child {
-  border-bottom-right-radius: 3px;
-}
-
-td {
-  background: #ffffff;
-  font-weight: 300;
-  font-size: 15px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #c1c3d1;
-}
-
-.admin-Buttons {
-  cursor: pointer;
-  transition: 0.5s linear;
-}
-
-.admin-Buttons:hover {
-  transform: scale(1.3);
-} */
-
-/* ************************************************ */
-
-
-.footer #button {
-  width: 35px;
-  height: 35px;
-  border: #727172 12px solid;
-  border-radius: 35px;
-  margin: 0 auto;
-  position: relative;
-  transition: all 1s ease;
-}
-.footer #button:hover {
-  width: 35px;
-  height: 35px;
-  border: #3a3a3a 12px solid;
-  position: relative;
-}
-.footer {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  height: 3.2em;
-  overflow: hidden;
-  margin: 0 auto;
-  transition: all 1s ease;
-  z-index: 999;
-}
-.footer:hover {
-  transition: all 1s ease;
-  height: 10em; 
-}
-.footer #container {
-  margin-top: 1vh;
-  display: flex;
-  justify-content: space-evenly;
-  padding: 0 20%;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
-  background: rgba(128, 0, 128, 0.9);
-}
-
-

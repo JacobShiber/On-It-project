@@ -2,12 +2,15 @@ import React, { useContext, useState } from 'react'
 import { UsersContext } from '../../../context/users-context/users-context';
 import { userLogin, GetAllUsers } from '../../../services/users/users.service';
 import { useNavigate } from 'react-router-dom';
+import './login.css'
 
 const Login = () => {
   const { user, setUser } = useContext(UsersContext);
   const [loginMessage, setLoginMessage] = useState('');
   const [loginStatus, setLoginStatus] = useState(false);
   let navigate = useNavigate();
+
+  const ifUser = JSON.parse(localStorage.getItem('user'));
 
   const defineUser = (name, value) => {
     switch (name) {
@@ -32,6 +35,7 @@ const Login = () => {
           localStorage.setItem('user', JSON.stringify(res.user))
           setUser(res.user);
           navigate('/home');
+          window.location.reload();
         }
         else {
           setLoginStatus(true);
@@ -43,7 +47,7 @@ const Login = () => {
 
   return (
     <div className="container" id='loginContainer'>  
-  <form id="contact" action="" method="post">
+ <form id="contact" action="" method="post">
     <h3>Login</h3>
     {
       loginStatus === true? <div><p className='loginMessage'>{loginMessage}</p></div> : null

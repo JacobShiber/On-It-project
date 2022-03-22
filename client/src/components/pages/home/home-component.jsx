@@ -3,16 +3,29 @@ import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
 import logoCheck from './homePicture/PinkCheck.png';
-// import mainPic from './homePicture/computerAndCoffe.png';
 import computerPic from './homePicture/computerMain.jpg';
 import LogoPic from './homePicture/Logo-white.png';
-
 import './home.css'
 import { Link } from "react-router-dom";
 
 const sendMassage=()=>{
   alert("Thank you for your time to massage us")
 }
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-125%, -50%)',
+  width: 410,
+  borderRadius: "5px" ,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  p: 4,
+};
+
+
 const Home = () => {
   return (
     <div className="home">
@@ -219,7 +232,7 @@ const Home = () => {
             src="https://cdn.pixabay.com/photo/2019/12/09/08/14/celebrity-4682972_960_720.jpg"
             alt="picStudent"
           />
-          <br />
+          <br/>
           <h2>Shay Belayneh</h2>
           <h4>graduate Tech-Career</h4>
           <a href="shay600195@gmail.com" target="_blank">
@@ -247,6 +260,7 @@ const Home = () => {
         <button onClick={sendMassage}>send</button>
         <hr/>
       </section>
+
 
       {/* <section className="questions">
         <img src="https://zephyrnet.com/wp-content/uploads/2020/09/5-questions-with-chase-cio-rohan-amin.jpg"

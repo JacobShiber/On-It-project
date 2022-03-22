@@ -12,12 +12,19 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-  const pages = ['Home', 'news', 'contact'];
-  const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+import { useNavigate } from 'react-router-dom';
+
+  const pages = ['Home', 'News', 'Grades', 'Schedule', 'Contact'];
+  const settings = ['Logout'];
+  const navigations = ['/home', '/news', '/grades', '/schedule', '/contact'];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const user = JSON.parse(localStorage.getItem('user'));
+
+  let navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -31,6 +38,17 @@ const Navbar = () => {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const navBarNavigator = (index) => {
+    navigate(navigations[index])
+  }
+
+  const logout = () => {
+    localStorage.clear();
+    handleCloseUserMenu();
+    navigate('/');
+    window.location.reload();
+  }
 
   return (
   <AppBar position="static" className='navbar' style={{backgroundColor:"#9932CC"}} >
@@ -93,10 +111,10 @@ const Navbar = () => {
           LOGO
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-          {pages.map((page) => (
+          {pages.map((page, index) => (
             <Button
               key={page}
-              onClick={handleCloseNavMenu}
+              onClick={() => navBarNavigator(index)}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               {page}
@@ -107,7 +125,7 @@ const Navbar = () => {
         <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <Avatar alt="User Image" src={user?.img} />
             </IconButton>
           </Tooltip>
           <Menu
@@ -127,7 +145,7 @@ const Navbar = () => {
             onClose={handleCloseUserMenu}
           >
             {settings.map((setting) => (
-              <MenuItem key={setting} onClick={handleCloseUserMenu}>
+              <MenuItem key={setting} onClick={logout}>
                 <Typography textAlign="center">{setting}</Typography>
               </MenuItem>
             ))}
