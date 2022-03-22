@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AdminGradesTable from "../../features/admin-grades-table/admin-grade-table";
 import UserGradesTable from "../../features/user-grade-table/user-grade-table"; 
-import UserCardInfo from '../../features/user-card/user-card';
+// import UserCardInfo from '../../features/user-card/user-card';
 
 import './grades.css'
 const GradesTable = () => {
@@ -15,7 +15,7 @@ const GradesTable = () => {
 
   return (
     <div>
-      <UserCardInfo />
+      {/* <UserCardInfo /> */}
       {user.isAdmin === false ? <UserGradesTable /> : <AdminGradesTable />}
     </div>
   );

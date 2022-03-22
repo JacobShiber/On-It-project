@@ -4,16 +4,20 @@ import { UsersContext } from '../../../context/users-context/users-context';
 import { GetAllNews, PostNews, DeleteNews } from '../../../services/newsUser/newsUser.service';
 
 const NewsAdmin = () => {
+    let [loading , setLoading] = useState(false);
     let { user } = useContext(UsersContext);
     user = JSON.parse(localStorage.getItem('user'));
     const [news, setNews] = useState([]);
     const [update, setUpdate] = useState({});
 
     useEffect(() => {
+  setLoading(true);
         GetAllNews()
             .then((res) => res.json())
             .then(result => setNews(result))
-            .catch((error) => console.log({ error: "the method get isnt work" }));
+            .catch((error) => console.log({ error: "the method get isnt work" }))
+            .finally(() => setLoading(false))
+            
     }, [])
 
     const addNews = (dataValue) => {
@@ -37,6 +41,8 @@ const NewsAdmin = () => {
     }
 
     return (
+        
+        <>{loading ? <img src='https://static.wixstatic.com/media/f2773f_a97a7c76b5ba4075bb095745a72b53c3~mv2.gif' className='gifLoading' alt="gifLoading" />:
         <div>
             <div className="newsInputs">
                 <form>
@@ -68,6 +74,6 @@ const NewsAdmin = () => {
                 }
             </div>
         </div>
-    )
+   }</> )
 }
 export default NewsAdmin;

@@ -44,7 +44,6 @@ function AdminSchedule() {
   .finally(() => setLoading(false))
     }, [])
 
-
     function handleAddEvent() {
         setAllEvents([...allEvents, newEvent]);
         newEvent.allDay = false;

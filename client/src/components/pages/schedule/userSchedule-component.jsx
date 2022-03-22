@@ -24,9 +24,11 @@ let events = [
 ];
 
 function UserSchedule() {
-    const [allEvents, setAllEvents] = useState(events);
+  const [allEvents, setAllEvents] = useState(events);
+    let [loading , setLoading] = useState(false);
 
     useEffect(() => {
+  setLoading(true);
       GetAllSchedules()
       .then(result => {
         result.map(event => {
@@ -36,13 +38,15 @@ function UserSchedule() {
         })
         setAllEvents(result);
       })
+  .finally(() => setLoading(false))
     }, [])
     return (
+      <>{loading ? <img src="https://img1.picmix.com/output/stamp/normal/6/3/3/5/1025336_27291.gif" className='gifLoading' alt="gifLoading" />:
         <div className="UserSchedule">
             <h1>Calendar</h1>
             <Calendar localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />
         </div>
-    );
+    }</>);
 }
 
 export default UserSchedule;
