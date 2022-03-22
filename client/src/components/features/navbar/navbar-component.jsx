@@ -47,6 +47,7 @@ const Navbar = () => {
     localStorage.clear();
     handleCloseUserMenu();
     navigate('/');
+    window.location.reload();
   }
 
   return (
