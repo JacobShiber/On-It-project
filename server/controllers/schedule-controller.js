@@ -29,7 +29,7 @@ res.status(200).json(result)
 };
 
 const deleteSchedules = async (req, res) => {
-    schedules.findByIdAndRemove(req.params.id, (err, result) => {
+    schedules.findByIdAndDelete(req.params.id, (err, result) => {
         if (err) {
             return res.status(400).json({ success: false, error: err })
         };

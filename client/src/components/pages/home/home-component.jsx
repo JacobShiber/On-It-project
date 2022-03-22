@@ -1,10 +1,13 @@
-import React from "react";
+import React , {useState} from "react";
 import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
 import logoCheck from './homePicture/PinkCheck.png';
 import computerPic from './homePicture/computerMain.jpg';
 import LogoPic from './homePicture/Logo-white.png';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 import './home.css'
 import { Link } from "react-router-dom";
 import shimonPic from './homePicture/shimon.jpg';
@@ -12,15 +15,11 @@ import jacobPic from './homePicture/jacob.jpg';
 import kerenPic from './homePicture/keren.jpg';
 
 
-const sendMassage=()=>{
-  alert("Thank you for your time to massage us")
-}
-
 const style = {
   position: 'absolute',
   top: '50%',
   left: '50%',
-  transform: 'translate(-125%, -50%)',
+  transform: 'translate(-50%, -50%)',
   width: 410,
   borderRadius: "5px" ,
   bgcolor: 'background.paper',
@@ -31,6 +30,13 @@ const style = {
 
 
 const Home = () => {
+
+  const [open, setOpen] = useState(false);
+
+  const sendMassage = () => {
+    setOpen(!open)
+  }
+
   return (
     <div className="home">
 <section className="textOnPicMain">
@@ -154,6 +160,7 @@ const Home = () => {
           </ul>
         </article>
       </section>
+
       <h1>MEET THE TEAM</h1>
       <section className="theTeam">
         <article className="student">
@@ -246,11 +253,18 @@ const Home = () => {
         <hr/>
       </section>
 
-
-      {/* <section className="questions">
-        <img src="https://zephyrnet.com/wp-content/uploads/2020/09/5-questions-with-chase-cio-rohan-amin.jpg"
-alt="picQuestions" />
-      </section> */}
+   <Modal
+        open={open}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+           <p onClick={() => setOpen(!open)} style = {{cursor: "pointer"}}>&#9747;</p>
+           <p>We received your message !</p>
+          </Typography>
+        </Box>
+      </Modal>
 
     </div>
   );
