@@ -448,4 +448,10 @@ td {
   background: rgba(128, 0, 128, 0.9);
 }
 
+.links {
+  transition: 8s;
+}
 
+.links:hover {
+  transform: scale(1.3);
+}

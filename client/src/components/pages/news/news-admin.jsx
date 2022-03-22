@@ -13,9 +13,9 @@ const style = {
     transform: 'translate(-50%, -50%)',
     width: 410,
     borderRadius: "5px" ,
-    // bgcolor: 'background.paper',
+    bgcolor:"rgb(0,0,0,0.7)",
     color: "white",
-    border: '3px solid purple',
+    border: '3px solid white',
     boxShadow: 24,
     p: 4,
   };
@@ -31,7 +31,7 @@ const NewsAdmin = () => {
     const [postId, setPostId] = useState('');
 
     const sortPosts = (array) => {
-     return array.reverse();
+      return array.reverse();
     }
 
     useEffect(() => {
