@@ -17,7 +17,7 @@ const CardsContact = () => {
   return (
     <>
     {
-       loading ?  <img className='gifLoading' src='https://thumbs.gfycat.com/AmpleTenderArkshell-size_restricted.gif' alt='gifContact'/> : 
+       loading ?  <img className='gifLoading' src='https://cdn.dribbble.com/users/46511/screenshots/1756041/loader-spinning.gif' alt='gifContact'/> : 
     <div className='cardWrapper'>
         {
           userData.map((user) => <CardContact key={user.firstName} userItem={user}/>)

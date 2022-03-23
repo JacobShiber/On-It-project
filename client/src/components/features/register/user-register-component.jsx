@@ -20,7 +20,6 @@ const style = {
   p: 4,
 };
 
-
 const UserRegister = () => {
 
   // let navigator = useNavigate() ;

@@ -73,8 +73,7 @@ const NewsAdmin = () => {
         setOpen(!open);
     }
 
-    const postNewUpdate = (e) => {
-        e.preventDefault();
+    const postNewUpdate = () => {
         PostNews(update)
         .then(()=> 
         GetAllNews()
@@ -87,7 +86,8 @@ const NewsAdmin = () => {
 
     return (
         
-        <>{loading ? <img src='https://static.wixstatic.com/media/f2773f_a97a7c76b5ba4075bb095745a72b53c3~mv2.gif' className='gifLoading' alt="gifLoading" />:
+        <>{loading ? <img src='https://cdn.dribbble.com/users/2646511/screenshots/15115496/media/f2ffddfadda5505334e601f8eb09596e.gif' 
+        className='gifLoading' alt="gifLoading" />:
         <div>
             <div className="newsInputs">
                     <input type="text" placeholder="Whats on your mind" onChange={(e) => { addNews(e.target.value) }} />
