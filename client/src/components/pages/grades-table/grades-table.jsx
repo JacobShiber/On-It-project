@@ -14,7 +14,7 @@ const GradesTable = () => {
   const user = JSON.parse(localStorage.getItem('user'));
 
   return (
-    <div>
+    <div >
       {/* <UserCardInfo /> */}
       {user.isAdmin === false ? <UserGradesTable /> : <AdminGradesTable />}
     </div>
