@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT;
 const cors = require('cors');
+const path=require('path');
 
 app.use(cors());
 app.use(express.json());
@@ -35,4 +36,5 @@ if(process.env.NODE_ENV === 'production'){
         res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
     })
 }
+console.log(process.env.NODE_ENV);
 
