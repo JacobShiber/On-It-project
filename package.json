@@ -5,7 +5,13 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon node ./server/server.js"
+    "server": "nodemon node ./server/server.js",
+    "start": "node ./server/server.js",
+    "setup": "npm install && cd client && npm install",
+    "client": "cd client && npm run dev",
+    "build":"npm run setup && npm run build:",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"cd client && npm install --only=dev && npm install && npm run build"
   },
   "author": "Jacob Shiber, Keren Hailu, Shay Belayneh, Shimon Samay",
   "license": "ISC",

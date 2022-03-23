@@ -16,9 +16,13 @@
   height: 100vh;
   font-family: "Mochiy Pop One", sans-serif;
   font-family: "Poppins", sans-serif;
-  /* grid-template-rows: 10% 80%;
-  grid-template-columns: 15%; */
-  /* overflow-x: hidden; */
+
+}
+
+.gifLoading{
+  margin-top: 15vh;
+  width: 70vw;
+  height: 50vh;
 }
 h1 {
   font-size: 40px;
