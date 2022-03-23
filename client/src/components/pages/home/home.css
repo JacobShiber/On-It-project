@@ -183,6 +183,13 @@
     width: 45vw;
     margin-top: 4%;
   }
+
+.picOnIt{
+
+margin-left: 100px;
+
+}
+
   .aboutUsPic img {
     width: 90vw;
   }
@@ -192,6 +199,10 @@
   .textOnPicMain h3 {
     font-size: x-large;
   }
+}
+
+.navbar {
+  width: 100vw;
 }
 
 @media screen and (max-width: 426px) {
@@ -204,7 +215,7 @@
     font-size: small;
   }
   .Service {
-    width: 40vw;
+    width: 95vw;
     margin: 1%;
   }
   .aboutUsArticle h3 {
@@ -216,4 +227,16 @@
   .questionsText h2 {
     margin-left: 12%;
   }
+
+  .onItText{
+
+margin-left: 80px;
+
+  }
+
+  .textOnPicMain img {
+
+    margin-left: 70px;
+  }
+
 }

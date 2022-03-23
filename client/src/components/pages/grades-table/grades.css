@@ -9,6 +9,10 @@
   
 }
 
+.navbar {
+  width: 30vw;
+}
+
 .table-select {
   padding: 5px 15px;
   margin: 4px;
@@ -131,3 +135,25 @@ td {
 .admin-Buttons:hover {
   transform: scale(1.3);
 } 
+
+ @media screen and (max-width: 768px) {
+.navbar   {
+    background-color: red;
+    width: 112.5%;
+
+  }
+}
+
+
+ 
+@media screen and (max-width: 426px) {
+  
+  .navbar {
+    width: 135%;
+  }
+
+  .table-fill{
+    width: 80vw;
+    margin-left: -7vw;
+  }
+}

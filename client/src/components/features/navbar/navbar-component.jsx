@@ -48,8 +48,10 @@ const Navbar = () => {
   }
 
   return (
-  <AppBar position="static" className='navbar' style={{backgroundColor:"#9932CC"}} >
-    <Container maxWidth="xl">
+  
+    <div className='navbar' >
+<AppBar position="static" style={{backgroundColor:"#9932CC"}} >
+        <Container maxWidth="xl">
       <Toolbar disableGutters>
         <Typography
           variant="h6"
@@ -146,9 +148,11 @@ const Navbar = () => {
         </Box>
       </Toolbar>
     </Container>
-  </AppBar>
+      </AppBar>
+    </div>
+  
+
   );
 };
 
 export default Navbar;
-
