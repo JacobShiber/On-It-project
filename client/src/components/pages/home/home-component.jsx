@@ -38,14 +38,13 @@ const Home = () => {
   return (
     <div className="home">
 <section className="textOnPicMain">
-  <h1><img src={LogoPic} className="picOnIt"/>n It
-  </h1>
+  {/* <h1><img src={LogoPic} className="picOnIt"/>n It
+  </h1> */}
   <h3>Be stronger than your excuse</h3>
-</section><img className="mainPic" src={computerPic}
-  alt="computer"/>
+</section><img className="mainPic" src={computerPic} alt="computer"/>
 
 <section className="ourService">
-      <h1>OUR SERVICES</h1>
+      <h1>FEATURES</h1>
         <article className="Service">
           <img
             src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
@@ -88,6 +87,23 @@ const Home = () => {
             Without being late for class
           </h3>
         </article>
+        <article className="Service">
+          <img
+            src="https://iconsplace.com/wp-content/uploads/_icons/800080/256/png/news-icon-13-256.png"
+            alt="picService"
+          />
+          <Link to="/grades"><h2>Grades</h2></Link>
+          <h3>
+            In this page you can
+            <br />
+            check all your grades
+          </h3>
+        </article>
+
+        <p>
+         Our mission is to make the studying progress much more easy to deal with. <br/>
+         Each feature is dedicated to accomplish our vision.
+        </p>
       </section>
 
       <section className="aboutUs">

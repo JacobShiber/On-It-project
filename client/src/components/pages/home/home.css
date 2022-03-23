@@ -1,6 +1,7 @@
+
 .home h1 {
   font-size: 40px;
-  text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
+  /* color: blueviolet; */
 }
 .home {
   width: 100vw;
@@ -54,14 +55,20 @@
 }
 .textOnPicMain {
   position: absolute;
-  margin-left: 30vw;
-  margin-top: 20vh;
+  margin-left: 25vw;
+  margin-top: 35vh;
   font-size: 30px;
   padding: 1%;
 }
-.textOnPicMain h1 {
+/* .textOnPicMain h1 {
   font-size: 80px;
   padding: 3%;
+} */
+
+.textOnPicMain h3 {
+  color: #9932cc93;
+  font-size: 50px;
+  height: auto;
 }
 .ourService {
   width: 100vw;
@@ -69,37 +76,64 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  background: linear-gradient(
-    white,
-    rgba(233, 205, 233, 0.712),
-    rgba(231, 170, 231, 0.712)
-  );
+  /* background: linear-gradient(
+    rgb(165, 157, 157),
+    /* rgba(233, 205, 233, 0.712),
+    rgba(231, 170, 231, 0.712) */
+  /* ); */
+  background: rgb(243, 241, 241);
   box-shadow: 2px 2px 2px rgb(221, 216, 216);
   padding: 4%;
 }
+
 .ourService h1 {
   width: 90vw;
+  color: #9932cc93;
+}
+
+.ourService p {
+  margin-top: 7.5%;
+  margin-bottom: 3.5%;
+  margin-left: 17.5%;
+  font-size: 25px;
 }
 .Service {
-  width: 30%;
+  width: 23%;
+  /* height: 55vh; */
+  margin-top: 5%;
+  border-radius: 5%;
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 12px rgb(190, 185, 185);
+  padding: 2%;
+}
+
+.Service h2 {
+  color: #9932cc93;
 }
 .Service img {
   width: 8vw;
   height: 12vh;
   border-radius: 50%;
-  box-shadow: 4px 4px 4px rgb(134, 128, 128);
+  /* box-shadow: 4px 4px 4px rgb(134, 128, 128); */
   margin: 3%;
 }
 .aboutUs {
-  background-color: rgba(231, 170, 231, 0.712);
-  background: linear-gradient(
+  /* background-color: rgba(231, 170, 231, 0.712); */
+  /* background: linear-gradient(
+    white,
+    white,
+    white,
+    rgba(233, 205, 233, 0.712),
+    rgba(231, 170, 231, 0.712)
     rgba(231, 170, 231, 0.712),
     rgba(233, 205, 233, 0.712),
     white
-  );
+  ); */
   /* box-shadow: 4px 4px 4px 4px  black; */
+  background-color: #9932cc77;
   width: 100vw;
   display: flex;
+  color: whitesmoke;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -107,6 +141,7 @@
     box-shadow: 2px 2px 2px rgb(221, 216, 216); */
   flex-wrap: wrap;
   padding: 4%;
+  margin-bottom: 5%;
 }
 .aboutUsPic {
   width: 45vw;
@@ -114,6 +149,8 @@
 .aboutUsPic img {
   width: 45vw;
   height: auto;
+  border-radius: 2%;
+  box-shadow: 3px 3px 12px black;
 }
 .aboutUsArticle {
   text-align: left;
@@ -165,15 +202,19 @@
   height: 25vh;
   transition: 1s ease-in-out;
 }
+
 .inputMassage:hover {
   background-color: rgba(238, 196, 238, 0.795);
 }
+
 .inputEmail:hover {
   background-color: rgba(238, 196, 238, 0.795);
 }
+
 .inputName:hover {
   background-color: rgba(238, 196, 238, 0.795);
 }
+
 .questionsText h2 {
   margin-right: 13vw;
 }
