@@ -1,5 +1,5 @@
 .mainTitle {
-  text-shadow: 1px 1px 1px purple;
+  text-shadow: 1px 1px 1px #9932CC;
 }
 
 .newsInputs input {
@@ -14,7 +14,7 @@
   background-color: black;
   border-radius: 15%;
   color: white;
-  box-shadow: 1px 1px 1px purple;
+  box-shadow: 1px 1px 1px #9932CC;
 }
 .newsCard{
   display: flex;

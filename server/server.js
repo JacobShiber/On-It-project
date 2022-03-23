@@ -26,7 +26,6 @@ app.use('/grades' , passport.authenticate("jwt",{session:false}), userGradesRout
 app.use('/schedule', passport.authenticate("jwt",{session:false}), ScheduleRouter)
 
 
-
 app.listen(process.env.PORT);
 app.get('/', (req, res) => {
     res.status(200).send('Server is online');
