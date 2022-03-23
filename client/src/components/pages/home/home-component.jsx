@@ -26,7 +26,7 @@ const style = {
   borderRadius: "5px" ,
   bgcolor:"rgb(0,0,0,0.7)",
   color: "white",
-  border: '3px solid purple',
+  border: '3px solid white  ',
   boxShadow: 24,
   textAlign:"center",
   p: 4,

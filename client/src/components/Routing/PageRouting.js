@@ -10,7 +10,6 @@ import Schedule from "../pages/schedule/schedule-component";
 import Footer from "../features/footer/footer-component";
 import Navbar from "../features/navbar/navbar-component";
 
-const user = JSON.parse(localStorage.getItem('user'));
 const PageRouting = () => {
  
  const [user , setUser] = useState({});
@@ -19,7 +18,6 @@ const PageRouting = () => {
     setUser(localStorage.getItem("user"));
   } , []);
   
-  console.log(user);
   return (
     <div> 
       <BrowserRouter>

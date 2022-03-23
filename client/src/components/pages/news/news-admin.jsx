@@ -120,7 +120,7 @@ const NewsAdmin = () => {
         open={open}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-      >
+     >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
            <p>Are you sure you want to delete ? </p>
