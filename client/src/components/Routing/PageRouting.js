@@ -15,7 +15,7 @@ const PageRouting = () => {
  const [user , setUser] = useState({});
 
   useEffect(() => {
-    setUser(localStorage.getItem("user"));
+    setUser(JSON.parse(localStorage.getItem("user")));
   } , []);
   
   return (
