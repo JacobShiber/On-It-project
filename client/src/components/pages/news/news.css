@@ -79,11 +79,25 @@
 
 #demo-simple-select-label{
   /* text-align: center; */
-  margin-left: 0.65vw;
+  margin-left: 0.25vw;
   font-size: 3em;
+  background-color: rgb(223, 215, 215, 0.5);
+  width: 60px;
+  border-radius: 50%;
 }
 
 .optionsButton {
   position: relative;
-  top: 10vh;
+  top: 12vh;
+}
+
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
+  position: relative;
+  bottom: 3vh;
+  left: 1vw;
+  z-index: 1000;
+}
+
+.selectInput{
+  opacity: 0;
 }
