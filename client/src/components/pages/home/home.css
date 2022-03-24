@@ -30,12 +30,8 @@
   height: 35vh;
 }
 
-
-
-
-
 .mainPic {
-   width: 100vw;
+  width: 100vw;
   height: 90vh;
   /* opacity: 0.25;  */
   /* position: relative; */
@@ -68,14 +64,14 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  background: white ;
+  background: white;
   box-shadow: 2px 2px 2px rgb(221, 216, 216);
   padding: 1%;
 }
 
 .ourService h1 {
   width: 90vw;
-   margin-left: 3%;
+  margin-left: 3%;
 }
 
 .ourService p {
@@ -170,9 +166,9 @@
   transition: 1s ease-in-out;
 }
 
- /* .questionsText button:hover {
+.questionsText button:hover {
   background-color: rgb(202, 89, 202);
-}  */
+} 
 
 .questionsText input {
   border: none;
@@ -182,8 +178,8 @@
 .inputEmail,
 .inputName {
   width: 15%;
-    height: 5vh;
-    transition: 1s ease-in-out;
+  height: 5vh;
+  transition: 1s ease-in-out;
 }
 .inputMassage {
   width: 31%;
@@ -191,17 +187,23 @@
   transition: 1s ease-in-out;
 }
 
-/* .inputMassage:hover {
+.questionsText input {
+  padding: 0 10% 0 14%;
+}
+.questionsText .inputMassage {
+  padding: 0 10% 7% 39%;
+}
+.inputMassage:hover {
   background-color: rgba(238, 196, 238, 0.795);
-} */
+} 
 
-/* .inputEmail:hover {
+.inputEmail:hover {
   background-color: rgba(238, 196, 238, 0.795);
-} */
+}
 
-/* .inputName:hover {
+ .inputName:hover {
   background-color: rgba(238, 196, 238, 0.795);
-} */
+}
 
 .questionsText h2 {
   margin-right: 4vw;
@@ -212,13 +214,9 @@
     width: 45vw;
     margin-top: 4%;
   }
-
-.picOnIt{
-
-margin-left: 100px;
-
-}
-
+  .picOnIt {
+    margin-left: 100px;
+  }
   .aboutUsPic img {
     width: 90vw;
   }
@@ -228,31 +226,24 @@ margin-left: 100px;
   .textOnPicMain h3 {
     font-size: x-large;
   }
-
   .ourService p {
     font-size: large;
     margin-right: 15%;
   }
-
-.questionsText h2 {
-  margin-left: 25%;
-  width: 50vw;
+  .questionsText h2 {
+    margin-left: 25%;
+    width: 50vw;
+  }
+  .questionsText input {
+    padding: 0 10% 0 14%;
+  }
+  .questionsText .inputMassage {
+    padding: 0 10% 0 40%;
+  }
 }
-
-.questionsText input {
-  padding: 0 10% 0 14%;
-}
-
-.questionsText .inputMassage {
-  padding: 0 10% 0 40%;
-}
-
-}
-
 .navbar {
   width: 100vw;
-} 
-
+}
 @media screen and (max-width: 426px) {
   .home h1 {
     font-size: x-large;
@@ -273,23 +264,17 @@ margin-left: 100px;
     justify-content: space-around;
   }
 
-  /* .questionsText h2 {
-    margin-left: 12%;
-  } */
-
   .ourService p {
     font-size: medium;
     min-width: 90vw;
     /* margin-right: 15%; */
   }
+  .questionsText h2 {
+    margin-left: 25%;
+    width: 50vw;
+  }
+  .picStudents {
+    width: 40vw;
+  }
 
-.questionsText h2 {
-  margin-left: 25%;
-  width: 50vw;
 }
-
-.picStudents {
-  width: 40vw;
-}
-}
-
