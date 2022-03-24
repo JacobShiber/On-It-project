@@ -108,10 +108,9 @@ const NewsAdmin = () => {
                             <div key={index} className='news'>
                                 <div className="newsCard">
                                     {user.firstName == update.userName ?
-                                        // <button onClick={() => deleteNews(update._id)}>Delete</button>
-                                        <Box sx={{ minWidth: 120 }}>
+                                        <Box className = 'optionsButton' sx={{ minWidth: 120, marginRight: "97%" }}>
                                             <FormControl >
-                                                <InputLabel id="demo-simple-select-label">...</InputLabel>
+                                                <InputLabel id="demo-simple-select-label">&#8285;</InputLabel>
                                                 <Select
                                                     labelId="demo-simple-select-label"
                                                     id="demo-simple-select"
@@ -119,7 +118,7 @@ const NewsAdmin = () => {
                                                     label="Options"
                                                     onChange={"handleChange"}
                                                 >
-                                                    <MenuItem value={10}>Delete</MenuItem>
+                                                    <MenuItem value={10} onClick ={() => deleteNews(update._id)}>Delete</MenuItem>
                                                 </Select>
                                             </FormControl>
                                         </Box>
