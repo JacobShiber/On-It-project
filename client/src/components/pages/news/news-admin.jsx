@@ -108,7 +108,7 @@ const NewsAdmin = () => {
                             <div key={index} className='news'>
                                 <div className="newsCard">
                                     {user.firstName == update.userName ?
-                                        <Box className = 'optionsButton' sx={{ minWidth: 120, marginRight: "97%" }}>
+                                        <Box className = 'optionsButton' sx={{ minWidth: 120, marginRight: "95%" }}>
                                             <FormControl >
                                                 <InputLabel id="demo-simple-select-label">&#8285;</InputLabel>
                                                 <Select
@@ -117,6 +117,7 @@ const NewsAdmin = () => {
                                                     value={"More Options"}
                                                     label="Options"
                                                     onChange={"handleChange"}
+                                                    className = "selectInput"
                                                 >
                                                     <MenuItem value={10} onClick ={() => deleteNews(update._id)}>Delete</MenuItem>
                                                 </Select>
