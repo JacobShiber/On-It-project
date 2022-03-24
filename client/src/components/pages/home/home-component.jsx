@@ -20,11 +20,13 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 410,
+  width: 350,
   borderRadius: "5px" ,
-  bgcolor: 'background.paper',
-  border: '2px solid #000',
+  bgcolor:"rgb(0,0,0,0.7)",
+  color: "white",
+  border: '3px solid white  ',
   boxShadow: 24,
+  textAlign:"center",
   p: 4,
 };
 
@@ -48,7 +50,11 @@ const Home = () => {
   alt="computer"/>
 
 <section className="ourService">
-      <h1>OUR SERVICES</h1>
+          <p>
+           Our mission is to make the studying progress much more easy to deal with. <br/>
+           Each feature is dedicated to accomplish our vision.
+          </p>
+      <h1>FEATURES</h1>
         <article className="Service">
           <img
             src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
@@ -91,6 +97,19 @@ const Home = () => {
             Without being late for class
           </h3>
         </article>
+        <article className="Service">
+          <img
+            src="https://iconsplace.com/wp-content/uploads/_icons/800080/256/png/news-icon-13-256.png"
+            alt="picService"
+          />
+          <Link to="/grades"><h2>Grades</h2></Link>
+          <h3>
+            In this page you can
+            <br />
+            check all your grades
+          </h3>
+        </article>
+
       </section>
 
       <section className="aboutUs">
@@ -162,7 +181,7 @@ const Home = () => {
         </article>
       </section>
 
-      <h1>MEET THE TEAM</h1>
+      <h1 className="meet-Team-Title">MEET THE TEAM</h1>
       <section className="theTeam">
         <article className="student">
           <img className="picStudents"
@@ -241,17 +260,16 @@ const Home = () => {
       </section>
 
       <section className="questionsText">
-        <h1>GET IN TOUCH </h1>
+        {/* <h1>GET IN TOUCH </h1> */}
         <h2>For questions, requests and inquiries we are always 
           available and happy to help :</h2>
-        {/* <label htmlFor="">Name : </label><br/> */}
+        <div>
         <input placeholder="  Name" className="inputName"/>
-        {/* <label htmlFor="">Email : </label><br/> */}
         <input placeholder="  Email" className="inputEmail"/><br/>
-        {/* <label >Text : </label><br/> */}
         <input placeholder="  Massage" className="inputMassage"/><br/>
         <button onClick={sendMassage}>send</button>
         <hr/>
+        </div>
       </section>
 
    <Modal
@@ -261,7 +279,7 @@ const Home = () => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-           <p onClick={() => setOpen(!open)} style = {{cursor: "pointer"}}>&#9747;</p>
+           <p onClick={() => setOpen(!open)} style = {{cursor: "pointer" , position:"relative" , left:"50%" , bottom:"25px"}}>&#9747;</p>
            <p>We received your message !</p>
           </Typography>
         </Box>

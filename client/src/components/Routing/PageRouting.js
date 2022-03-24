@@ -10,16 +10,14 @@ import Schedule from "../pages/schedule/schedule-component";
 import Footer from "../features/footer/footer-component";
 import Navbar from "../features/navbar/navbar-component";
 
-const user = JSON.parse(localStorage.getItem('user'));
 const PageRouting = () => {
  
  const [user , setUser] = useState({});
 
   useEffect(() => {
-    setUser(localStorage.getItem("user"));
+    setUser(JSON.parse(localStorage.getItem("user")));
   } , []);
   
-  console.log(user);
   return (
     <div> 
       <BrowserRouter>
@@ -33,7 +31,7 @@ const PageRouting = () => {
           <Route exact path="/schedule" element={<Schedule />}/>
           <Route exact path="/grades" element={<GradesTable />}/>
         </Routes>
-        <Footer/>
+        {user? <Footer/> : null}
       </BrowserRouter>
      </div> 
   );

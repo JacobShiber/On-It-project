@@ -20,9 +20,9 @@ const style = {
     transform: 'translate(-50%, -50%)',
     width: 410,
     borderRadius: "5px" ,
-    // bgcolor: 'background.paper',
+    bgcolor:"rgb(0,0,0,0.7)",
     color: "white",
-    border: '3px solid purple',
+    border: '3px solid white',
     boxShadow: 24,
     p: 4,
   };
@@ -92,10 +92,10 @@ function AdminSchedule() {
             <h1>Calendar</h1>
             <div className="addEvent">
             <h2>Add New Event</h2>
-                <input type="text" className="inputText" placeholder="Add Title" style={{ width: "37%", marginRight: "5px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
-                <DatePicker minDate={new Date()} showTimeSelect dateFormat="Pp" placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
-                <DatePicker minDate={newEvent.start} showTimeSelect dateFormat="Pp" placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
-                <button className="saveEvent" stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
+                <input type="text" className="inputText" placeholder="Add Title"  value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
+                <DatePicker className="inputText" minDate={new Date()} showTimeSelect dateFormat="Pp" placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
+                <DatePicker  className="inputText" minDate={newEvent.start} showTimeSelect dateFormat="Pp" placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
+                <button className="saveEvent" style={{ marginTop: "18px" }} onClick={handleAddEvent}>
                     Add Event
                 </button>
                 <br/>

@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 import './navbar.css'
+
   const pages = ['Home', 'News', 'Grades', 'Schedule', 'Contact'];
   const settings = ['Logout'];
   const navigations = ['/home', '/news', '/grades', '/schedule', '/contact'];
@@ -48,7 +49,7 @@ const Navbar = () => {
   }
 
   return (
-  <AppBar position="static" className='navbar' style={{backgroundColor:"#9932CC"}} >
+  <AppBar position="static" className='navbar' style={{backgroundColor:"#9932CC" , width:"100vw"}} >
     <Container maxWidth="xl">
       <Toolbar disableGutters>
         <Typography
@@ -90,7 +91,7 @@ const Navbar = () => {
             }}
           >
             {pages.map((page) => (
-              <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <MenuItem  key={page} onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">{page}</Typography>
               </MenuItem>
             ))}
@@ -106,7 +107,7 @@ const Navbar = () => {
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page, index) => (
-            <Button
+            <Button className='links'
               key={page}
               onClick={() => navBarNavigator(index)}
               sx={{ my: 2, color: 'white', display: 'block' }}
@@ -146,9 +147,11 @@ const Navbar = () => {
         </Box>
       </Toolbar>
     </Container>
-  </AppBar>
+      </AppBar>
+    </div>
+  
+
   );
 };
 
 export default Navbar;
-

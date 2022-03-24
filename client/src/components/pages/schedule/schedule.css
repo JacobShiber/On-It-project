@@ -28,10 +28,11 @@
 }
 
 .saveEvent{
-    height: 3vh;
+    height: 4vh;
     width: 10vw;
+    border-radius: 5%;
     font-weight: bold;
-    transition: 1s ease-in-out;
+    transition: 0.2s linear;
 }
 .saveEvent:hover{
     width: 10.3vw;
@@ -41,6 +42,17 @@
 
 .rbc-event{
     background-color: rgb(142, 72, 151)
+}
+
+.inputText {
+    border: none;
+    border-bottom: 2px solid grey ;
+    /* padding: 0 25% ; */
+    height: 4vh;
+    margin-top: 1.5vh;
+}
+.inputText:focus{
+    border: none;
 }
 /* .rbc-row{
     background-color: rgba(175, 121, 175, 0.623);
