@@ -251,7 +251,7 @@ margin-left: 100px;
 
 .navbar {
   width: 100vw;
-}
+} 
 
 @media screen and (max-width: 426px) {
   .home h1 {
