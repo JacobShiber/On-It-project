@@ -147,9 +147,11 @@ const Navbar = () => {
         </Box>
       </Toolbar>
     </Container>
-  </AppBar>
+      </AppBar>
+    </div>
+  
+
   );
 };
 
 export default Navbar;
-

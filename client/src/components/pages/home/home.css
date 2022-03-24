@@ -211,6 +211,13 @@
     width: 45vw;
     margin-top: 4%;
   }
+
+.picOnIt{
+
+margin-left: 100px;
+
+}
+
   .aboutUsPic img {
     width: 90vw;
   }
@@ -241,6 +248,10 @@
 
 }
 
+.navbar {
+  width: 100vw;
+}
+
 @media screen and (max-width: 426px) {
   .home h1 {
     font-size: x-large;
@@ -251,7 +262,7 @@
     font-size: small;
   }
   .Service {
-    width: 40vw;
+    width: 95vw;
     margin: 1%;
   }
   .aboutUsArticle h3 {

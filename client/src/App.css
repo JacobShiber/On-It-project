@@ -7,13 +7,13 @@
   text-align: center;
   background-color: white;
   color: black;
-  display: grid;
+  /* display: grid;
   grid-template-areas:
     "navbar navbar navbar navbar"
     "main main main main"
     "main main main main"
-    "footer footer footer footer";
-  width: 100%;
+    "footer footer footer footer"; */
+  width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   font-family: "Mochiy Pop One", sans-serif;
