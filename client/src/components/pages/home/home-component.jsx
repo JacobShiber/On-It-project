@@ -2,9 +2,9 @@ import React , {useState} from "react";
 import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
-import logoCheck from './homePicture/Black_check.svg.png';
-import computerPic from './homePicture/computerMain.jpg';
-import LogoPic from './homePicture/Logo-white.png';
+import logoCheck from './homePicture/PinkCheck.png';
+import computerPic from './homePicture/mainPicComputer.png';
+// import LogoPic from './homePicture/Logo-white.png';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -14,8 +14,6 @@ import shimonPic from './homePicture/shimon.jpg';
 import jacobPic from './homePicture/jacob.jpg';
 import kerenPic from './homePicture/keren.jpg';
 import shayPic from './homePicture/shay.jpeg';
-
-
 
 const style = {
   position: 'absolute',
@@ -46,9 +44,10 @@ const Home = () => {
     <div className="home">
 <section className="textOnPicMain">
   {/* <h1><img src={LogoPic} className="picOnIt"/>n It
-  </h1> */}
-  {/* <h3>Be stronger than your excuse</h3> */}
-</section><img className="mainPic" src={computerPic} alt="computer"/>
+  </h1>
+  <h3>Be stronger than your excuse</h3> */}
+</section><img className="mainPic" src={computerPic}
+  alt="computer"/>
 
 <section className="ourService">
           <p>

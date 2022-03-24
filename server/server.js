@@ -27,7 +27,6 @@ app.use('/grades' , passport.authenticate("jwt",{session:false}), userGradesRout
 app.use('/schedule', passport.authenticate("jwt",{session:false}), ScheduleRouter)
 
 
-
 app.listen(process.env.PORT);
 
 if(process.env.NODE_ENV === 'production'){

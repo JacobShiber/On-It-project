@@ -35,9 +35,10 @@
 
 
 .mainPic {
-  width: 100vw;
+   width: 100vw;
   height: 90vh;
-  opacity: 0.25;
+  /* opacity: 0.25;  */
+  /* position: relative; */
 }
 .picOnIt {
   width: 20vw;

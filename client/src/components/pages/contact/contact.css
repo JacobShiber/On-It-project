@@ -17,11 +17,11 @@
     background: linear-gradient(
     white,
     white,
-    rgba(231, 170, 231, 0.712)
+    #9362ac
   );
   }
   .cardUser:hover{
-    box-shadow: rgba(128, 0, 128, 0.836) 4px 4px 4px 4px;
+    box-shadow: #9932CC 4px 4px 4px 4px;
     width: 29vw;
   
     }

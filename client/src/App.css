@@ -128,7 +128,7 @@ body {
   margin: 5px 0 15px;
   display: block;
   font-weight: 400;
-  color: rgb(184, 69, 184);
+  color: #9932CC;
   text-shadow: 1px 1px 1px black;
   font-size: 30px;
 }
@@ -176,7 +176,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background-color: purple;
+  background-color: #9932CC;
   box-shadow: 1px 1px 1px black;
   color: #fff;
   margin: 0 0 5px;
@@ -234,7 +234,7 @@ fieldset {
   margin-right: 20px;
   font-size: 20px;
   background: none;
-  color: purple;
+  color: #9932CC;
 }
 
 .registerButtons button:hover {
@@ -249,7 +249,7 @@ fieldset {
   padding: 5px 5px;
   border-radius: 2px;
   background: black;
-  box-shadow: 1px 1px 1px purple;
+  box-shadow: 1px 1px 1px #9932CC;
   color: white;
   margin: 10px;
   font-size: 15px;
@@ -257,7 +257,7 @@ fieldset {
 }
 
 .navigateButtons:hover {
-  background-color: purple;
+  background-color: #9932CC;
   box-shadow: 1px 1px 1px black;
 }
 
