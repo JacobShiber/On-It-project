@@ -148,7 +148,6 @@ const Navbar = () => {
       </Toolbar>
     </Container>
       </AppBar>
-    </div>
   
 
   );
