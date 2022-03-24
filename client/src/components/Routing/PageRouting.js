@@ -31,7 +31,7 @@ const PageRouting = () => {
           <Route exact path="/schedule" element={<Schedule />}/>
           <Route exact path="/grades" element={<GradesTable />}/>
         </Routes>
-        <Footer/>
+        {user? <Footer/> : null}
       </BrowserRouter>
      </div> 
   );
