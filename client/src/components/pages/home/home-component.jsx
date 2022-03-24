@@ -2,7 +2,7 @@ import React , {useState} from "react";
 import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
-import logoCheck from './homePicture/PinkCheck.png';
+import logoCheck from './homePicture/Black_check.svg.png';
 import computerPic from './homePicture/computerMain.jpg';
 import LogoPic from './homePicture/Logo-white.png';
 import Box from '@mui/material/Box';
@@ -45,14 +45,17 @@ const Home = () => {
   return (
     <div className="home">
 <section className="textOnPicMain">
-  <h1><img src={LogoPic} className="picOnIt"/>n It
-  </h1>
-  <h3>Be stronger than your excuse</h3>
-</section><img className="mainPic" src={computerPic}
-  alt="computer"/>
+  {/* <h1><img src={LogoPic} className="picOnIt"/>n It
+  </h1> */}
+  {/* <h3>Be stronger than your excuse</h3> */}
+</section><img className="mainPic" src={computerPic} alt="computer"/>
 
 <section className="ourService">
-      <h1>OUR SERVICES</h1>
+          <p>
+           Our mission is to make the studying progress much more easy to deal with. <br/>
+           Each feature is dedicated to accomplish our vision.
+          </p>
+      <h1>FEATURES</h1>
         <article className="Service">
           <img
             src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
@@ -95,6 +98,19 @@ const Home = () => {
             Without being late for class
           </h3>
         </article>
+        <article className="Service">
+          <img
+            src="https://iconsplace.com/wp-content/uploads/_icons/800080/256/png/news-icon-13-256.png"
+            alt="picService"
+          />
+          <Link to="/grades"><h2>Grades</h2></Link>
+          <h3>
+            In this page you can
+            <br />
+            check all your grades
+          </h3>
+        </article>
+
       </section>
 
       <section className="aboutUs">
@@ -166,7 +182,7 @@ const Home = () => {
         </article>
       </section>
 
-      <h1>MEET THE TEAM</h1>
+      <h1 className="meet-Team-Title">MEET THE TEAM</h1>
       <section className="theTeam">
         <article className="student">
           <img className="picStudents"
@@ -248,11 +264,13 @@ const Home = () => {
         {/* <h1>GET IN TOUCH </h1> */}
         <h2>For questions, requests and inquiries we are always 
           available and happy to help :</h2>
+        <div>
         <input placeholder="  Name" className="inputName"/>
         <input placeholder="  Email" className="inputEmail"/><br/>
         <input placeholder="  Massage" className="inputMassage"/><br/>
         <button onClick={sendMassage}>send</button>
         <hr/>
+        </div>
       </section>
 
    <Modal
