@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { useNavigate } from 'react-router-dom';
 import './navbar.css'
+
   const pages = ['Home', 'News', 'Grades', 'Schedule', 'Contact'];
   const settings = ['Logout'];
   const navigations = ['/home', '/news', '/grades', '/schedule', '/contact'];
@@ -48,7 +49,7 @@ const Navbar = () => {
   }
 
   return (
-  <AppBar position="static" className='navbar' style={{backgroundColor:"#9932CC"}} >
+  <AppBar position="static" className='navbar' style={{backgroundColor:"#9932CC" , width:"100vw"}} >
     <Container maxWidth="xl">
       <Toolbar disableGutters>
         <Typography
