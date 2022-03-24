@@ -1,242 +1,286 @@
+.firstH3{
+    
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
 .home h1 {
-  font-size: 40px;
-  text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
-}
-.home {
-  width: 100vw;
-  height: 100vh;
-}
-/* .home{
-  font-family: 'Mochiy Pop One', sans-serif;
-  font-family: 'Poppins', sans-serif;} */
-
-.theTeam {
-  width: 99vw;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.student {
-  width: 22vw;
-  height: auto;
-  padding: 1.5%;
-  margin: 0.5%;
-  /* margin: 1%; */
-  /* border: 2px black solid; */
-  /* box-shadow: 4px 4px 4px rgba(216, 205, 216, 0.712); */
-  box-shadow: gray 5px 5px 5px 5px;
-  transition: 2s ease-in-out;
-}
-.picStudents {
-  width: 18vw;
-  height: 35vh;
-}
-/* .student img :hover{
-  width: 0.5%;
-} */
-.student:hover {
-  width: 23vw;
-}
-.mainPic {
-  width: 100vw;
-  height: 90vh;
-  opacity: 0.25;
-  /* position: relative; */
-}
-.picOnIt {
-  width: 20vw;
-  height: 30vh;
-  margin-right: -103px;
-  /* margin-top: 5vh; */
-  /* position: relative; */
-  margin-bottom: -92px;
-}
-.textOnPicMain {
-  position: absolute;
-  margin-left: 30vw;
-  margin-top: 20vh;
-  font-size: 30px;
-  padding: 1%;
-}
-.textOnPicMain h1 {
-  font-size: 80px;
-  padding: 3%;
-}
-.ourService {
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  background: linear-gradient(
-    white,
-    rgba(233, 205, 233, 0.712),
-    rgba(231, 170, 231, 0.712)
-  );
-  box-shadow: 2px 2px 2px rgb(221, 216, 216);
-  padding: 4%;
-}
-.ourService h1 {
-  width: 90vw;
-}
-.Service {
-  width: 30%;
-}
-.Service img {
-  width: 8vw;
-  height: 12vh;
-  border-radius: 50%;
-  box-shadow: 4px 4px 4px rgb(134, 128, 128);
-  margin: 3%;
-}
-.aboutUs {
-  background-color: rgba(231, 170, 231, 0.712);
-  background: linear-gradient(
-    rgba(231, 170, 231, 0.712),
-    rgba(233, 205, 233, 0.712),
-    white
-  );
-  /* box-shadow: 4px 4px 4px 4px  black; */
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* background-color: rgba(236, 229, 229, 0.493);
-    box-shadow: 2px 2px 2px rgb(221, 216, 216); */
-  flex-wrap: wrap;
-  padding: 4%;
-}
-.aboutUsPic {
-  width: 45vw;
-}
-.aboutUsPic img {
-  width: 45vw;
-  height: auto;
-}
-.aboutUsArticle {
-  text-align: left;
-  width: 45vw;
-}
-.aboutUsArticle h3 {
-  font-size: large;
-}
-.aboutUsArticle ul {
-  list-style-type: none;
-  font-weight: 400;
-  font-size: 14px;
-}
-.questionsText {
-  margin-top: 1%;
-  background: linear-gradient(white, rgb(179, 172, 172));
-  width: 100vw;
-  text-align: center;
-  /* position: absolute; */
-}
-.questionsText button {
-  width: 30vw;
-  margin: 1%;
-  padding: 0.5%;
-  border: none;
-  box-shadow: 4px 4px 4px rgb(134, 128, 128);
-  font-size: large;
-  font-weight: bold;
-  text-shadow: 1px 1px 1px rgb(201, 117, 180);
-  transition: 1s ease-in-out;
-}
-
-.questionsText button:hover {
-  background-color: rgb(202, 89, 202);
-}
-.questionsText input {
-  border: none;
-  box-shadow: 4px 4px 4px rgb(134, 128, 128);
-  margin: 0.5%;
-}
-.inputEmail,
-.inputName {
-  width: 30vw;
-  height: 6vh;
-  transition: 1s ease-in-out;
-}
-.inputMassage {
-  width: 61vw;
-  height: 25vh;
-  transition: 1s ease-in-out;
-}
-.inputMassage:hover {
-  background-color: rgba(238, 196, 238, 0.795);
-}
-.inputEmail:hover {
-  background-color: rgba(238, 196, 238, 0.795);
-}
-.inputName:hover {
-  background-color: rgba(238, 196, 238, 0.795);
-}
-.questionsText h2 {
-  margin-right: 13vw;
-}
-
-@media screen and (max-width: 768px) {
-  .student {
-    width: 45vw;
-    margin-top: 4%;
+    font-size: 40px;
+    text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
   }
-
-.picOnIt{
-
-margin-left: 100px;
-
-}
-
-  .aboutUsPic img {
-    width: 90vw;
+  .home {
+    width: 100vw;
+    height: 100vh;
   }
-  .aboutUsArticle {
-    width: 90vw;
-  }
-  .textOnPicMain h3 {
-    font-size: x-large;
-  }
-}
-
-.navbar {
-  width: 100vw;
-}
-
-@media screen and (max-width: 426px) {
-  .home h1 {
-    font-size: x-large;
-  }
-  .home h2,
-  h4,
-  h3 {
-    font-size: small;
-  }
-  .Service {
-    width: 95vw;
-    margin: 1%;
-  }
-  .aboutUsArticle h3 {
-    font-size: medium;
-  }
-  .ourService {
+  /* .home{
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-family: 'Poppins', sans-serif;} */
+  
+  .theTeam {
+    width: 99vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
   }
+  .student {
+    width: 22vw;
+    height: auto;
+    padding: 1.5%;
+    margin: 0.5%;
+    /* margin: 1%; */
+    /* border: 2px black solid; */
+    /* box-shadow: 4px 4px 4px rgba(216, 205, 216, 0.712); */
+    box-shadow: gray 5px 5px 5px 5px;
+    transition: 2s ease-in-out;
+  }
+  .picStudents {
+    width: 18vw;
+    height: 35vh;
+  }
+  /* .student img :hover{
+    width: 0.5%;
+  } */
+  .student:hover {
+    width: 23vw;
+  }
+  .mainPic {
+    width: 100%;
+    
+    background-color: #e5e5e5;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+    /* position: relative; */
+  }
+  .picOnIt {
+    width: 20vw;
+    height: 30vh;
+    margin-right: -103px;
+    /* margin-top: 5vh; */
+    /* position: relative; */
+    margin-bottom: -92px;
+  }
+  .textOnPicMain {
+    position: absolute;
+    margin-left: 30vw;
+    margin-top: 20vh;
+    font-size: 30px;
+    padding: 1%;
+  }
+  .textOnPicMain h1 {
+    font-size: 80px;
+    padding: 3%;
+  }
+  .ourService {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+        padding: 100px 0;
+    background: #f6f6f6;
+    
+
+    box-shadow: 2px 2px 2px rgb(221, 216, 216);
+    padding: 4%;
+  }
+  .ourService h1 {
+    width: 90vw;
+  }
+  .Service {
+    width: 30%;
+  }
+  .Service img {
+    width: 8vw;
+    height: 12vh;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px rgb(134, 128, 128);
+    margin: 3%;
+  }
+  .aboutUs {
+    background-color: white;
+    background: linear-gradient(
+      /* rgba(231, 170, 231, 0.712),
+      rgba(233, 205, 233, 0.712), */
+      white
+    );
+    /* box-shadow: 4px 4px 4px 4px  black; */
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: rgba(236, 229, 229, 0.493);
+      box-shadow: 2px 2px 2px rgb(221, 216, 216); */
+    flex-wrap: wrap;
+    padding: 4%;
+  }
+  .aboutUsPic {
+    width: 45vw;
+  }
+  .aboutUsPic img {
+    width: 45vw;
+    height: auto;
+  }
+  .aboutUsArticle {
+    text-align: left;
+    width: 45vw;
+  }
+  .aboutUsArticle h3 {
+    font-size: large;
+  }
+  .aboutUsArticle ul {
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .questionsText {
+    margin-top: 1%;
+    background: linear-gradient(white, rgb(179, 172, 172));
+    width: 100vw;
+    text-align: center;
+    /* position: absolute; */
+  }
+  .questionsText button {
+    width: 30vw;
+    margin: 1%;
+    padding: 0.5%;
+    border: none;
+    box-shadow: 4px 4px 4px rgb(134, 128, 128);
+    font-size: large;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgb(201, 117, 180);
+    transition: 1s ease-in-out;
+  }
+  
+  .questionsText button:hover {
+    background-color: rgb(202, 89, 202);
+  }
+  .questionsText input {
+    border: none;
+    box-shadow: 4px 4px 4px rgb(134, 128, 128);
+    margin: 0.5%;
+  }
+  .inputEmail,
+  .inputName {
+    width: 30vw;
+    height: 6vh;
+    transition: 1s ease-in-out;
+  }
+  .inputMassage {
+    width: 61vw;
+    height: 25vh;
+    transition: 1s ease-in-out;
+  }
+  .inputMassage:hover {
+    background-color: rgba(238, 196, 238, 0.795);
+  }
+  .inputEmail:hover {
+    background-color: rgba(238, 196, 238, 0.795);
+  }
+  .inputName:hover {
+    background-color: rgba(238, 196, 238, 0.795);
+  }
   .questionsText h2 {
-    margin-left: 12%;
+    margin-right: 13vw;
   }
-
-  .onItText{
-
-margin-left: 80px;
-
+  
+  @media screen and (max-width: 768px) {
+    .student {
+      width: 45vw;
+      margin-top: 4%;
+    }
+  
+  .picOnIt{
+  
+  margin-left: 100px;
+  
   }
-
-  .textOnPicMain img {
-
-    margin-left: 70px;
+  
+    .aboutUsPic img {
+      width: 90vw;
+    }
+    .aboutUsArticle {
+      width: 90vw;
+    }
+    .textOnPicMain h3 {
+      font-size: x-large;
+    }
   }
+  
+  .navbar {
+    width: 100vw;
+  }
+  
+  @media screen and (max-width: 426px) {
+    .home h1 {
+      font-size: x-large;
+    }
+    .home h2,
+    h4,
+    h3 {
+      font-size: small;
+    }
+    .Service {
+      width: 95vw;
+      margin: 1%;
+    }
+    .aboutUsArticle h3 {
+      font-size: medium;
+    }
+    .ourService {
+      justify-content: space-around;
+    }
+    .questionsText h2 {
+      margin-left: 12%;
+    }
+  
+    .onItText{
+  
+  margin-left: 80px;
+  
+    }
+  
+    .textOnPicMain img {
+  
+      margin-left: 70px;
+    }
+  
+    .fa-bu:before {
+        content: "\f0a1";
+        font-size: 38px;
+        
+    }
+    .bullhorn::before{
+        content: "\f0a2";
+    }
+    .i.fa {
+        font-size: 38px;
+        margin-bottom: 20px;
+        transition: all 0.5s;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        padding: 30px 0;
+        border-radius: 50%;
+        background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+        box-shadow: 10px 10px 10px rgb(0 0 0 / 5%);
+    }
+    .aboutUsPicOne {
+        width: 520px;
+    }
 
-}
+    /* .ourService {
+        padding: 100px 0;
+    background: #f6f6f6;
+    } */
+  }

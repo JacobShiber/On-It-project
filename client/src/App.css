@@ -12,6 +12,7 @@
   height: 100vh;
   font-family: "Mochiy Pop One", sans-serif;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 
 }
 
@@ -21,9 +22,9 @@
   height: 50vh;
 }
 h1 {
-  font-size: 40px;
+  /* font-size: 40px;
   text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
-  padding: 1%;
+  padding: 1%; */
 }
 
 

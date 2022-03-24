@@ -1,4 +1,5 @@
-import React , {useState} from "react";
+
+import React, { useState } from "react";
 import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
@@ -23,12 +24,12 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 350,
-  borderRadius: "5px" ,
-  bgcolor:"rgb(0,0,0,0.7)",
+  borderRadius: "5px",
+  bgcolor: "rgb(0,0,0,0.7)",
   color: "white",
   border: '3px solid white  ',
   boxShadow: 24,
-  textAlign:"center",
+  textAlign: "center",
   p: 4,
 };
 
@@ -39,25 +40,28 @@ const Home = () => {
 
   const sendMassage = () => {
     setOpen(!open)
-    
+
   }
 
   return (
     <div className="home">
-<section className="textOnPicMain">
-  <h1><img src={LogoPic} className="picOnIt"/>n It
-  </h1>
-  <h3>Be stronger than your excuse</h3>
-</section><img className="mainPic" src={computerPic}
-  alt="computer"/>
-
-<section className="ourService">
-      <h1>OUR SERVICES</h1>
+      <section className="textOnPicMain">
+        {/* <h1><img src={LogoPic} className="picOnIt"/>n It
+  </h1> */}
+        <h3 className="firstH3">Be stronger than your excuse</h3>
+      </section>
+      <img className="mainPic" src="https://github.com/technext/interact/blob/master/img/intro-bg.jpg?raw=true"
+        alt="computer" />
+      <section className="ourService">
+        <h1>FEATURES</h1>
         <article className="Service">
-          <img
+          {/* <img
             src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
             alt="picService"
-          />
+          /> */}
+          <i class="fa fa-bullhorn">
+
+          </i>
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
@@ -68,11 +72,10 @@ const Home = () => {
           </h3>
         </article>
         <article className="Service">
-          <img
-            src="https://thumbs.gfycat.com/BlindZigzagGreatargus-max-1mb.gif"
-            alt="picService"
-          />
-             <Link to="/news"><h2>News</h2></Link>
+         <i class="fa fa-comments-o">
+
+         </i>
+          <Link to="/news"><h2>News</h2></Link>
           <h3>
             In this page you can
             <br />
@@ -99,8 +102,8 @@ const Home = () => {
 
       <section className="aboutUs">
         <article className="aboutUsPic">
-          <img
-            src="https://media.istockphoto.com/photos/concept-against-racism-or-racial-discrimination-by-showing-with-hand-picture-id1252564431?s=2048x2048"
+          <img className="aboutUsPicOne"
+            src="https://technext.github.io/interact/img/about.jpg"
             alt="us"
           />
         </article>
@@ -108,9 +111,9 @@ const Home = () => {
           <h1>ABOUT US</h1>
           <h3>
             We are four Tech-Career's students from israel and this is our final
-            Project. <br/>
+            Project. <br />
             We chose this idea for students to aid them to be more arranged.
-            The main goal is to have all the details of their studies arranged in one place. <br/>
+            The main goal is to have all the details of their studies arranged in one place. <br />
             We do it because
             we did not have this platform , and we think that every student should have it.
           </h3>
@@ -177,18 +180,18 @@ const Home = () => {
           <h2>Shimon Samay</h2>
           <h4>graduate Tech-Career</h4>
           <a href="shimonsamay7@gmail.com" target="_blank">
-          <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/></a>
+            <img src={logoEmail}
+              width="38px" height="30px" alt="gifEmail" /></a>
           <a href="https://github.com/ShimonSamay" target="_blank">
-           <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/></a>
+            <img src={logoGithub}
+              width="41px" height="30px" alt="gifGithub" /></a>
           <a href="https://www.linkedin.com/in/shimon-samay-363a27217/" target="_blank">
-           <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/></a>
+            <img src={logoLinkedin}
+              width="38px" height="30px" alt="gifLinkedin" /></a>
         </article>
 
         <article className="student">
-          <img  className="picStudents"
+          <img className="picStudents"
             src={jacobPic}
             alt="picStudent"
           />
@@ -196,17 +199,17 @@ const Home = () => {
           <h2>Jacob Shiber</h2>
           <h4>graduate Tech-Career</h4>
           <a href="Yaakovshiber@gmail.com" target="_blank">
-          <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/></a>
+            <img src={logoEmail}
+              width="38px" height="30px" alt="gifEmail" /></a>
           <a href="https://github.com/JacobShiber" target="_blank">
-           <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/></a>
+            <img src={logoGithub}
+              width="41px" height="30px" alt="gifGithub" /></a>
           <a href="https://www.linkedin.com/in/yaakov-shiber-31a466226/" target="_blank">
-           <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/></a>
+            <img src={logoLinkedin}
+              width="38px" height="30px" alt="gifLinkedin" /></a>
         </article>
         <article className="student">
-          <img  className="picStudents"
+          <img className="picStudents"
             src={kerenPic}
             alt="picStudent"
           />
@@ -214,56 +217,56 @@ const Home = () => {
           <h2>Keren Hailu</h2>
           <h4>graduate Tech-Career</h4>
           <a href="keren4509@gmail.com" target="_blank">
-          <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/></a>
+            <img src={logoEmail}
+              width="38px" height="30px" alt="gifEmail" /></a>
           <a href="https://github.com/kerenhailu" target="_blank">
-           <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/></a>
+            <img src={logoGithub}
+              width="41px" height="30px" alt="gifGithub" /></a>
           <a href="https://www.linkedin.com/in/keren-hailu-58bb07218/" target="_blank">
-           <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/></a>
+            <img src={logoLinkedin}
+              width="38px" height="30px" alt="gifLinkedin" /></a>
         </article>
 
         <article className="student">
-          <img  className="picStudents"
+          <img className="picStudents"
             src={shayPic}
             alt="picStudent"
           />
-          <br/>
+          <br />
           <h2>Shay Belayneh</h2>
           <h4>graduate Tech-Career</h4>
           <a href="shay600195@gmail.com" target="_blank">
-          <img src={logoEmail}
-          width="38px" height="30px" alt="gifEmail"/></a>
+            <img src={logoEmail}
+              width="38px" height="30px" alt="gifEmail" /></a>
           <a href="https://github.com/ShayBelayneh" target="_blank">
-           <img src={logoGithub}
-          width="41px" height="30px" alt="gifGithub"/></a>
+            <img src={logoGithub}
+              width="41px" height="30px" alt="gifGithub" /></a>
           <a href="https://www.linkedin.com/in/shay-belayneh/" target="_blank">
-           <img src={logoLinkedin}
-          width="38px" height="30px" alt="gifLinkedin"/></a>
+            <img src={logoLinkedin}
+              width="38px" height="30px" alt="gifLinkedin" /></a>
         </article>
       </section>
 
       <section className="questionsText">
         {/* <h1>GET IN TOUCH </h1> */}
-        <h2>For questions, requests and inquiries we are always 
+        <h2>For questions, requests and inquiries we are always
           available and happy to help :</h2>
-        <input placeholder="  Name" className="inputName"/>
-        <input placeholder="  Email" className="inputEmail"/><br/>
-        <input placeholder="  Massage" className="inputMassage"/><br/>
+        <input placeholder="  Name" className="inputName" />
+        <input placeholder="  Email" className="inputEmail" /><br />
+        <input placeholder="  Massage" className="inputMassage" /><br />
         <button onClick={sendMassage}>send</button>
-        <hr/>
+        <hr />
       </section>
 
-   <Modal
+      <Modal
         open={open}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-           <p onClick={() => setOpen(!open)} style = {{cursor: "pointer" , position:"relative" , left:"50%" , bottom:"25px"}}>&#9747;</p>
-           <p>We received your message !</p>
+            <p onClick={() => setOpen(!open)} style={{ cursor: "pointer", position: "relative", left: "50%", bottom: "25px" }}>&#9747;</p>
+            <p>We received your message !</p>
           </Typography>
         </Box>
       </Modal>
