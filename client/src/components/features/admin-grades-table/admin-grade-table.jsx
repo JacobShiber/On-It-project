@@ -74,16 +74,8 @@ return (
 <input className="table-Inputs" name="userName" onChange={updateValue} placeholder="Enter Student Name"/>
 <input className="table-Inputs" name="userId" onChange={updateValue}  placeholder="Enter Student Id"/>
 <input className="table-Inputs" type="number"  name="grade" onChange={updateValue}  placeholder="Enter Student Grade"/>
+<input type="text" placeholder="Enter Student Test" className="table-select" name="test" onChange={updateValue}/>
 
- <select className="table-select" name="test"  onChange={updateValue}>
- <option>Test</option>
-   {
-     tests?.map((test , index) => 
-          <option key={index} value={test}>{test}</option>
-     )
-   }
-
- </select>
 
  <select className="table-select"  name="course" onChange={updateValue}>
  <option>Course</option>
