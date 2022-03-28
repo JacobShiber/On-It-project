@@ -14,14 +14,13 @@ function App() {
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@500&display=swap');
 </style>
       <header className="App-header">
-        {/* <ThemeProvider>
+        <ThemeProvider>
         <UsersContextProvider>
           <LoadingContextProvider>
           <PageRouting/>
           </LoadingContextProvider>
         </UsersContextProvider>
-        </ThemeProvider> */}
-       <ContactTable/>
+        </ThemeProvider> 
       </header>
     </div>
   );
