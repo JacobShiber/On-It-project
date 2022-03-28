@@ -10,7 +10,7 @@ const ContactTable = () => {
   let message = "not exist , make sure you typed correctly" ;
 
   let [visibleMessage , setVisibleMessage] = useState(false) ;
-
+  
   const fetchData = () => {
     GetAllUsers()
     .then((data) => {

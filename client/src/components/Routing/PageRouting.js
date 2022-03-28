@@ -10,6 +10,7 @@ import News from "../pages/news/news-component";
 import Schedule from "../pages/schedule/schedule-component";
 import Footer from "../features/footer/footer-component";
 import Navbar from "../features/navbar/navbar-component";
+import MainContact from "../pages/contact/main-contact";
 
 const PageRouting = () => {
  
@@ -28,7 +29,7 @@ const PageRouting = () => {
           <Route exact path="/login" element={<Login />}/>
           <Route exact path="/home" element={<Home />}/>
           <Route exact path="/news" element={<News />}/>
-          <Route exact path="/contact" element={<CardsContact />}/>
+          <Route exact path="/contact" element={<MainContact />}/>
           <Route exact path="/schedule" element={<Schedule />}/>
           <Route exact path="/grades" element={<GradesTable />}/>
         </Routes>
