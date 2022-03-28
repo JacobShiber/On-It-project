@@ -71,7 +71,7 @@ const Home = () => {
         </article>
         <article className="Service">
           <img
-            src="https://thumbs.gfycat.com/BlindZigzagGreatargus-max-1mb.gif"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiVzA_O9FU4yAZPDwRQHDx4OmvIMysz0E2gUVM2SCAE_oATo4JUpk5ZbmoOcXMhZy_00E&usqp=CAU"
             alt="picService"
           />
              <Link to="/news"><h2>News</h2></Link>
@@ -85,7 +85,7 @@ const Home = () => {
         </article>
         <article className="Service">
           <img
-            src="https://i.pinimg.com/originals/36/1a/f8/361af8ea19b3ae80d06922bb2a314afd.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6QC-MX2lLlMrNgH5L5a6xh4YKn5XfDwGW9E6MmwIlOin2uNanhJYVuPlbgww3jChR7U&usqp=CAU"
             alt="picService"
           />
           <Link to="/schedule"><h2>Schedule</h2></Link>

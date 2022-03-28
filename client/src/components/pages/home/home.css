@@ -91,14 +91,16 @@
 }
 
 .Service h2 {
-  color: #9932cc93;
+  color: purple;
+  font-size: 20px;
+  /* text-shadow: 1px 1px 1px black; */
 }
 .Service img {
-  width: 8vw;
-  height: 12vh;
-  border-radius: 50%;
+  width: 6vw;
+  height: 10vh;
+  /* border-radius: 50%; */
   /* box-shadow: 4px 4px 4px rgb(134, 128, 128); */
-  margin: 3%;
+  /* margin: 3%; */
 }
 .aboutUs {
   /* background-color: rgba(231, 170, 231, 0.712); */
