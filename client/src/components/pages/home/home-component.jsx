@@ -4,7 +4,6 @@ import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
 import logoCheck from './homePicture/Black_check.svg.png';
 import computerPic from './homePicture/mainPicComputer.png';
-import LogoPic from './homePicture/Black_check.svg.png';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -45,16 +44,14 @@ const Home = () => {
   return (
     <div className="home">
 <section className="textOnPicMain">
-  {/* <h1><img src={LogoPic} className="picOnIt"/>n It
-  </h1>
-  <h3>Be stronger than your excuse</h3> */}
 </section><img className="mainPic" src={computerPic}
   alt="computer"/>
 
 <section className="ourService">
           <p>
-           Our mission is to make the studying progress much more easy to deal with. <br/>
-           Each feature is dedicated to accomplish our vision.
+           This web make the studying progress much more easy to deal with. <br/>
+           Each feature is dedicated to accomplish our vision. <br/>
+           they have all they need in one place.
           </p>
       <h1>FEATURES</h1>
         <article className="Service">
@@ -65,37 +62,37 @@ const Home = () => {
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
-            <br />
+            
             contact to all your
-            <br />
+            
             friends and admins.
           </h3>
         </article>
         <article className="Service">
           <img
-            src="https://thumbs.gfycat.com/BlindZigzagGreatargus-max-1mb.gif"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiVzA_O9FU4yAZPDwRQHDx4OmvIMysz0E2gUVM2SCAE_oATo4JUpk5ZbmoOcXMhZy_00E&usqp=CAU"
             alt="picService"
           />
              <Link to="/news"><h2>News</h2></Link>
           <h3>
             In this page you can
-            <br />
+            
             see your news in live
-            <br />
+            
             And not to hear from others
           </h3>
         </article>
         <article className="Service">
           <img
-            src="https://i.pinimg.com/originals/36/1a/f8/361af8ea19b3ae80d06922bb2a314afd.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6QC-MX2lLlMrNgH5L5a6xh4YKn5XfDwGW9E6MmwIlOin2uNanhJYVuPlbgww3jChR7U&usqp=CAU"
             alt="picService"
           />
           <Link to="/schedule"><h2>Schedule</h2></Link>
           <h3>
             In this page you can
-            <br />
+            
             see your schedule anytime
-            <br />
+            
             Without being late for class
           </h3>
         </article>
@@ -107,7 +104,7 @@ const Home = () => {
           <Link to="/grades"><h2>Grades</h2></Link>
           <h3>
             In this page you can
-            <br />
+            
             check all your grades
           </h3>
         </article>

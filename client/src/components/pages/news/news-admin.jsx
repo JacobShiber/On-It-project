@@ -92,10 +92,8 @@ const NewsAdmin = () => {
                         setNews(result);
                     }))
     }
-
     return (
-
-        <>{loading ? <img src='https://cdn.dribbble.com/users/2646511/screenshots/15115496/media/f2ffddfadda5505334e601f8eb09596e.gif'
+        <>{loading ? <img src='https://flevix.com/wp-content/uploads/2019/07/Curve-Loading.gif'
             className='gifLoading' alt="gifLoading" /> :
             <div>
                 <div className="newsInputs">

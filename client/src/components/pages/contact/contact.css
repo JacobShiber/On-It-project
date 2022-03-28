@@ -1,15 +1,16 @@
 .cardWrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
+   flex-direction: row;
     justify-content:space-around;
-    margin-top: 2vh;
+    margin-top: 2vh; 
   }
   .cardUser {
     width: 28vw;
     height: auto;
     align-items: center;
     margin: 1%;
-    transition: 1s ease-in-out;
+    /* transition: 1s ease-in-out; */
     margin-top: 5vh;
     border-radius: 2%;
     box-shadow: rgba(153, 140, 153, 0.781) 3px 3px 3px 3px;
@@ -20,11 +21,11 @@
     #9362ac
   );
   }
-  .cardUser:hover{
+  /* .cardUser:hover{
     box-shadow: #9932CC 4px 4px 4px 4px;
     width: 29vw;
   
-    }
+    } */
   .cardUser img {
     margin-top: 3%;
     width: 21vw;
