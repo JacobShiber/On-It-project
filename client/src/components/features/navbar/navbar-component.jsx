@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React , {useContext} from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,8 +11,11 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { themeContext } from "../../../context/theme-context/theme-context";
+import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import { useNavigate } from 'react-router-dom';
 import './navbar.css'
+
   const pages = ['Home', 'News', 'Grades', 'Schedule', 'Contact'];
   const settings = ['Logout'];
   const navigations = ['/home', '/news', '/grades', '/schedule', '/contact'];
@@ -20,6 +23,12 @@ import './navbar.css'
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
+
+  const changeTheme = () => {
+    setPurpleMode(!purpleMode) ;
+  }
 
   const user = JSON.parse(localStorage.getItem('user'));
 
@@ -48,10 +57,8 @@ const Navbar = () => {
   }
 
   return (
-  
-    <div className='navbar' >
-<AppBar position="static" style={{backgroundColor:"#9932CC"}} >
-        <Container maxWidth="xl">
+  <AppBar position="static" className='navbar' style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>
+    <Container maxWidth="xl">
       <Toolbar disableGutters>
         <Typography
           variant="h6"
@@ -116,6 +123,7 @@ const Navbar = () => {
               {page}
             </Button>
           ))}
+           <ColorLensOutlinedIcon onClick={changeTheme} style={{fontSize:"300%" , color:"white" , marginTop:"1%" , marginLeft:"3%" , cursor:"pointer"}}/>
         </Box>
         <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="Open settings">
@@ -149,9 +157,6 @@ const Navbar = () => {
       </Toolbar>
     </Container>
       </AppBar>
-    </div>
-  
-
   );
 };
 

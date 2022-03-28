@@ -1,11 +1,9 @@
-
-import React, { useState } from "react";
+import React , {useState , useContext} from "react";
 import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
-import logoCheck from './homePicture/PinkCheck.png';
-import computerPic from './homePicture/computerMain.jpg';
-import LogoPic from './homePicture/Logo-white.png';
+import logoCheck from './homePicture/Black_check.svg.png';
+import computerPic from './homePicture/mainPicComputer.png';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
@@ -15,8 +13,7 @@ import shimonPic from './homePicture/shimon.jpg';
 import jacobPic from './homePicture/jacob.jpg';
 import kerenPic from './homePicture/keren.jpg';
 import shayPic from './homePicture/shay.jpeg';
-
-
+import { themeContext } from "../../../context/theme-context/theme-context";
 
 const style = {
   position: 'absolute',
@@ -35,8 +32,10 @@ const style = {
 
 
 const Home = () => {
-
+  
   const [open, setOpen] = useState(false);
+  
+  const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
 
   const sendMassage = () => {
     setOpen(!open)
@@ -45,15 +44,18 @@ const Home = () => {
 
   return (
     <div className="home">
-      <section className="textOnPicMain">
-        {/* <h1><img src={LogoPic} className="picOnIt"/>n It
-  </h1> */}
-        <h3 className="firstH3">Be stronger than your excuse</h3>
-      </section>
-      <img className="mainPic" src="https://github.com/technext/interact/blob/master/img/intro-bg.jpg?raw=true"
-        alt="computer" />
-      <section className="ourService">
-        <h1>FEATURES</h1>
+
+<section className="textOnPicMain">
+</section><img className="mainPic" src={computerPic}
+  alt="computer"/>
+
+<section className="ourService">
+          <p>
+           This web make the studying progress much more easy to deal with. <br/>
+           Each feature is dedicated to accomplish our vision. <br/>
+           they have all they need in one place.
+          </p>
+      <h1>FEATURES</h1>
         <article className="Service">
           {/* <img
             src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
@@ -65,42 +67,56 @@ const Home = () => {
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
-            <br />
+            
             contact to all your
-            <br />
+            
             friends and admins.
           </h3>
         </article>
         <article className="Service">
-         <i class="fa fa-comments-o">
-
-         </i>
-          <Link to="/news"><h2>News</h2></Link>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiVzA_O9FU4yAZPDwRQHDx4OmvIMysz0E2gUVM2SCAE_oATo4JUpk5ZbmoOcXMhZy_00E&usqp=CAU"
+            alt="picService"
+          />
+             <Link to="/news"><h2>News</h2></Link>
           <h3>
             In this page you can
-            <br />
+            
             see your news in live
-            <br />
+            
             And not to hear from others
           </h3>
         </article>
         <article className="Service">
           <img
-            src="https://i.pinimg.com/originals/36/1a/f8/361af8ea19b3ae80d06922bb2a314afd.jpg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE6QC-MX2lLlMrNgH5L5a6xh4YKn5XfDwGW9E6MmwIlOin2uNanhJYVuPlbgww3jChR7U&usqp=CAU"
             alt="picService"
           />
           <Link to="/schedule"><h2>Schedule</h2></Link>
           <h3>
             In this page you can
-            <br />
+            
             see your schedule anytime
-            <br />
+            
             Without being late for class
           </h3>
         </article>
+        <article className="Service">
+          <img
+            src="https://iconsplace.com/wp-content/uploads/_icons/800080/256/png/news-icon-13-256.png"
+            alt="picService"
+          />
+          <Link to="/grades"><h2>Grades</h2></Link>
+          <h3>
+            In this page you can
+            
+            check all your grades
+          </h3>
+        </article>
+
       </section>
 
-      <section className="aboutUs">
+      <section className="aboutUs" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>
         <article className="aboutUsPic">
           <img className="aboutUsPicOne"
             src="https://brancoweiss.org.il/wp-content/uploads/2017/08/%D7%9E%D7%A9%D7%95%D7%91-21.jpg"
@@ -170,7 +186,7 @@ const Home = () => {
         </article>
       </section>
 
-      <h1>MEET THE TEAM</h1>
+      <h1 className="meet-Team-Title">MEET THE TEAM</h1>
       <section className="theTeam">
         <article className="student">
           <img className="picStudents"
@@ -252,11 +268,13 @@ const Home = () => {
         {/* <h1>GET IN TOUCH </h1> */}
         <h2>For questions, requests and inquiries we are always
           available and happy to help :</h2>
-        <input placeholder="  Name" className="inputName" />
-        <input placeholder="  Email" className="inputEmail" /><br />
-        <input placeholder="  Massage" className="inputMassage" /><br />
+        <div>
+        <input placeholder="  Name" className="inputName"/>
+        <input placeholder="  Email" className="inputEmail"/><br/>
+        <input placeholder="  Massage" className="inputMassage"/><br/>
         <button onClick={sendMassage}>send</button>
-        <hr />
+        <hr/>
+        </div>
       </section>
 
       <Modal

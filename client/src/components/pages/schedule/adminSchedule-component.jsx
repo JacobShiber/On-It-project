@@ -92,14 +92,14 @@ function AdminSchedule() {
             <h1>Calendar</h1>
             <div className="addEvent">
             <h2>Add New Event</h2>
-                <input type="text" className="inputText" placeholder="Add Title" style={{ width: "37%", marginRight: "5px" }} value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
-                <DatePicker minDate={new Date()} showTimeSelect dateFormat="Pp" placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
-                <DatePicker minDate={newEvent.start} showTimeSelect dateFormat="Pp" placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
-                <button className="saveEvent" style={{ marginTop: "10px" }} onClick={handleAddEvent}>
-                    Add Event
+                <input type="text" className="inputText" placeholder="Add Title"  value={newEvent.title} onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })} />
+                <DatePicker className="inputText" minDate={new Date()} showTimeSelect dateFormat="Pp" placeholderText="Start Date" style={{ marginRight: "10px" }} selected={newEvent.start} onChange={(start) => setNewEvent({ ...newEvent, start })} />
+                <DatePicker  className="inputText" minDate={newEvent.start} showTimeSelect dateFormat="Pp" placeholderText="End Date" selected={newEvent.end} onChange={(end) => setNewEvent({ ...newEvent, end })} />
+                <button className="saveEvent" style={{ marginTop: "18px" }} onClick={handleAddEvent}>
+                    Add
                 </button>
                 <br/>
-                <img src="https://cdn-icons-png.flaticon.com/512/1513/1513520.png"
+                <img className="imgSchedule" src="https://cdn-icons-png.flaticon.com/512/1513/1513520.png"
                 alt="gifClock" />
             </div>
             <Calendar onSelectEvent={event => {setEventId(event._id); setOpen(!open) }} className="maimSchedule" localizer={localizer} events={allEvents} startAccessor="start" endAccessor="end" style={{ height: 500, margin: "50px" }} />

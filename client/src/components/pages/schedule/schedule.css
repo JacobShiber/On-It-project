@@ -28,20 +28,33 @@
 }
 
 .saveEvent{
-    height: 3vh;
+    height: 4vh;
     width: 10vw;
+    border-radius: 5%;
     font-weight: bold;
-    transition: 1s ease-in-out;
+    transition: 0.2s linear;
+    cursor: pointer;
 }
+
 .saveEvent:hover{
-    width: 10.3vw;
-    height: 3.4vh;
-    background-color: rgb(173, 79, 173);
+  margin-left: 15px;
+  transform: scale(1.1);
 }
 
 .rbc-event{
-    background-color: rgb(142, 23, 158);
+    background-color: rgb(142, 72, 151)
 }
+
+.inputText {
+    border: none;
+    border-bottom: 2px solid grey ;
+    height: 4vh;
+}
+
+.inputText:focus{
+    border: none;
+}
+
 /* .rbc-row{
     background-color: rgba(175, 121, 175, 0.623);
 }
@@ -49,3 +62,9 @@
 .rbc-time-slot{
     background-color: rgba(175, 121, 175, 0.623);
 } */
+
+@media screen and (max-width: 1429px) {
+    .imgSchedule{
+        display: none;
+    }
+}

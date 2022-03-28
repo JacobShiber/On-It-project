@@ -4,9 +4,8 @@
   margin: 4px;
   border-radius: 3px;
   margin-bottom: 2vh;
-  border: 3px solid rgba(128, 0, 128, 0.801); ;
-  text-align: center;
-  
+  border: 3px solid #9932CC; ;
+  text-align: center; 
 }
 
 .navbar {
@@ -17,7 +16,7 @@
   padding: 5px 15px;
   margin: 4px;
   text-align: center;
-  border: 3px solid rgba(128, 0, 128, 0.801); ;
+  border: 3px solid #9932CC; ;
   border-radius: 5px;
   
 }
@@ -26,16 +25,16 @@
   padding: 5px 20px;
   border-radius: 3px ;
   margin-left: 1.5vw;
-  background-color: rgba(128, 0, 128, 0.801);
+  background-color: #9932CC;
   color: white;
   transition: 0.3s linear;
 }
 
 .table-button:hover {
   transform: scale(1.2);
-  border: 3px solid rgba(128, 0, 128, 0.801);
+  border: 3px solid #9932CC;
   background-color:#EBEBEB;
-  color:  rgba(128, 0, 128, 0.801);
+  color:  #9932CC;
   cursor: pointer;
 } 
 
@@ -61,7 +60,7 @@
 
 th {
  color:#D5DDE5;;
- background:rgba(128, 0, 128, 0.801);
+ background:#9932CC;
  border-bottom:2px solid whitesmoke ;
  font-size:15px;
  font-weight: 100;
@@ -90,7 +89,7 @@ tr {
 }
 
 tr:hover td {
- background:rgba(128, 0, 128, 0.801);
+ background:#9932CC;
  color:#FFFFFF;
  border-top: 1px solid #22262e;
 }
@@ -108,7 +107,7 @@ tr:nth-child(odd) td {
 }
 
 tr:nth-child(odd):hover td {
-  background:rgba(128, 0, 128, 0.801);
+  background:#9932CC;
 }
 
 tr:last-child td:first-child {

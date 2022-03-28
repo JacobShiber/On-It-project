@@ -1,34 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 .App {
   text-align: center;
   background-color: white;
   color: black;
-  display: grid;
-  grid-template-areas:
-    "navbar navbar navbar navbar"
-    "main main main main"
-    "main main main main"
-    "footer footer footer footer";
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   font-family: "Mochiy Pop One", sans-serif;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
-
 }
 
-.gifLoading{
+.gifLoading {
   margin-top: 15vh;
-  width: 70vw;
-  height: 50vh;
+  width: 40vw;
+  height: 40vh;
 }
+
 h1 {
-  /* font-size: 40px;
-  text-shadow: 2px 2px 2px rgba(128, 0, 128, 0.842);
-  padding: 1%; */
+  font-size: 40px;
+  text-shadow: 2px 2px 2px #9932cc93;
+  padding: 1%;
 }
 
-
-.loginMessage{
+.loginMessage {
   color: red;
   font-weight: bold;
   font-size: large;
@@ -40,7 +39,6 @@ h1 {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-
 }
 
 .leftSize {
@@ -125,7 +123,7 @@ body {
   margin: 5px 0 15px;
   display: block;
   font-weight: 400;
-  color: purple;
+  color: #9932CC;
   text-shadow: 1px 1px 1px black;
   font-size: 30px;
 }
@@ -173,7 +171,7 @@ fieldset {
   cursor: pointer;
   width: 100%;
   border: none;
-  background-color: purple;
+  background-color: #9932CC;
   box-shadow: 1px 1px 1px black;
   color: #fff;
   margin: 0 0 5px;
@@ -231,7 +229,7 @@ fieldset {
   margin-right: 20px;
   font-size: 20px;
   background: none;
-  color: purple;
+  color: #9932CC;
 }
 
 .registerButtons button:hover {
@@ -246,7 +244,7 @@ fieldset {
   padding: 5px 5px;
   border-radius: 2px;
   background: black;
-  box-shadow: 1px 1px 1px purple;
+  box-shadow: 1px 1px 1px #9932CC;
   color: white;
   margin: 10px;
   font-size: 15px;
@@ -254,7 +252,7 @@ fieldset {
 }
 
 .navigateButtons:hover {
-  background-color: purple;
+  background-color: #9932CC;
   box-shadow: 1px 1px 1px black;
 }
 
@@ -299,7 +297,6 @@ fieldset {
 /* admin Grades table css */
 
 /*** Table Styles **/
-
 
 .table-fill {
   background: white;
@@ -410,7 +407,6 @@ td {
 
 /* ************************************************ */
 
-
 .footer #button {
   width: 35px;
   height: 35px;
@@ -420,12 +416,14 @@ td {
   position: relative;
   transition: all 1s ease;
 }
+
 .footer #button:hover {
   width: 35px;
   height: 35px;
   border: #3a3a3a 12px solid;
   position: relative;
 }
+
 .footer {
   bottom: 0;
   left: 0;
@@ -437,10 +435,12 @@ td {
   transition: all 1s ease;
   z-index: 999;
 }
+
 .footer:hover {
   transition: all 1s ease;
-  height: 10em; 
+  height: 10em;
 }
+
 .footer #container {
   margin-top: 1vh;
   display: flex;
@@ -451,13 +451,26 @@ td {
   position: relative;
   top: 0;
   left: 0;
-  background: rgba(128, 0, 128, 0.9);
+  background-color: #9932cc93;
 }
 
-.links {
+/* .links {
   transition: 8s;
 }
 
 .links:hover {
   transform: scale(1.3);
+} */
+
+.Icons-container {
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
 }
+
+.Names {
+  position: absolute ;
+  bottom: 42%;
+}
+
+

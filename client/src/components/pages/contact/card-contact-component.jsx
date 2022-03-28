@@ -1,15 +1,32 @@
 import React from "react";
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
 const CardContact = ({userItem}) => {
   return (
-    <div className="cardUser">
-        <img src={userItem.img} width="100px" height="100px" alt="picUser"/> 
-      <h3>firstName : {userItem.firstName}</h3>
-      <h3>course :{userItem.course}</h3>
-      <h3>email : {userItem.email}</h3>
-      <h3>phone : {userItem.phone}</h3>
-      <h3>role : {userItem.role}</h3>
-    </div>
+    <Card  className = 'cardUser'>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          image={userItem.img}
+          alt="User image"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+          {userItem.firstName}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+          {userItem.role} at {userItem.school} <br/>
+          Course - {userItem.course} <br />
+          Email - {userItem.email} <br />
+          Telephone - {userItem.phone}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
   );
 };
 export default CardContact;
