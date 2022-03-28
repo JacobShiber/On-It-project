@@ -4,7 +4,8 @@ import PageRouting from "./components/Routing/PageRouting";
 import ThemeProvider from "./context/theme-context/theme-context";
 import { LoadingContextProvider } from "./context/loading/loading-context";
 import { UsersContextProvider } from "./context/users-context/users-context";
-import ContactTable from "./components/pages/contact/contact-table" ;
+
+
 
 
 function App() {
