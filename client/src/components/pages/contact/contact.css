@@ -5,41 +5,66 @@
     justify-content:space-around;
     margin-top: 2vh; 
   }
-  .cardUser {
-    width: 28vw;
-    height: auto;
-    align-items: center;
-    margin: 1%;
-    /* transition: 1s ease-in-out; */
-    margin-top: 5vh;
-    border-radius: 2%;
-    box-shadow: rgba(153, 140, 153, 0.781) 3px 3px 3px 3px;
-    padding: 0.5%;
-    background: linear-gradient(
-    white,
-    white,
-    #9362ac
-  );
+  .cardUser{
+    width: 27vw;
+     margin-Bottom: 2% ;
   }
-  /* .cardUser:hover{
-    box-shadow: #9932CC 4px 4px 4px 4px;
-    width: 29vw;
-  
-    } */
-  .cardUser img {
-    margin-top: 3%;
-    width: 21vw;
-    height: 33vh;
-    opacity: 0.9;
-    border-radius: 1%;
+  .cardUser img{
+    height: 270px;
   }
-  .main{
+  .sortNameInput{
+    position:absolute;
+     top:20%;
+     left: 84vw;
+      /* left:; */
+  }
+  .errorName{
+    position:absolute;
+    left: 84vw;
+    top:170px;
+  }
+  /* .main{
     grid-area: main;
-  }
+  } */
+.cntcToggleBtn{
+  margin-right: 80vw;
+  border: none;
+  cursor: pointer;
+  background-color: whitesmoke;
+  font-size: 150%;
+}
 
+.cntcToggleBtn:hover {
+  border-bottom: 1px solid purple;
+}
+  .cntcMain{
+     display:flex;
+      justify-content:flex-end;
+       width: 95vw;
+      height: 85vh;
+      margin-top: 3vh;
+      overflow-x:hidden;
+  }
   @media screen and (max-width: 768px){
+    .cntcSearchCnt{
+      position: relative;
+      right: 180px;
+      bottom: 140px;
+      z-index: 100;
+      align-self:"self-start" ;
+      justify-self: "center";
+    }
+    .cntcMain{
+      overflow-x:visible;
+
+    }
+    .errorName{
+     top: 125px;
+    width: 80px;
+    }
     .cardUser{
       width: 45vw;
+      padding: 3%;
     }
     .cardUser img{
       width: 35vw;
@@ -52,5 +77,16 @@
     }
     .cardUser img{
       width: 70vw;
+    }
+    .cntcSearchCnt{
+      right: 7px;
+    }
+    .cntcMain{
+      /* overflow-y:scroll; */
+      width: 98vw;
+
+    }
+    .cntcToggleBtn{
+      font-size: small;
     }
   }

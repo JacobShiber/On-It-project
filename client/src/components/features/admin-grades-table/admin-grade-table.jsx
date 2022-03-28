@@ -76,8 +76,9 @@ return (
 <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" name="userName" onChange={updateValue} placeholder="Enter Student Name"/>
 <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" name="userId" onChange={updateValue}  placeholder="Enter Student Id"/>
 <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="number"  name="grade" onChange={updateValue}  placeholder="Enter Student Grade"/>
+<input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="text"  name="test" onChange={updateValue}  placeholder="Enter Student test"/>
 
- <select  style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select" name="test"  onChange={updateValue}>
+ {/* <select  style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select" name="test"  onChange={updateValue}>
  <option>Test</option>
    {
      tests?.map((test , index) => 
@@ -85,7 +86,7 @@ return (
      )
    }
 
- </select>
+ </select> */}
 
  <select style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select"  name="course" onChange={updateValue}>
  <option>Course</option>

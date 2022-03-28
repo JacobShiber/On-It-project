@@ -7,7 +7,7 @@ const ContactTable = () => {
 
   let [baseData , setBaseData] = useState([]) ;
 
-  let message = "not exist , make sure you typed correctly" ;
+  let message = "not found" ;
 
   let [visibleMessage , setVisibleMessage] = useState(false) ;
   
@@ -50,10 +50,10 @@ const ContactTable = () => {
 
   return (
     <>
-      <section style={{ display:"flex", justifyContent:"flex-end" , width: "95vw",height: "85vh", marginTop: "3vh", overflowX:"hidden" }} >
-        <section style={{alignSelf:"self-start" , justifySelf: "center"}}>
-         <input onChange={findByName} placeholder="Search By Name" style={{position:"absolute" , top:"5%" , left:"8%"}}/>
-         {visibleMessage ? <p>{message}</p> : ""}
+      <section className="cntcMain">
+        <section className="cntcSearchCnt">
+         <input className="sortNameInput" onChange={findByName} placeholder="Search By Name"/>
+         {visibleMessage ? <p className="errorName">{message}</p> : ""}
         </section>
         <table className="table-fill" style={{overflowX:"scroll"}}>
           <thead>
