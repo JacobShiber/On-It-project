@@ -1,7 +1,8 @@
 import React , { useState , useEffect} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../features/login/login-component";
-import Contact from "../pages/contact/contact-component";
+// import Contact from "../pages/contact/contact-component";
+import CardsContact from '../pages/contact/cards-contact-component';
 import GradesTable from "../pages/grades-table/grades-table";
 import Home from "../pages/home/home-component";
 import LoginPage from "../pages/login/loginPage-component";
@@ -27,7 +28,7 @@ const PageRouting = () => {
           <Route exact path="/login" element={<Login />}/>
           <Route exact path="/home" element={<Home />}/>
           <Route exact path="/news" element={<News />}/>
-          <Route exact path="/contact" element={<Contact />}/>
+          <Route exact path="/contact" element={<CardsContact />}/>
           <Route exact path="/schedule" element={<Schedule />}/>
           <Route exact path="/grades" element={<GradesTable />}/>
         </Routes>
