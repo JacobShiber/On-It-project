@@ -19,7 +19,6 @@ const CardsContact = () => {
       {
         loading ? <img className='gifLoading' src='https://cdn.dribbble.com/users/46511/screenshots/1756041/loader-spinning.gif' alt='gifContact' /> :
           <div className='main'>
-            <h1>TO CONTACT :</h1>
               <h2>Manegment</h2>
             <div className='cardWrapper' style={{display: 'flex', justifyContent: 'space-around', marginTop: '5%', marginBottom: '3%'}}>
               {

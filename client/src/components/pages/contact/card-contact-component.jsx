@@ -1,5 +1,4 @@
 import React from "react";
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,15 +7,14 @@ import { CardActionArea } from '@mui/material';
 
 const CardContact = ({userItem}) => {
   return (
-    <Card sx={{ width: '23%', marginBottom: '2%' }}>
+    <Card  className = 'cardUser'>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
           image={userItem.img}
           alt="User image"
         />
-        <CardContent className = 'cardUser'>
+        <CardContent>
           <Typography gutterBottom variant="h5" component="div">
           {userItem.firstName}
           </Typography>
