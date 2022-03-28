@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { GetAllGrades , PutGrade , PostGrade , DeleteGrade } from "../../../services/userGrades/uses-grades-service" ;
+import { GetAllGrades, PutGrade, PostGrade, DeleteGrade } from "../../../services/userGrades/uses-grades-service";
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -9,64 +9,87 @@ import { LoadingContext } from "../../../context/loading/loading-context";
 
 const AdminGradesTable = () => {
 
-  let [userToUpdate , setUserToUpdate] = useState({}) ;
+  let [userToUpdate, setUserToUpdate] = useState({});
 
-  let {loading,setLoading} = useContext(LoadingContext);
+  let { loading, setLoading } = useContext(LoadingContext);
 
   let [usersData, setUsersData] = useState([]);
 
-  let tests = ["React" , "Typescript" , "JS" , ".Net" , "HTML" , "Css" , "Node.js" , "MongoDB"]
+  let tests = ["React", "Typescript", "JS", ".Net", "HTML", "Css", "Node.js", "MongoDB"]
 
   let courses = ["Full Stack" , "Dev-net" , "Cyber" , "Qa"];
 
   const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
 
   useEffect(() => {
-  setLoading(true);
-  GetAllGrades()
-  .then(data => setUsersData(data))
-  .catch(err => console.log(err))
-  .finally(() => setLoading(false))
- } , []);  
+    setLoading(true);
+    GetAllGrades()
+      .then(data => setUsersData(data))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
+  }, []);
 
- const updateValue = (e) => {
-  userToUpdate[e.target.name] = e.target.value ;
- };
+  const updateValue = (e) => {
+    userToUpdate[e.target.name] = e.target.value;
+  };
 
- const updateUser = (requestedGrade , newGrade) => {
-   setLoading(true);
-   setUserToUpdate({...userToUpdate});
-   console.log({requestedGrade,newGrade});
-   PutGrade({requestedGrade,newGrade})
-  .then(res => res.json())
-  .then(data => setUsersData(data))
-  .catch(err => console.log(err))
-  .finally(() => setLoading(false))
- };
+  const updateUser = (requestedGrade, newGrade) => {
+    setLoading(true);
+    setUserToUpdate({ ...userToUpdate });
+    console.log({ requestedGrade, newGrade });
+    PutGrade({ requestedGrade, newGrade })
+      .then(res => res.json())
+      .then(data => setUsersData(data))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
+  };
 
- const addGrade = () => {
-   setLoading(true);
-   setUserToUpdate({...userToUpdate})
-   console.log(userToUpdate);
-   PostGrade(userToUpdate)
-  .then(res => res.json())
-  .then(data => setUsersData(data))
-  .catch(err => console.log(err))
-  .finally(() => setLoading(false))
- };
+  const addGrade = () => {
+    setLoading(true);
+    setUserToUpdate({ ...userToUpdate })
+    console.log(userToUpdate);
+    PostGrade(userToUpdate)
+      .then(res => res.json())
+      .then(data => setUsersData(data))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
+  };
 
- const deleteUserGrade = (user) => {
-  setLoading(true);
-  DeleteGrade(user)
- .then(res => res.json())
- .then(data => setUsersData(data))
- .catch(err => console.log(err))
- .finally(() => setLoading(false))
- };
+  const deleteUserGrade = (user) => {
+    setLoading(true);
+    DeleteGrade(user)
+      .then(res => res.json())
+      .then(data => setUsersData(data))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
+  };
 
- 
-return (
+  let sortByGradesHighToLow = () => {
+    usersData.sort((a, b) => b.grade - a.grade);
+    setUsersData([...usersData]);
+
+  }
+
+  let sortByGradesLowToHigh = () => {
+    usersData.sort((a, b) => a.grade - b.grade);
+    setUsersData([...usersData]);
+
+  }
+
+  let handleGradesSorting = (event) => {
+    let optionValue = event.target.value;
+
+    if(optionValue == "highToLow"){
+      sortByGradesHighToLow();
+    }else{
+      sortByGradesLowToHigh();
+    }
+  }
+
+
+  return (
     <>
+
      {
        loading ?  <Stack sx={{ color: 'grey.500' , marginLeft:"50vw" , marginTop:"30vh" }} spacing={2} direction="row">
        <CircularProgress color="secondary" />
@@ -97,6 +120,17 @@ return (
    }
 
  </select>
+
+<select onChange={(event)=>{handleGradesSorting(event)}} className="table-select">
+
+
+              <option name="Sort" value=""> Sort </option>
+              <option value="highToLow">Sort By Grades (High to Low)</option>
+              <option value="lowToHigh">Sort By Grades (Low to High)</option>
+
+
+              {/* <button onClick={() => sortByGrades()}>hesds </button> */}
+            </select>
 <button style={purpleMode ? themeColor.purpleButton : themeColor.cyanButton} className="table-button" type="button" onClick={addGrade}>Add Grade</button>
 
 <table className="table-fill">
@@ -128,11 +162,11 @@ usersData?.map((user , index) =>
 </div> 
 }
     </>
-     
+
   );
 }
 
-export default AdminGradesTable ;
+export default AdminGradesTable;
 
 
 

@@ -1,13 +1,19 @@
 import React, {useContext} from "react";
 import './footer.css'
+
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
+
 import { themeContext } from "../../../context/theme-context/theme-context";
+
 
 const Footer = () => {
   const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
   return (
     <>
+
       <div className="footer">
-        <div id="button"></div>
+
+        <ArrowCircleUpIcon style={{ fontSize: '300%' }} />
         <div id="container" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>
 
         <div className="Icons-container">
@@ -39,7 +45,7 @@ const Footer = () => {
         </div>
 
         </div>
-        
+
       </div>
     </>
   );
