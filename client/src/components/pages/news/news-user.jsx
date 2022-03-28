@@ -23,7 +23,7 @@ const NewsUser = () => {
     }, [])
 
     return (
-        <>{loading ? <img src='https://static.wixstatic.com/media/f2773f_a97a7c76b5ba4075bb095745a72b53c3~mv2.gif' className='gifLoading' alt="gifLoading" /> :
+        <>{loading ? <img src='https://flevix.com/wp-content/uploads/2019/07/Curve-Loading.gif' className='gifLoading' alt="gifLoading" /> :
             <div className="newsContainer">
                 {
                     news.map(update =>

@@ -7,12 +7,6 @@
   text-align: center;
   background-color: white;
   color: black;
-  /* display: grid;
-  grid-template-areas:
-    "navbar navbar navbar navbar"
-    "main main main main"
-    "main main main main"
-    "footer footer footer footer"; */
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
@@ -22,8 +16,8 @@
 
 .gifLoading {
   margin-top: 15vh;
-  width: 70vw;
-  height: 50vh;
+  width: 40vw;
+  height: 40vh;
 }
 
 h1 {
