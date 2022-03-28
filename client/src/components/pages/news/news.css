@@ -102,3 +102,41 @@
 .selectInput{
   opacity: 0;
 }
+
+@media screen and (max-width: 768px){
+  .userCardInfo{
+    display: none;
+  }
+  .news{
+    width: 70%;
+    position: relative;
+    right: 10%;
+  }
+  .postDetails{
+    margin-right: 40%;
+  }
+  .datePost{
+    margin-left: 50vw;
+  }
+  
+}
+
+@media screen and (max-width: 426px){
+  .userCardInfo{
+    display: none;
+  }
+  .news{
+    width: 80%;
+    position: relative;
+    right: 15%;
+  }
+  .postDetails{
+    margin-right: 18%;
+  }
+  .postDetails img {
+    width: 10vw;
+  }
+  .datePost{
+    margin-left: 50vw;
+  }
+}
