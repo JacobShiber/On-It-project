@@ -56,6 +56,7 @@ export const PutGrade = async (userData) => {
     console.log("error in method put");
   }
 };
+
 export const DeleteGrade = async (userData) => {
   try {
     return await fetch(`${basic_url}`, {

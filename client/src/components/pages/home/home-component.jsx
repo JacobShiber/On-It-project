@@ -1,4 +1,4 @@
-import React , {useState} from "react";
+import React , {useState , useContext} from "react";
 import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
@@ -14,6 +14,7 @@ import shimonPic from './homePicture/shimon.jpg';
 import jacobPic from './homePicture/jacob.jpg';
 import kerenPic from './homePicture/keren.jpg';
 import shayPic from './homePicture/shay.jpeg';
+import { themeContext } from "../../../context/theme-context/theme-context";
 
 const style = {
   position: 'absolute',
@@ -32,12 +33,13 @@ const style = {
 
 
 const Home = () => {
-
+  
   const [open, setOpen] = useState(false);
+  
+  const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
 
   const sendMassage = () => {
     setOpen(!open)
-    
   }
 
   return (
@@ -112,7 +114,7 @@ const Home = () => {
 
       </section>
 
-      <section className="aboutUs">
+      <section className="aboutUs" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>
         <article className="aboutUsPic">
           <img
             src="https://media.istockphoto.com/photos/concept-against-racism-or-racial-discrimination-by-showing-with-hand-picture-id1252564431?s=2048x2048"

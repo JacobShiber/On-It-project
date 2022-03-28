@@ -33,11 +33,12 @@
     border-radius: 5%;
     font-weight: bold;
     transition: 0.2s linear;
+    cursor: pointer;
 }
+
 .saveEvent:hover{
-    width: 10.3vw;
-    height: 3.4vh;
-    background-color: rgb(179, 84, 179)
+  margin-left: 15px;
+  transform: scale(1.1);
 }
 
 .rbc-event{
@@ -47,13 +48,13 @@
 .inputText {
     border: none;
     border-bottom: 2px solid grey ;
-    /* padding: 0 25% ; */
     height: 4vh;
-    margin-top: 1.5vh;
 }
+
 .inputText:focus{
     border: none;
 }
+
 /* .rbc-row{
     background-color: rgba(175, 121, 175, 0.623);
 }
