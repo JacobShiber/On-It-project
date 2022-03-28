@@ -3,6 +3,9 @@ import { UsersContext } from '../../../context/users-context/users-context';
 import { GetAllNews } from '../../../services/newsUser/newsUser.service';
 import { LoadingContext } from '../../../context/loading/loading-context';
 import {sortPosts} from './news-admin';
+import Aos from "aos" ;
+import "aos/dist/aos.css" ;
+
 
 const NewsUser = () => {
     let { loading, setLoading } = useContext(LoadingContext);
@@ -11,6 +14,10 @@ const NewsUser = () => {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
+        Aos.init({
+        useClassNames : true ,
+        duration:2000 ,
+    });
         setLoading(true);
         GetAllNews()
             .then((res) => res.json())
@@ -26,9 +33,9 @@ const NewsUser = () => {
         <>{loading ? <img src='https://flevix.com/wp-content/uploads/2019/07/Curve-Loading.gif' className='gifLoading' alt="gifLoading" /> :
             <div className="newsContainer">
                 {
-                    news.map(update =>
+                    news.map((update , index) =>
                         <div className='news'>
-                            <div className="newsCard">
+                            <div data-aos="fade-left" className="newsCard">
                                 <div className="postDetails">
                                     <img src={update.userImg} alt="Picture" />
                                     <div>

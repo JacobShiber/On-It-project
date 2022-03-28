@@ -2,7 +2,8 @@ import React , {useState , useEffect, useContext} from "react";
 import { GetAllGrades } from "../../../services/userGrades/uses-grades-service";
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
-import { LoadingContext } from "../../../context/loading/loading-context";
+import {LoadingContext} from "../../../context/loading/loading-context"
+
 
 const UserGradesTable = () => {
 

@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useContext} from "react";
 import './footer.css'
+import { themeContext } from "../../../context/theme-context/theme-context";
 
 const Footer = () => {
+  const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
   return (
     <>
       <div className="footer">
         <div id="button"></div>
-        <div id="container">
+        <div id="container" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>
 
         <div className="Icons-container">
         <h2 className="Names">Shimon</h2>
