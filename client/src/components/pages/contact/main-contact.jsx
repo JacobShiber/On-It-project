@@ -13,7 +13,7 @@ let [contactCards , setContactCards] = useState(true) ;
 
    return (
        <>
-       <h1>TO CONTACT :</h1>
+       {/* <h1>TO CONTACT :</h1> */}
        <button className="cntcToggleBtn" onClick={changeComponent}> {contactCards ? "search for students" : "get all details"}  </button>
        {
            contactCards ? <CardsContact/> : <ContactTable/> 

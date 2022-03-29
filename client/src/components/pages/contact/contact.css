@@ -177,31 +177,18 @@ table th {
 
 
 
-
-
-
-
-
-
-
-
-
   @media screen and (max-width: 768px){
     .cntcSearchCnt{
       position: relative;
       right: 180px;
-      bottom: 140px;
-      z-index: 100;
-      align-self:"self-start" ;
-      justify-self: "center";
+      bottom: 120px;
     }
-    .cntcMain{
-      overflow-x:visible;
-
+    /* style={{alignSelf:"self-start" , justifySelf: "center"}} */
+    .sortNameInput{
+      /* right: 10vw; */
     }
     .errorName{
-     top: 125px;
-    width: 80px;
+     top: 145px;
     }
     .cardUser{
       width: 45vw;
