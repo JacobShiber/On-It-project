@@ -57,13 +57,10 @@ const Home = () => {
           </p>
       <h1>FEATURES</h1>
         <article className="Service">
-          {/* <img
-            src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTDVTtbdg8H0w0N8EsnPqTTHXylwBiVx7gcz7J2G8UZO6acvJZNLSihwydbH68y8ZgcOA&usqp=CAU"
             alt="picService"
-          /> */}
-          <i class="fa fa-bullhorn">
-
-          </i>
+          />
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
