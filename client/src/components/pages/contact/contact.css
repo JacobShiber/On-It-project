@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .cardWrapper {
     display: flex;
     flex-wrap: wrap; 
@@ -13,15 +19,15 @@
     height: 270px;
   }
   .sortNameInput{
-    position:absolute;
+    /* position:absolute;
      top:20%;
-     left: 84vw;
+     left: 84vw; */
       /* left:; */
   }
   .errorName{
-    position:absolute;
+    /* position:absolute;
     left: 84vw;
-    top:170px;
+    top:170px; */
   }
   /* .main{
     grid-area: main;
@@ -37,7 +43,140 @@
 .cntcToggleBtn:hover {
   border-bottom: 1px solid purple;
 }
+
+
+
+
+
+
+
+
+
+  /* .cntcMain {
+    display:flex;
+    justify-content:center; 
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+  }
+
+  .cntcSearchCnt {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    align-items: center;
+    height: 5vw;
+  }
+
+  .errorName {
+    position: absolute;
+    top: 27%;
+  }
+
+  .table-container {
+    position: relative;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    background-color: red;
+    justify-content: center;
+  }
+
+  .info-table {
+    position: absolute;
+    width: 70vw;
+    height: 10vh;
+    text-align: center;
+    background-color: blue;
+    border-radius: 3px;
+    border-collapse: collapse;
+    overflow: scroll;
+    margin-left: 3vw;
+    padding: 5px;
+  } */
+
+  table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
   
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+
+
+
   @media screen and (max-width: 768px){
     .cntcSearchCnt{
       position: relative;
@@ -66,5 +205,15 @@
     }
     .cardUser img{
       width: 70vw;
+    }
+    .cntcSearchCnt{
+      right: 7px;
+    }
+    .cntcMain{
+      width: 65vw;
+      margin-left: 10vw;
+    }
+    .cntcToggleBtn{
+      font-size: small;
     }
   }

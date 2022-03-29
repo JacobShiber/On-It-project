@@ -119,7 +119,7 @@ const Home = () => {
       <section className="aboutUs" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>
         <article className="aboutUsPic">
           <img className="aboutUsPicOne"
-            src="https://brancoweiss.org.il/wp-content/uploads/2017/08/%D7%9E%D7%A9%D7%95%D7%91-21.jpg"
+            src="https://www.mndd.co.il/wp-content/uploads/2020/03/minded-image-6-1.png"
             alt="us"
           />
           
@@ -148,7 +148,7 @@ const Home = () => {
             </li>
             <li>
               <img
-                src={logoCheck}
+                src={logoCheck  }
                 alt="vi"
                 width="18px"
                 height="18px"

@@ -1,58 +1,62 @@
-
 .footer #button {
-    width: 35px;
-    height: 35px;
-    border: #727172 12px solid;
-    border-radius: 35px;
-    margin: 0 auto;
-    position: relative;
-    transition: all 1s ease;
+  width: 35px;
+  height: 35px;
+  border: #727172 12px solid;
+  border-radius: 35px;
+  margin: 0 auto;
+  position: relative;
+  transition: all 1s ease;
+}
+.footer #button:hover {
+  width: 35px;
+  height: 35px;
+  border: #3a3a3a 12px solid;
+  position: relative;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 3.2em;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: all 1s ease;
+  z-index: 999;
+}
+.footer:hover {
+  transition: all 1s ease;
+  height: 10em;
+}
+.footer #container {
+  margin-top: 1vh;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20%;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: #9932cc93;
+}
+
+.Icons-container {
+  /* background-color: red; */
+  display: flex;
+  padding-top: 3%;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 10%;
+  height: 10%;
+}
+
+a:visited {
+  color: white;
+}
+
+@media screen and (max-width: 426px) {
+  .home h1 {
+    font-size: x-large;
   }
-  .footer #button:hover {
-    width: 35px;
-    height: 35px;
-    border: #3a3a3a 12px solid;
-    position: relative;
-  }
-  .footer {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    width: 100%;
-    height: 3.2em;
-    overflow: hidden;
-    margin: 0 auto;
-    transition: all 1s ease;
-    z-index: 999;
-  }
-  .footer:hover {
-    transition: all 1s ease;
-    height: 10em; 
-  }
-  .footer #container {
-    margin-top: 1vh;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0 20%;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    background: #9932cc93;
-  }
-  
-  
-  .Icons-container {
-    /* background-color: red; */
-    display: flex;
-    padding-top: 3%;
-    justify-content: space-around;
-    align-content: space-around;
-    width: 10%;
-    height: 10%;
-  }
-  
-  a:visited {
-   color: white;
-  }
+}

@@ -13,7 +13,7 @@ const CardsContact = () => {
       .then((res) => setUserData(res))
       .finally(() => setLoading(false))
   }, [])
-  console.log(userData);
+  
   return (
     <>
       {

@@ -6,6 +6,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import UpdateIcon from '@mui/icons-material/Update';
 import { themeContext } from "../../../context/theme-context/theme-context";
 import { LoadingContext } from "../../../context/loading/loading-context";
+import '../../pages/grades-table/grades.css'
+
 
 const AdminGradesTable = () => {
 

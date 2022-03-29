@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { GetAllUsers } from "../../../services/users/users.service";
+import './contact.css' ;
 
 const ContactTable = () => {
 
@@ -51,11 +52,14 @@ const ContactTable = () => {
   return (
     <>
       <section className="cntcMain">
-        <section className="cntcSearchCnt">
+
+         <section className="cntcSearchCnt">
          <input className="sortNameInput" onChange={findByName} placeholder="Search By Name"/>
          {visibleMessage ? <p className="errorName">{message}</p> : ""}
         </section>
-        <table className="table-fill" style={{overflowX:"scroll"}}>
+
+        <div className="table-container">
+        <table className="info-table">
           <thead>
             <tr>
               <th className="text-left">Name</th>
@@ -77,6 +81,8 @@ const ContactTable = () => {
               ))}
           </tbody>
         </table>
+        </div> 
+
       </section>
     </>
   );
