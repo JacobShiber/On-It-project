@@ -3,6 +3,7 @@ import { GetAllGrades } from "../../../services/userGrades/uses-grades-service";
 import Stack from '@mui/material/Stack';
 import CircularProgress from '@mui/material/CircularProgress';
 import {LoadingContext} from "../../../context/loading/loading-context"
+import '../../pages/grades-table/grades.css'
 
 
 const UserGradesTable = () => {

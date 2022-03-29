@@ -39,10 +39,6 @@
 } 
 
 
-/* admin Grades table css */
-
-/*** Table Styles **/
-
  .table-fill {
  background: white;
  text-align: center;
@@ -135,6 +131,7 @@ td {
   transform: scale(1.3);
 } 
 
+
  @media screen and (max-width: 768px) {
 .navbar   {
     background-color: red;
@@ -153,6 +150,6 @@ td {
 
   .table-fill{
     width: 80vw;
-    margin-left: -7vw;
+    margin-left: 9vw;
   }
 }

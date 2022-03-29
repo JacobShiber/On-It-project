@@ -105,23 +105,8 @@
 .Service img {
   width: 5vw;
   height: 7vh;
-  /* border-radius: 50%; */
-  /* box-shadow: 4px 4px 4px rgb(134, 128, 128); */
-  /* margin: 3%; */
 }
 .aboutUs {
-  /* background-color: rgba(231, 170, 231, 0.712); */
-  /* background: linear-gradient(
-    white,
-    white,
-    white,
-    rgba(233, 205, 233, 0.712),
-    rgba(231, 170, 231, 0.712)
-    rgba(231, 170, 231, 0.712),
-    rgba(233, 205, 233, 0.712),
-    white
-  ); */
-  /* box-shadow: 4px 4px 4px 4px  black; */
   background-color: #9932cc77;
   width: 100vw;
   display: flex;
@@ -129,40 +114,44 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* background-color: rgba(236, 229, 229, 0.493);
-    box-shadow: 2px 2px 2px rgb(221, 216, 216); */
   flex-wrap: wrap;
   padding: 4%;
   margin-bottom: 5%;
 }
+
 .aboutUsPic {
   width: 45vw;
 }
+
 .aboutUsPic img {
   width: 45vw;
   height: auto;
   border-radius: 2%;
   box-shadow: 3px 3px 12px black;
 }
+
 .aboutUsArticle {
   text-align: left;
   width: 45vw;
 }
+
 .aboutUsArticle h3 {
   font-size: large;
 }
+
 .aboutUsArticle ul {
   list-style-type: none;
   font-weight: 400;
   font-size: 14px;
 }
+
 .questionsText {
   margin-top: 3%;
   background: linear-gradient(white, rgb(179, 172, 172));
   width: 100vw;
   text-align: center;
-  /* position: absolute; */
 }
+
 .questionsText button {
   width: 10vw;
   margin: 1%;
@@ -434,3 +423,4 @@
     background: #f6f6f6;
     } */
   }
+}
