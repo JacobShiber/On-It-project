@@ -37,30 +37,19 @@
 .cntcToggleBtn:hover {
   border-bottom: 1px solid purple;
 }
-  .cntcMain{
-     display:flex;
-      justify-content:flex-end;
-       width: 95vw;
-      height: 85vh;
-      margin-top: 3vh;
-      overflow-x:hidden;
-  }
+  
   @media screen and (max-width: 768px){
     .cntcSearchCnt{
       position: relative;
       right: 180px;
-      bottom: 140px;
-      z-index: 100;
-      align-self:"self-start" ;
-      justify-self: "center";
+      bottom: 120px;
     }
-    .cntcMain{
-      overflow-x:visible;
-
+    /* style={{alignSelf:"self-start" , justifySelf: "center"}} */
+    .sortNameInput{
+      /* right: 10vw; */
     }
     .errorName{
-     top: 125px;
-    width: 80px;
+     top: 145px;
     }
     .cardUser{
       width: 45vw;
@@ -77,16 +66,5 @@
     }
     .cardUser img{
       width: 70vw;
-    }
-    .cntcSearchCnt{
-      right: 7px;
-    }
-    .cntcMain{
-      /* overflow-y:scroll; */
-      width: 98vw;
-
-    }
-    .cntcToggleBtn{
-      font-size: small;
     }
   }

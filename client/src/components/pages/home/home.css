@@ -1,4 +1,3 @@
-
 .home h1 {
   font-size: 40px;
 }
@@ -98,7 +97,7 @@
   transition: 1s;
   /* text-shadow: 1px 1px 1px black; */
 }
-.Service h2:hover{
+.Service h2:hover {
   color: #000;
   padding: 2%;
 }
@@ -177,7 +176,7 @@
 
 .questionsText button:hover {
   background-color: rgb(202, 89, 202);
-} 
+}
 
 .questionsText input {
   border: none;
@@ -204,13 +203,13 @@
 }
 .inputMassage:hover {
   background-color: rgba(238, 196, 238, 0.795);
-} 
+}
 
 .inputEmail:hover {
   background-color: rgba(238, 196, 238, 0.795);
 }
 
- .inputName:hover {
+.inputName:hover {
   background-color: rgba(238, 196, 238, 0.795);
 }
 
@@ -220,26 +219,21 @@
 
 @media screen and (max-width: 768px) {
   .student {
-    width: 22vw;
+    width: 45vw;
     height: auto;
     padding: 1.5%;
-    margin: 0.5%;
-    /* margin: 1%; */
-    /* border: 2px black solid; */
-    /* box-shadow: 4px 4px 4px rgba(216, 205, 216, 0.712); */
+    margin:1%;
     box-shadow: gray 5px 5px 5px 5px;
     transition: 2s ease-in-out;
   }
-
   .picOnIt {
     margin-left: 100px;
   }
   .aboutUsPic img {
-
     width: 90vw;
   }
   .Service {
-    width: 30%;
+    width: 45vw;
   }
   .Service img {
     width: 8vw;
@@ -250,32 +244,28 @@
   }
   .aboutUs {
     background-color: white;
+    flex-wrap: wrap;
     background: linear-gradient(
       /* rgba(231, 170, 231, 0.712),
-      rgba(233, 205, 233, 0.712), */
-      white
+      rgba(233, 205, 233, 0.712), */ white
     );
-    /* box-shadow: 4px 4px 4px 4px  black; */
     width: 100vw;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* background-color: rgba(236, 229, 229, 0.493);
-      box-shadow: 2px 2px 2px rgb(221, 216, 216); */
-    flex-wrap: wrap;
     padding: 4%;
   }
   .aboutUsPic {
     width: 45vw;
   }
   .aboutUsPic img {
-    width: 45vw;
+    width: 90vw;
     height: auto;
   }
   .aboutUsArticle {
     text-align: left;
-    width: 45vw;
+    width: 90vw;
   }
   .aboutUsArticle h3 {
     font-size: large;
@@ -294,143 +284,10 @@
   .questionsText .inputMassage {
     padding: 0 10% 0 40%;
   }
-  /* .Service img{
-    width: 30vw;
-    height: 7vh;
-  } */
 }
 .navbar {
   width: 100vw;
 }
 @media screen and (max-width: 426px) {
-  .home h1 {
-    font-size: x-large;
-  }
-  .questionsText {
-    margin-top: 1%;
-    background: linear-gradient(white, rgb(179, 172, 172));
-    width: 100vw;
-    text-align: center;
-    /* position: absolute; */
-  }
-  .questionsText button {
-    width: 30vw;
-    margin: 1%;
-    padding: 0.5%;
-    border: none;
-    box-shadow: 4px 4px 4px rgb(134, 128, 128);
-    font-size: large;
-    font-weight: bold;
-    text-shadow: 1px 1px 1px rgb(201, 117, 180);
-    transition: 1s ease-in-out;
-  }
-  
-  .questionsText button:hover {
-    background-color: rgb(202, 89, 202);
-  }
-  .questionsText input {
-    border: none;
-    box-shadow: 4px 4px 4px rgb(134, 128, 128);
-    margin: 0.5%;
-  }
-  .inputEmail,
-  .inputName {
-    width: 30vw;
-    height: 6vh;
-    transition: 1s ease-in-out;
-  }
-  .inputMassage {
-    width: 61vw;
-    height: 25vh;
-    transition: 1s ease-in-out;
-  }
-  .inputMassage:hover {
-    background-color: rgba(238, 196, 238, 0.795);
-  }
-  .inputEmail:hover {
-    background-color: rgba(238, 196, 238, 0.795);
-  }
-  .inputName:hover {
-    background-color: rgba(238, 196, 238, 0.795);
-  }
-
-  .ourService p {
-    font-size: medium;
-    min-width: 90vw;
-    /* margin-right: 15%; */
-  }
-  .questionsText h2 {
-    margin-left: 25%;
-    width: 50vw;
-  }
-  .picStudents {
-    width: 40vw;
-  }
-  
-  .navbar {
-    width: 100vw;
-  }
-  
-  @media screen and (max-width: 426px) {
-    .home h1 {
-      font-size: x-large;
-    }
-    .home h2,
-    h4,
-    h3 {
-      font-size: small;
-    }
-    .Service {
-      width: 95vw;
-      margin: 1%;
-    }
-    .aboutUsArticle h3 {
-      font-size: medium;
-    }
-    .ourService {
-      justify-content: space-around;
-    }
-    .questionsText h2 {
-      margin-left: 12%;
-    }
-  
-    .onItText{
-  
-  margin-left: 80px;
-  
-    }
-  
-    .textOnPicMain img {
-  
-      margin-left: 70px;
-    }
-  
-    .fa-bu:before {
-        content: "\f0a1";
-        font-size: 38px;
-        
-    }
-    .bullhorn::before{
-        content: "\f0a2";
-    }
-    .i.fa {
-        font-size: 38px;
-        margin-bottom: 20px;
-        transition: all 0.5s;
-        color: #fff;
-        width: 100px;
-        height: 100px;
-        padding: 30px 0;
-        border-radius: 50%;
-        background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-        box-shadow: 10px 10px 10px rgb(0 0 0 / 5%);
-    }
-    .aboutUsPicOne {
-        width: 520px;
-    }
-
-    /* .ourService {
-        padding: 100px 0;
-    background: #f6f6f6;
-    } */
-  }
+ 
+}

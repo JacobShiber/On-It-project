@@ -54,9 +54,6 @@ const UserRegister = () => {
            <p> Hey {user.firstName} ,  You Registered Successfully !</p>
            <button onClick={() => window.location.reload()}>Log-in</button>
           </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography> 
         </Box>
       </Modal>
   <form id="contact" action="" method="post">
