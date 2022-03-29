@@ -47,7 +47,8 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
   const navBarNavigator = (index) => {
-    navigate(navigations[index])
+    navigate(navigations[index]);
+    handleCloseNavMenu();
   }
   const logout = () => {
     localStorage.clear();
@@ -98,8 +99,8 @@ const Navbar = () => {
               backgroundColor : "primary"
             }}
           >
-            {pages.map((page) => (
-              <MenuItem  key={page} onClick={handleCloseNavMenu}>
+            {pages.map((page, index) => (
+              <MenuItem  key={page} onClick={() => navBarNavigator(index)}>
                 <Typography textAlign="center">{page}</Typography>
               </MenuItem>
             ))}
@@ -111,7 +112,7 @@ const Navbar = () => {
           component="div"
           sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
         >
-          LOGO
+
         </Typography>
         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page, index) => (
