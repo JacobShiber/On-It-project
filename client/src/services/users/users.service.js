@@ -1,6 +1,6 @@
 const basic_url =
   process.env.NODE_ENV === "production"
-    ? "https://mern-office-app.herokuapp.com"
+    ? "http://on-it-project.herokuapp.com/users"
     : "http://localhost:6500/users";
 
 export const GetAllUsers = async () => {
