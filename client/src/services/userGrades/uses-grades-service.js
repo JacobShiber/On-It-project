@@ -1,6 +1,6 @@
 const basic_url =
   process.env.NODE_ENV === "production"
-    ? "https://mern-office-app.herokuapp.com"
+    ? "http://on-it-project.herokuapp.com/grades"
     : "http://localhost:6500/grades";
 export const GetAllGrades = async () => {
   try {
