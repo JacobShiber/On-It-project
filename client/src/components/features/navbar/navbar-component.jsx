@@ -15,6 +15,7 @@ import { themeContext } from "../../../context/theme-context/theme-context";
 import ColorLensOutlinedIcon from '@mui/icons-material/ColorLensOutlined';
 import { useNavigate } from 'react-router-dom';
 import './navbar.css'
+import UserUpdate from '../update/update-component';
 
   const pages = ['Home', 'News', 'Grades', 'Schedule', 'Contact'];
   const settings = ['Logout'];
@@ -126,6 +127,9 @@ const Navbar = () => {
           ))}
            <ColorLensOutlinedIcon onClick={changeTheme} style={{fontSize:"300%" , color:"white" , marginTop:"1%" , marginLeft:"3%" , cursor:"pointer"}}/>
         </Box>
+        {/* <Box>
+          <button onClick={UserUpdate}><img src='https://jooinn.com/images/edit-1.png' alt='edit' width="10px" height="10px"/></button>
+        </Box> */}
         <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="Open settings">
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

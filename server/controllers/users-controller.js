@@ -38,4 +38,14 @@ const getAllUsers = async (req, res) => {
       .catch((err) => res.status(404).json({ massage: err }));
   };
 
-module.exports = {register, login , getAllUsers};
+  const putUser = async (req, res) => {
+    await users.updateOne(req.body.user, req.body.newUser) 
+    .then(result=>{
+    res.status(200).json(result)
+    })
+    .catch(err=>{
+      res.status(500).json({massage:"update is failed"})
+    })
+};
+
+module.exports = {register, login , getAllUsers, putUser};

@@ -2,6 +2,7 @@ import React , { useState } from "react";
 import ContactTable from "./contact-table";
 import CardsContact from "./cards-contact-component";
 import './contact.css';
+import UserUpdate from "../../features/update/update-component";
 
 const MainContact = () => {
 

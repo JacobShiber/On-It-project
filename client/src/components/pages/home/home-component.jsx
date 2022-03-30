@@ -7,7 +7,7 @@ import computerPic from './homePicture/mainPicComputer.png';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
-import './home.css'
+import './home.css';
 import { Link } from "react-router-dom";
 import shimonPic from './homePicture/shimon.jpg';
 import jacobPic from './homePicture/jacob.jpg';
@@ -67,19 +67,14 @@ const Home = () => {
           </p>
       <h1>FEATURES</h1>
         <article className="Service">
-          {/* <img
-            src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTDVTtbdg8H0w0N8EsnPqTTHXylwBiVx7gcz7J2G8UZO6acvJZNLSihwydbH68y8ZgcOA&usqp=CAU"
             alt="picService"
-          /> */}
-          <i class="fa fa-bullhorn">
-
-          </i>
+          />
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
-            
             contact to all your
-            
             friends and admins.
           </h3>
         </article>
