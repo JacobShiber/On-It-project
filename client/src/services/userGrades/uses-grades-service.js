@@ -9,7 +9,6 @@ export const GetAllGrades = async () => {
         Authorization: `bearer ${localStorage.getItem("token")}`,
       },
     })
-    
       .then((res) => res.json())
       .catch((error) => console.log({ error: "the method get isnt work" }));
   } catch (error) {
