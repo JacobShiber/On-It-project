@@ -1,4 +1,4 @@
-import React , {useState , useContext} from "react";
+import React, { useState, useContext } from "react";
 import logoGithub from './homePicture/gifGithub.jpg';
 import logoLinkedin from './homePicture/linkedin.png';
 import logoEmail from './homePicture/email.png';
@@ -14,6 +14,7 @@ import jacobPic from './homePicture/jacob.jpg';
 import kerenPic from './homePicture/keren.jpg';
 import shayPic from './homePicture/shay.jpeg';
 import { themeContext } from "../../../context/theme-context/theme-context";
+import EditIcon from '@mui/icons-material/Edit';
 
 const style = {
   position: 'absolute',
@@ -32,10 +33,10 @@ const style = {
 
 
 const Home = () => {
-  
+
   const [open, setOpen] = useState(false);
-  
-  const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
+
+  const { themeColor, setThemeColor, purpleMode, setPurpleMode } = useContext(themeContext);
 
   const sendMassage = () => {
     setOpen(!open)
@@ -43,19 +44,23 @@ const Home = () => {
   }
 
   return (
+
     <div className="home">
 
-<section className="textOnPicMain">
-</section><img className="mainPic" src={computerPic}
-  alt="computer"/>
+      <section className="textOnPicMain">
 
-<section className="ourService">
-          <p>
-           This web make the studying progress much more easy to deal with. <br/>
-           Each feature is dedicated to accomplish our vision. <br/>
-           they have all they need in one place.
-          </p>
-      <h1>FEATURES</h1>
+      </section><img className="mainPic" src={computerPic}
+        alt="computer" />
+      <div className="editIcon"><EditIcon /></div>
+
+      <section className="ourService">
+
+        <p>
+          This web make the studying progress much more easy to deal with. <br />
+          Each feature is dedicated to accomplish our vision. <br />
+          they have all they need in one place.
+        </p>
+        <h1>FEATURES</h1>
         <article className="Service">
           {/* <img
             src="https://thumbs.dreamstime.com/b/icon-support-customer-service-call-center-vector-icons-help-phone-contact-business-line-symbol-communication-telephone-technology-140921371.jpg"
@@ -67,9 +72,9 @@ const Home = () => {
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
-            
+
             contact to all your
-            
+
             friends and admins.
           </h3>
         </article>
@@ -78,12 +83,12 @@ const Home = () => {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiVzA_O9FU4yAZPDwRQHDx4OmvIMysz0E2gUVM2SCAE_oATo4JUpk5ZbmoOcXMhZy_00E&usqp=CAU"
             alt="picService"
           />
-             <Link to="/news"><h2>News</h2></Link>
+          <Link to="/news"><h2>News</h2></Link>
           <h3>
             In this page you can
-            
+
             see your news in live
-            
+
             And not to hear from others
           </h3>
         </article>
@@ -95,9 +100,9 @@ const Home = () => {
           <Link to="/schedule"><h2>Schedule</h2></Link>
           <h3>
             In this page you can
-            
+
             see your schedule anytime
-            
+
             Without being late for class
           </h3>
         </article>
@@ -109,7 +114,7 @@ const Home = () => {
           <Link to="/grades"><h2>Grades</h2></Link>
           <h3>
             In this page you can
-            
+
             check all your grades
           </h3>
         </article>
@@ -119,10 +124,10 @@ const Home = () => {
       <section className="aboutUs" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>
         <article className="aboutUsPic">
           <img className="aboutUsPicOne"
-            src="https://brancoweiss.org.il/wp-content/uploads/2017/08/%D7%9E%D7%A9%D7%95%D7%91-21.jpg"
+            src="https://www.mndd.co.il/wp-content/uploads/2020/03/minded-image-6-1.png"
             alt="us"
           />
-          
+
         </article>
         <article className="aboutUsArticle">
           <h1>ABOUT US</h1>
@@ -269,11 +274,11 @@ const Home = () => {
         <h2>For questions, requests and inquiries we are always
           available and happy to help :</h2>
         <div>
-        <input placeholder="  Name" className="inputName"/>
-        <input placeholder="  Email" className="inputEmail"/><br/>
-        <input placeholder="  Massage" className="inputMassage"/><br/>
-        <button onClick={sendMassage}>send</button>
-        <hr/>
+          <input placeholder="  Name" className="inputName" />
+          <input placeholder="  Email" className="inputEmail" /><br />
+          <input placeholder="  Massage" className="inputMassage" /><br />
+          <button onClick={sendMassage}>send</button>
+          <hr />
         </div>
       </section>
 

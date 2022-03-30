@@ -17,9 +17,9 @@ const AdminGradesTable = () => {
 
   let tests = ["React", "Typescript", "JS", ".Net", "HTML", "Css", "Node.js", "MongoDB"]
 
-  let courses = ["Full Stack" , "Dev-net" , "Cyber" , "Qa"];
+  let courses = ["Full Stack", "Dev-net", "Cyber", "Qa"];
 
-  const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
+  const { themeColor, setThemeColor, purpleMode, setPurpleMode } = useContext(themeContext);
 
   useEffect(() => {
     setLoading(true);
@@ -79,9 +79,9 @@ const AdminGradesTable = () => {
   let handleGradesSorting = (event) => {
     let optionValue = event.target.value;
 
-    if(optionValue == "highToLow"){
+    if (optionValue == "highToLow") {
       sortByGradesHighToLow();
-    }else{
+    } else {
       sortByGradesLowToHigh();
     }
   }
@@ -90,18 +90,18 @@ const AdminGradesTable = () => {
   return (
     <>
 
-     {
-       loading ?  <Stack sx={{ color: 'grey.500' , marginLeft:"50vw" , marginTop:"30vh" }} spacing={2} direction="row">
-       <CircularProgress color="secondary" />
-     </Stack> : 
-      <div style={{width:"70vw" , height:"30vh" , marginTop:"5vh" , marginLeft:"15vw"}}>
+      {
+        loading ? <Stack sx={{ color: 'grey.500', marginLeft: "50vw", marginTop: "30vh" }} spacing={2} direction="row">
+          <CircularProgress color="secondary" />
+        </Stack> :
+          <div style={{ width: "70vw", height: "30vh", marginTop: "5vh", marginLeft: "15vw" }}>
 
-<input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" name="userName" onChange={updateValue} placeholder="Enter Student Name"/>
-<input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" name="userId" onChange={updateValue}  placeholder="Enter Student Id"/>
-<input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="number"  name="grade" onChange={updateValue}  placeholder="Enter Student Grade"/>
-<input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="text"  name="test" onChange={updateValue}  placeholder="Enter Student test"/>
+            <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" name="userName" onChange={updateValue} placeholder="Enter Student Name" />
+            <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" name="userId" onChange={updateValue} placeholder="Enter Student Id" />
+            <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="number" name="grade" onChange={updateValue} placeholder="Enter Student Grade" />
+            <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="text" name="test" onChange={updateValue} placeholder="Enter Student test" />
 
- {/* <select  style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select" name="test"  onChange={updateValue}>
+            {/* <select  style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select" name="test"  onChange={updateValue}>
  <option>Test</option>
    {
      tests?.map((test , index) => 
@@ -111,17 +111,17 @@ const AdminGradesTable = () => {
 
  </select> */}
 
- <select style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select"  name="course" onChange={updateValue}>
- <option>Course</option>
-   {
-     courses?.map((course , index) => 
-          <option key={index} value={course}>{course}</option>
-     )
-   }
+            <select style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select" name="course" onChange={updateValue}>
+              <option>Course</option>
+              {
+                courses?.map((course, index) =>
+                  <option key={index} value={course}>{course}</option>
+                )
+              }
 
- </select>
+            </select>
 
-<select onChange={(event)=>{handleGradesSorting(event)}} className="table-select">
+            <select onChange={(event) => { handleGradesSorting(event) }} className="table-select">
 
 
               <option name="Sort" value=""> Sort </option>
@@ -131,36 +131,36 @@ const AdminGradesTable = () => {
 
               {/* <button onClick={() => sortByGrades()}>hesds </button> */}
             </select>
-<button style={purpleMode ? themeColor.purpleButton : themeColor.cyanButton} className="table-button" type="button" onClick={addGrade}>Add Grade</button>
+            <button style={purpleMode ? themeColor.purpleButton : themeColor.cyanButton} className="table-button" type="button" onClick={addGrade}>Add Grade</button>
 
-<table className="table-fill">
-<thead>
-<tr>
-<th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Name</th>
-<th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Id</th>
-<th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Grade</th>
-<th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Test</th>
-<th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Course</th>
-<th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}></th>
-</tr>
-</thead>
-<tbody className="table-hover">
-{
-usersData?.map((user , index) => 
-<tr key={index}>
- <td className="text-left">{user.userName}</td>
- <td className="text-left">{user.userId}</td>
- <td className="text-left">{user.grade}</td>
- <td className="text-left">{user.test}</td>
- <td className="text-left">{user.course}</td>
- <td><UpdateIcon className="admin-Buttons" onClick={() => updateUser(user,userToUpdate)}/> <DeleteIcon  className="admin-Buttons" onClick={() => deleteUserGrade(user)}/></td>
-</tr>
-)
-}
-</tbody>
-</table>
-</div> 
-}
+            <table className="table-fill">
+              <thead>
+                <tr>
+                  <th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Name</th>
+                  <th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Id</th>
+                  <th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Grade</th>
+                  <th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Test</th>
+                  <th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Course</th>
+                  <th className="text-left" style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}></th>
+                </tr>
+              </thead>
+              <tbody className="table-hover">
+                {
+                  usersData?.map((user, index) =>
+                    <tr key={index}>
+                      <td className="text-left">{user.userName}</td>
+                      <td className="text-left">{user.userId}</td>
+                      <td className="text-left">{user.grade}</td>
+                      <td className="text-left">{user.test}</td>
+                      <td className="text-left">{user.course}</td>
+                      <td><UpdateIcon className="admin-Buttons" onClick={() => updateUser(user, userToUpdate)} /> <DeleteIcon className="admin-Buttons" onClick={() => deleteUserGrade(user)} /></td>
+                    </tr>
+                  )
+                }
+              </tbody>
+            </table>
+          </div>
+      }
     </>
 
   );
