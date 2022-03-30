@@ -14,6 +14,7 @@ import jacobPic from './homePicture/jacob.jpg';
 import kerenPic from './homePicture/keren.jpg';
 import shayPic from './homePicture/shay.jpeg';
 import { themeContext } from "../../../context/theme-context/theme-context";
+import emailjs from "emailjs-com";
 
 const style = {
   position: 'absolute',
@@ -30,17 +31,26 @@ const style = {
   p: 4,
 };
 
-
 const Home = () => {
   
   const [open, setOpen] = useState(false);
+
+  const sendEmail = (e) => {
+     e.preventDefault();
+     emailjs.sendForm("service_c3eozt4" , "template_j9nshdx" , e.target , "_ahkyMtmsJQ_qRVtC")
+     .then(res => console.log(res))
+     .catch(err => console.log(err))
+     setOpen(!open);
+     e.target.value = "" ;
+  }
+  const [disabled , setDisabled] = useState(false);
   
   const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
 
-  const sendMassage = () => {
-    setOpen(!open)
+  // const sendMassage = () => {
+  //   setOpen(!open)
 
-  }
+  // }
 
   return (
     <div className="home">
@@ -109,7 +119,6 @@ const Home = () => {
           <Link to="/grades"><h2>Grades</h2></Link>
           <h3>
             In this page you can
-            
             check all your grades
           </h3>
         </article>
@@ -268,13 +277,18 @@ const Home = () => {
         {/* <h1>GET IN TOUCH </h1> */}
         <h2>For questions, requests and inquiries we are always
           available and happy to help :</h2>
-        <div>
-        <input placeholder="  Name" className="inputName"/>
-        <input placeholder="  Email" className="inputEmail"/><br/>
-        <input placeholder="  Massage" className="inputMassage"/><br/>
-        <button onClick={sendMassage}>send</button>
-        <hr/>
-        </div>
+        <form onSubmit={sendEmail}>
+         <div>
+           {/* <input onChange={(e) => console.log(e.target.value)} type="text" style={{color:"green"}} placeholder="Name" name="userName" className="inputName"/>
+           <input type="text" placeholder="Email" name="userEmail" className="inputEmail"/><br/>
+           <input type="text" placeholder="Massage" name="content" className="inputMassage"/><br/> */}
+           <input  placeholder="Name"  name="userName"/>
+           <input placeholder="Email" name="userEmail"/>
+           <input placeholder="Massage" name="content"/>
+           <button>Send Email</button>
+          <hr/>
+         </div>
+        </form>
       </section>
 
       <Modal
@@ -285,7 +299,7 @@ const Home = () => {
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
             <p onClick={() => setOpen(!open)} style={{ cursor: "pointer", position: "relative", left: "50%", bottom: "25px" }}>&#9747;</p>
-            <p>We received your message !</p>
+            <p>We received your message!</p>
           </Typography>
         </Box>
       </Modal>
