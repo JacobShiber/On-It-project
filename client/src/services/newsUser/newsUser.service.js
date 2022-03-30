@@ -1,7 +1,8 @@
 const basic_url =
   process.env.NODE_ENV === "production"
-    ? "https://mern-office-app.herokuapp.com"
+    ? "https://final-on-it-project.herokuapp.com/news"
     : "http://localhost:6500/news";
+
 export const GetAllNews = async () => {
   try {
     return await fetch(`${basic_url}`, {

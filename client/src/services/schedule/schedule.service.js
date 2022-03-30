@@ -1,6 +1,6 @@
 const basic_url =
   process.env.NODE_ENV === "production"
-    ? "https://mern-office-app.herokuapp.com"
+    ? "https://final-on-it-project.herokuapp.com/schedule"
     : "http://localhost:6500/schedule";
 export const GetAllSchedules = async () => {
   return await fetch(`${basic_url}`, {

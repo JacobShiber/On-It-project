@@ -1,8 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect , useContext } from "react";
 import { GetAllUsers } from "../../../services/users/users.service";
+import { themeContext } from "../../../context/theme-context/theme-context";
 import './contact.css' ;
 
 const ContactTable = () => {
+
+  const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
 
   let [visibleData, setVisibleData] = useState([]);
 
@@ -62,11 +65,11 @@ const ContactTable = () => {
         <table className="info-table">
           <thead>
             <tr>
-              <th className="text-left">Name</th>
-              <th className="text-left">Phone</th>
-              <th className="text-left">Email</th>
-              <th className="text-left">Course</th>
-              <th className="text-left">School</th>
+              <th className="text-left"  style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Name</th>
+              <th className="text-left"  style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Phone</th>
+              <th className="text-left"  style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Email</th>
+              <th className="text-left"  style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>Course</th>
+              <th className="text-left"  style={purpleMode ? themeColor.lightPurpleTheme : themeColor.lightCyanTheme}>School</th>
             </tr>
           </thead>
           <tbody className="table-hover">
