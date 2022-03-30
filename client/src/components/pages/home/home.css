@@ -154,7 +154,7 @@
 
 .questionsText button {
   width: 10vw;
-  margin: 1%;
+  margin-bottom: 4%;
   padding: 0.5%;
   border: none;
   box-shadow: 4px 4px 4px rgb(134, 128, 128);
@@ -165,45 +165,20 @@
 }
 
 .questionsText button:hover {
-  background-color: rgb(202, 89, 202);
+  background-color: rgb(134, 61, 134);
+  width: 10.5vw;
+  height: 5vh;
 }
 
-.questionsText input {
+.input {
   border: none;
   box-shadow: 4px 4px 4px rgb(134, 128, 128);
   margin: 0.5%;
-}
-
-.inputEmail,
-.inputName {
-  width: 15%;
-  height: 5vh;
-  transition: 1s ease-in-out;
+  padding: 0 2% 1% 3%;
 }
 .inputMassage {
-  width: 31%;
-  height: 8vh;
-  transition: 1s ease-in-out;
+  padding: 0 10% 2% 12%;
 }
-
-.questionsText input {
-  padding: 0 10% 0 14%;
-}
-.questionsText .inputMassage {
-  padding: 0 10% 7% 39%;
-}
-.inputMassage:hover {
-  background-color: rgba(238, 196, 238, 0.795);
-}
-
-.inputEmail:hover {
-  background-color: rgba(238, 196, 238, 0.795);
-}
-
-.inputName:hover {
-  background-color: rgba(238, 196, 238, 0.795);
-}
-
 .questionsText h2 {
   margin-right: 4vw;
 }
@@ -213,7 +188,7 @@
     width: 45vw;
     height: auto;
     padding: 1.5%;
-    margin:1%;
+    margin: 1%;
     box-shadow: gray 5px 5px 5px 5px;
     transition: 2s ease-in-out;
   }
@@ -269,11 +244,11 @@
     margin-left: 25%;
     width: 50vw;
   }
-  .questionsText input {
-    padding: 0 10% 0 14%;
+  .input {
+    padding: 0 2% 1% 1%;
   }
-  .questionsText .inputMassage {
-    padding: 0 10% 0 40%;
+  .inputMassage {
+    padding: 0 10% 2% 19%;
   }
 }
 .navbar {
@@ -288,7 +263,6 @@
     background: linear-gradient(white, rgb(179, 172, 172));
     width: 100vw;
     text-align: center;
-    /* position: absolute; */
   }
   .questionsText button {
     width: 30vw;
@@ -301,40 +275,18 @@
     text-shadow: 1px 1px 1px rgb(201, 117, 180);
     transition: 1s ease-in-out;
   }
-  
   .questionsText button:hover {
     background-color: rgb(202, 89, 202);
   }
-  .questionsText input {
-    border: none;
-    box-shadow: 4px 4px 4px rgb(134, 128, 128);
-    margin: 0.5%;
-  }
-  .inputEmail,
-  .inputName {
-    width: 30vw;
-    height: 6vh;
-    transition: 1s ease-in-out;
+  .input {
+    padding: 0 0 0% 1%;
   }
   .inputMassage {
-    width: 61vw;
-    height: 25vh;
-    transition: 1s ease-in-out;
+    padding: 0 10% 2% 31%;
   }
-  .inputMassage:hover {
-    background-color: rgba(238, 196, 238, 0.795);
-  }
-  .inputEmail:hover {
-    background-color: rgba(238, 196, 238, 0.795);
-  }
-  .inputName:hover {
-    background-color: rgba(238, 196, 238, 0.795);
-  }
-
   .ourService p {
     font-size: medium;
     min-width: 90vw;
-    /* margin-right: 15%; */
   }
   .questionsText h2 {
     margin-left: 25%;
@@ -343,11 +295,9 @@
   .picStudents {
     width: 40vw;
   }
-  
   .navbar {
     width: 100vw;
   }
-  
   @media screen and (max-width: 426px) {
     .home h1 {
       font-size: x-large;
@@ -367,8 +317,8 @@
       border-radius: 0;
       box-shadow: none;
     }
-
-    .Service h2,h3 {
+    .Service h2,
+    h3 {
       font-size: 15px;
     }
     .aboutUsArticle h3 {
@@ -380,53 +330,43 @@
     .questionsText h2 {
       margin-left: 27%;
     }
-
-    .questionsText .inputMassage  {
-     height: 8vh;
-     text-align: center;
+    .questionsText .inputMassage {
+      height: 8vh;
+      text-align: center;
     }
-
     .student {
       width: 70vw;
     }
-
     .picStudents {
       width: 100%;
     }
-  
-    .onItText{
-   margin-left: 80px;
-  
+    .onItText {
+      margin-left: 80px;
     }
-  
     .textOnPicMain img {
-  
       margin-left: 70px;
     }
-  
     .fa-bu:before {
-        content: "\f0a1";
-        font-size: 38px;
-        
+      content: "\f0a1";
+      font-size: 38px;
     }
-    .bullhorn::before{
-        content: "\f0a2";
+    .bullhorn::before {
+      content: "\f0a2";
     }
     .i.fa {
-        font-size: 38px;
-        margin-bottom: 20px;
-        transition: all 0.5s;
-        color: #fff;
-        width: 100px;
-        height: 100px;
-        padding: 30px 0;
-        border-radius: 50%;
-        background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
-        box-shadow: 10px 10px 10px rgb(0 0 0 / 5%);
+      font-size: 38px;
+      margin-bottom: 20px;
+      transition: all 0.5s;
+      color: #fff;
+      width: 100px;
+      height: 100px;
+      padding: 30px 0;
+      border-radius: 50%;
+      background: linear-gradient(to right, #6372ff 0%, #5ca9fb 100%);
+      box-shadow: 10px 10px 10px rgb(0 0 0 / 5%);
     }
     .aboutUsPicOne {
-        width: 520px;
+      width: 520px;
     }
-
   }
 }

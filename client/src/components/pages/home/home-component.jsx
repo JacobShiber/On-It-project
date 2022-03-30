@@ -30,11 +30,8 @@ const style = {
   textAlign: "center",
   p: 4,
 };
-
 const Home = () => {
-  
   const [open, setOpen] = useState(false);
-
   const sendEmail = (e) => {
      e.preventDefault();
      emailjs.sendForm("service_c3eozt4" , "template_j9nshdx" , e.target , "_ahkyMtmsJQ_qRVtC")
@@ -44,17 +41,12 @@ const Home = () => {
      e.target.value = "" ;
   }
   const [disabled , setDisabled] = useState(false);
-  
   const {themeColor ,  setThemeColor , purpleMode , setPurpleMode } = useContext(themeContext);
-
   // const sendMassage = () => {
   //   setOpen(!open)
-
   // }
-
   return (
     <div className="home">
-
 <section className="textOnPicMain">
 </section><img className="mainPic" src={computerPic}
   alt="computer"/>
@@ -267,25 +259,19 @@ const Home = () => {
               width="38px" height="30px" alt="gifLinkedin" /></a>
         </article>
       </section>
-
       <section className="questionsText">
-        {/* <h1>GET IN TOUCH </h1> */}
         <h2>For questions, requests and inquiries we are always
           available and happy to help :</h2>
         <form onSubmit={sendEmail}>
          <div>
-           {/* <input onChange={(e) => console.log(e.target.value)} type="text" style={{color:"green"}} placeholder="Name" name="userName" className="inputName"/>
-           <input type="text" placeholder="Email" name="userEmail" className="inputEmail"/><br/>
-           <input type="text" placeholder="Massage" name="content" className="inputMassage"/><br/> */}
-           <input  placeholder="Name"  name="userName"/>
-           <input placeholder="Email" name="userEmail"/>
-           <input placeholder="Massage" name="content"/>
+           <input className="input" placeholder="Name"  name="userName"/>
+           <input className="input" placeholder="Email" name="userEmail"/><br/>
+           <input className="inputMassage" placeholder="Massage" name="content"/><br/>
            <button>Send Email</button>
           <hr/>
          </div>
         </form>
       </section>
-
       <Modal
         open={open}
         aria-labelledby="modal-modal-title"

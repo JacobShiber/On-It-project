@@ -13,7 +13,8 @@
   }
   .cardUser{
     width: 27vw;
-     margin-Bottom: 2% ;
+     margin-Bottom: 2%;
+     height: 56vh;
   }
   .cardUser img{
     height: 270px;
@@ -24,24 +25,13 @@
   border: none;
   cursor: pointer;
   background-color: whitesmoke;
-  font-size: 150%;
-  margin-top: 4vh;
+    margin-top: 4vh;
+    font-weight: bold;
 }
 
 .cntcToggleBtn:hover {
   border-bottom: 1px solid purple;
 }
-
-
-
-
-
-
-
-
-
-  
-
   .table-container {
     position: relative;
     height: 10vh;
@@ -83,16 +73,13 @@ table th {
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-
 @media screen and (max-width: 600px) {
   table {
     border: 0;
   }
-
   table caption {
     font-size: 1.3em;
   }
-  
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -103,7 +90,6 @@ table th {
     position: absolute;
     width: 1px;
   }
-  
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
@@ -128,12 +114,6 @@ table th {
     border-bottom: 0;
   }
 }
-
-
-
-
-
-
   @media screen and (max-width: 768px){
     .cntcSearchCnt{
       position: relative;
@@ -146,6 +126,7 @@ table th {
     .cardUser{
       width: 45vw;
       padding: 3%;
+      height: 70vh;
     }
     .cardUser img{
       width: 35vw;
@@ -155,6 +136,7 @@ table th {
   @media screen and (max-width: 426px){
     .cardUser{
       width: 90vw;
+      /* height: 80vh; */
     }
     .cardUser img{
       width: 70vw;
