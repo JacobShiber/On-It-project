@@ -1,17 +1,14 @@
 .mainTitle {
   text-shadow: 1px 1px 1px #9932CC;
 }
-
 .newsInputs {
   margin-right: 8%;
 }
-
 .newsInputs input {
   width: 35vw;
   padding: 1%;
   box-shadow: 1px 1px 1px 1px rgb(134, 128, 128);
 }
-
 .newsInputs button {
   margin: 1%;
   padding: 1%;
@@ -23,7 +20,6 @@
 .newsCard{
   display: flex;
   flex-wrap: wrap;
-  /* padding: 2%;  */
   justify-content: space-around;
 
 }
@@ -33,12 +29,10 @@
   height: auto;
   margin-left: 25%;
   padding: 1%;
-  /* padding-bottom: 2%; */
   margin-top: 2%;
   background-color:whitesmoke;
 }
 .newsContainer{
-  background-color: rgb(225, 220, 220);
   max-width: 100vw;
   height: auto;
   padding-bottom: 3vh;
@@ -48,36 +42,29 @@
   height: 10vh;
   border-radius: 50%;
   margin-top: 2%;
-  /* box-shadow: 4px 4px 4px 3px rgba(92, 89, 91, 0.603); */
-  /* margin-right: 22%; */
 }
 .datePost{
   position: relative;
   margin-left: 30vw;
   bottom: 10vh;
 }
-
 .userCardInfo {
     position: fixed;
     margin-left: 70%;
 }
-
 .postDetails  {
   display: flex;
   justify-content: baseline;
   margin-right: 35%;
 }
-
 .postDetails div {
   text-align: left;
   margin-top: 3.5%;
   margin-left: 5%;
 }
-
 .postDetails div p {
   width: 200px;
 }
-
 #demo-simple-select-label{
   margin-left: 0.25vw;
   font-size: 3em;
@@ -85,23 +72,19 @@
   width: 60px;
   border-radius: 50%;
 }
-
 .optionsButton {
   position: relative;
   top: 12vh;
 }
-
 .css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input{
   position: relative;
   bottom: 3vh;
   left: 1vw;
   z-index: 1000;
 }
-
 .selectInput{
   opacity: 0;
 }
-
 @media screen and (max-width: 768px){
   .userCardInfo{
     display: none;

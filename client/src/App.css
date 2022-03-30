@@ -26,120 +26,6 @@ h1 {
   text-shadow: 2px 2px 2px #9932cc93;
   padding: 1%;
 }
-
-
-/* .table-fill {
-  background: white;
-  text-align: center;
-  border-radius: 3px;
-  border-collapse: collapse;
-  height: 20vh;
-  margin-left: 10vw;
-  margin-top: 2vh;
-  max-width: 70%;
-  padding: 5px;
-  width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
-} */
-
-/* .table-fill {
- background: white;
- text-align: center;
- border-radius:3px;
- border-collapse: collapse;
- height: 20vh ;
- margin-left: 10vw;
- margin-top: 2vh;
- max-width: 70%;
- padding:5px;
- width: 100%;
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
- animation: float 5s infinite;
-}
-
-th {
-  color: #d5dde5;
-  background: rgba(128, 0, 128, 0.801);
-  border-bottom: 2px solid whitesmoke;
-  font-size: 15px;
-  font-weight: 100;
-  padding: 15px;
-  text-align: center;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  vertical-align: middle;
-}
-
-th:first-child {
-  border-top-left-radius: 3px;
-}
-
-th:last-child {
-  border-top-right-radius: 3px;
-  border-right: none;
-}
-
-tr {
-  border-top: 1px solid #c1c3d1;
-  border-bottom: 1px solid #c1c3d1;
-  color: #666b85;
-  font-size: 14px;
-  font-weight: normal;
-  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
-}
-
-tr:hover td {
-  background: rgba(128, 0, 128, 0.801);
-  color: #ffffff;
-  border-top: 1px solid #22262e;
-}
-
-tr:first-child {
-  border-top: none;
-}
-
-tr:last-child {
-  border-bottom: none;
-}
-
-tr:nth-child(odd) td {
-  background: #ebebeb;
-}
-
-tr:nth-child(odd):hover td {
-  background: rgba(128, 0, 128, 0.801);
-}
-
-tr:last-child td:first-child {
-  border-bottom-left-radius: 3px;
-}
-
-tr:last-child td:last-child {
-  border-bottom-right-radius: 3px;
-}
-
-td {
-  background: #ffffff;
-  font-weight: 300;
-  font-size: 15px;
-  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #c1c3d1;
-}
-
-.admin-Buttons {
-  cursor: pointer;
-  transition: 0.5s linear;
-}
-
-.admin-Buttons:hover {
-  transform: scale(1.3);
-} */
-
-
-
-
-
-
 .footer #button {
   width: 35px;
   height: 35px;
@@ -149,14 +35,12 @@ td {
   position: relative;
   transition: all 1s ease;
 }
-
 .footer #button:hover {
   width: 35px;
   height: 35px;
   border: #3a3a3a 12px solid;
   position: relative;
 }
-
 .footer {
   bottom: 0;
   left: 0;
@@ -190,17 +74,14 @@ td {
 .links {
   transition: 8s;
 }
-
 .links:hover {
   transform: scale(1.3);
 } 
-
 .Icons-container {
  display: flex;
  justify-content: space-evenly;
  align-items: center;
 }
-
 .Names {
   position: absolute ;
   bottom: 42%;
