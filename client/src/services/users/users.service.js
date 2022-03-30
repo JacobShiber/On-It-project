@@ -8,6 +8,22 @@ export const GetAllUsers = async () => {
     .then((res) => res.json())
     .catch((error) => console.log({ error: "the method get isnt work" }));
 };
+
+export const PutUser = async (id, userData) => {
+  try {
+    return await fetch(`${basic_url}/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `bearer ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify(userData),
+    }).then(res => res.json())
+  } catch (error) {
+    console.log("error in method put");
+  }
+};
+
 export const userLogin = async (userData) => {
   return await fetch(`${basic_url}/login`, {
     method: "POST",

@@ -1,0 +1,29 @@
+.formUpdate {
+  padding: 1%;
+  text-align: center;
+  /* border: solid rgb(121, 113, 113) 2px; */
+  width: 30vw;
+  margin-left: 35vw;
+  box-shadow: 3px 3px 3px 3px purple;
+  border-radius: 5%;
+}
+input{
+    border: none;
+    border-bottom: 2px solid grey ;
+    margin-bottom: 2%;
+}
+label {
+  font-size: large;
+  text-shadow: 1px 1px 1px gray;
+}
+button{
+    width: 7vw;
+    height: 4vh;
+    transition: 1s;
+    background-color: rgb(168, 115, 168);
+}
+button:hover{
+padding: 1%;
+box-shadow: 1px 1px 1px gray;
+
+}

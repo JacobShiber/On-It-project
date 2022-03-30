@@ -11,6 +11,7 @@ import Schedule from "../pages/schedule/schedule-component";
 import Footer from "../features/footer/footer-component";
 import Navbar from "../features/navbar/navbar-component";
 import MainContact from "../pages/contact/main-contact";
+import UserUpdate from "../features/update/update-component";
 
 const PageRouting = () => {
  
@@ -32,6 +33,7 @@ const PageRouting = () => {
           <Route exact path="/contact" element={<MainContact />}/>
           <Route exact path="/schedule" element={<Schedule />}/>
           <Route exact path="/grades" element={<GradesTable />}/>
+          <Route exact path="/update" element={<UserUpdate />}/>
         </Routes>
         {user? <Footer/> : null}
       </BrowserRouter>

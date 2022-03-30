@@ -64,9 +64,7 @@ const Home = () => {
           <Link to="/contact"><h2>Contact</h2></Link>
           <h3>
             In this page you can
-            
             contact to all your
-            
             friends and admins.
           </h3>
         </article>
