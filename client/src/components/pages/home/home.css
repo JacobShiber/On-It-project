@@ -36,6 +36,7 @@
   /* opacity: 0.25;  */
   /* position: relative; */
 }
+
 .picOnIt {
   width: 20vw;
   height: 30vh;
@@ -360,6 +361,16 @@
       width: 95vw;
       margin: 1%;
     }
+
+    .Service img {
+      width: 30vw;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .Service h2,h3 {
+      font-size: 15px;
+    }
     .aboutUsArticle h3 {
       font-size: medium;
     }
@@ -367,12 +378,24 @@
       justify-content: space-around;
     }
     .questionsText h2 {
-      margin-left: 12%;
+      margin-left: 27%;
+    }
+
+    .questionsText .inputMassage  {
+     height: 8vh;
+     text-align: center;
+    }
+
+    .student {
+      width: 70vw;
+    }
+
+    .picStudents {
+      width: 100%;
     }
   
     .onItText{
-  
-  margin-left: 80px;
+   margin-left: 80px;
   
     }
   
@@ -405,9 +428,5 @@
         width: 520px;
     }
 
-    /* .ourService {
-        padding: 100px 0;
-    background: #f6f6f6;
-    } */
   }
 }

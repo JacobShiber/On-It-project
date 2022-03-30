@@ -102,15 +102,6 @@ const AdminGradesTable = () => {
 <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="number"  name="grade" onChange={updateValue}  placeholder="Enter Student Grade"/>
 <input style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-Inputs" type="text"  name="test" onChange={updateValue}  placeholder="Enter Student test"/>
 
- {/* <select  style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select" name="test"  onChange={updateValue}>
- <option>Test</option>
-   {
-     tests?.map((test , index) => 
-          <option key={index} value={test}>{test}</option>
-     )
-   }
-
- </select> */}
 
  <select style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} className="table-select"  name="course" onChange={updateValue}>
  <option>Course</option>
@@ -122,7 +113,7 @@ const AdminGradesTable = () => {
 
  </select>
 
-<select onChange={(event)=>{handleGradesSorting(event)}} className="table-select">
+<select style={purpleMode ? themeColor.purpleSelect : themeColor.cyanSelect} onChange={(event)=>{handleGradesSorting(event)}} className="table-select">
 
 
               <option name="Sort" value=""> Sort </option>
